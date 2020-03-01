@@ -109,7 +109,7 @@ defaults:
 
 sidebar:
   title: "aa"
-  nav: docs
+  nav: main
 
 category_archive:
   type: liquid
