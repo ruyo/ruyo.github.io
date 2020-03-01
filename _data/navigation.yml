@@ -13,21 +13,21 @@ vrm4udocs:
     children:
       - title: "特徴"
         url: /VRM4U/
-      - title: "導入"
+      - title: "導入する"
         url: /VRM4U/01_quick-start/
-      - title: "見た目"
+      - title: "見た目を調整する"
         url: /VRM4U/01_look/
-      - title: "アニメーション"
+      - title: "アニメーション適用する"
         url: /VRM4U/01_animation/
   - title: "VRM4U 応用編"
     children:
-      - title: "全部入りプレビュー"
+      - title: "全部入りプレビューで見る"
         url: /VRM4U/02_shortcut/
-      - title: "マテリアル拡張"
+      - title: "マテリアル拡張機能"
         url: /VRM4U/quick-start/
-      - title: "スケルトン制御"
+      - title: "スケルトン制御機能"
         url: /VRM4U/quick-start/
-      - title: "モバイル"
+      - title: "モバイルで動かす"
         url: /VRM4U/quick-start/
 
        
