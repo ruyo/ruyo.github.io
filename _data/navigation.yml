@@ -9,7 +9,7 @@ main:
     url: /about/
 
 docs:
-  - title: Getting Started2
+  - title: "Getting Started2"
     children:
       - title: "Quick-Start Guide2"
         url: /docs/quick-start-guide/
@@ -19,17 +19,3 @@ docs:
         url: /docs/installation/
       - title: "Upgrading"
         url: /docs/upgrading/
-  - title: Customization
-    children:
-      - title: "Configuration"
-        url: /docs/configuration/
-      - title: "Overriding Theme Defaults"
-        url: /docs/overriding-theme-defaults/
-      - title: "Navigation"
-        url: /docs/navigation/
-      - title: "UI Text"
-        url: /docs/ui-text/
-      - title: "Authors"
-        url: /docs/authors/
-      - title: "Layouts"
-        url: /docs/layouts/
