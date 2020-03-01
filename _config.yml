@@ -115,6 +115,8 @@ defaults:
       comments: true
       share: true
       related: true
+      sidebar:
+        nav: vrm4udocs
 
 category_archive:
   type: liquid
