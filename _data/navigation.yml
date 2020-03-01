@@ -7,3 +7,12 @@ main:
     url: /tags/
   - title: "About"
     url: /about/
+
+docs:
+  - title: "VRM4U start"
+  children:
+    - title: "VRM4U"
+      url: /VRM4U/docs/start
+      
+sidebar:
+  nav: "docs"
