@@ -2,8 +2,8 @@
 title: "見た目を調整する"
 
 gallery:
-  - url: /assets/images/010_top.png
-    image_path: /assets/images/010_top.png
+  - url: /VRM4U/assets/images/010_top.png
+    image_path: /VRM4U/assets/images/010_top.png
     alt: "placeholder image 1"
     title: "Image 1 title caption"
 ---
