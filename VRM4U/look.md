@@ -30,4 +30,4 @@ Light で照らす
 
 [![](/assets/images/010_release.png)](/assets/images/010_release.png)
 
-[![](/VRM4U/assets/images/010_release.png)](/VRM4U/assets/images/010_release.png)
+[![](/VRM4U/assets/images/010_release.png)](https://ruyo.github.io/VRM4U/assets/images/010_release.png)

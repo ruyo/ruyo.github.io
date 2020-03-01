@@ -1,21 +1,23 @@
 main:
-  - title: "aabb"
+  - title: "VRM4U"
     url: https://ruyo.github.io/VRM4U/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
-    url: /about/
+#  - title: "Categories"
+#    url: /categories/
+#  - title: "Tags"
+#    url: /tags/
+#  - title: "About"
+#    url: /about/
 
 vrm4udocs:
-  - title: "Getting Started2"
+  - title: "VRM4U ドキュメント"
     children:
-      - title: "VRM4U導入"
+      - title: "VRM4Uトップ"
+        url: /VRM4U/
+      - title: "導入"
         url: /VRM4U/quick-start/
-      - title: "look"
+      - title: "見た目"
         url: /VRM4U/look/
-      - title: "Animation"
+      - title: "アニメーション"
         url: /VRM4U/animation/
       - title: "とにかくプレビュー"
         url: /VRM4U/shortcut/
