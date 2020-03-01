@@ -26,4 +26,8 @@ Light で照らす
 
 {% include gallery id="gallery2" %}
 
-[![](./assets/images/010_release.png)](./assets/images/010_release.png)
+[![](./assets/images/010_release.png)](../assets/images/010_release.png)
+
+[![](/assets/images/010_release.png)](/assets/images/010_release.png)
+
+[![](/VRM4U/assets/images/010_release.png)](/VRM4U/assets/images/010_release.png)
