@@ -89,7 +89,7 @@ footer:
 
 # Collections
 collections:
-  docs:
+  vrm4u:
     output: true
     permalink: /:collection/:path/
 
