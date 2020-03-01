@@ -24,4 +24,4 @@ Light で照らす
 
 {% include gallery caption="This is a sample gallery with **Markdown support**." %}
 
-{% include gallery2 %}
+{% include gallery id="gallery2" %}
