@@ -113,7 +113,7 @@ defaults:
       layout: single
       author_profile: false
       comments: true
-      share: true
+      share: false
       toc: true
       related: true
       sidebar:

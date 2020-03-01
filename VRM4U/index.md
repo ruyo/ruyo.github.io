@@ -1,6 +1,8 @@
 ---
 title: "VRM4U"
 
+share: true
+
 gallery:
   - url: /VRM4U/assets/images/010_top.png
     image_path: /VRM4U/assets/images/010_top.png
