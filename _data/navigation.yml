@@ -1,18 +1,9 @@
 main:
   - title: "VRM4U"
-    url: /VRM4U/docs/start
+    url: https://ruyo.github.io/VRM4U/
   - title: "Categories"
     url: /categories/
   - title: "Tags"
     url: /tags/
   - title: "About"
     url: /about/
-
-docs:
-  - title: "VRM4U start"
-  children:
-    - title: "VRM4U"
-      url: /VRM4U/docs/start
-      
-sidebar:
-  nav: "docs"
