@@ -1,15 +1,20 @@
 ---
 title: "VRM4U"
+
+gallery:
+  - url: /VRM4U/assets/images/010_top.png
+    image_path: /VRM4U/assets/images/010_top.png
 ---
 
 ## はじめに
 VRM4UはVRMファイルのインポーター兼ランタイムローダーです
 
 ## 特徴
+
 |||
 |----|----|
-|![2](https://github.com/ruyo/VRM4U/wiki/images/shot/03.png)|![2](https://github.com/ruyo/VRM4U/wiki/images/shot/04.png)|
-|![2](https://github.com/ruyo/VRM4U/wiki/images/shot/01.png)|![2](https://github.com/ruyo/VRM4U/wiki/images/shot/02.png)|
+|![](/assets/images/03.png)|![](/assets/images/04.png)|
+|![](/assets/images/01.png)|![](/assets/images/02.png)|
 
 
  - VRMファイルをインポートできます。

@@ -9,15 +9,25 @@ main:
 #    url: /about/
 
 vrm4udocs:
-  - title: "VRM4U ドキュメント"
+  - title: "VRM4U 基礎編"
     children:
-      - title: "VRM4Uトップ"
+      - title: "特徴"
         url: /VRM4U/
       - title: "導入"
-        url: /VRM4U/quick-start/
+        url: /VRM4U/01_quick-start/
       - title: "見た目"
-        url: /VRM4U/look/
+        url: /VRM4U/01_look/
       - title: "アニメーション"
-        url: /VRM4U/animation/
-      - title: "とにかくプレビュー"
-        url: /VRM4U/shortcut/
+        url: /VRM4U/01_animation/
+  - title: "VRM4U 応用編"
+    children:
+      - title: "全部入りプレビュー"
+        url: /VRM4U/02_shortcut/
+      - title: "マテリアル拡張"
+        url: /VRM4U/quick-start/
+      - title: "スケルトン制御"
+        url: /VRM4U/quick-start/
+      - title: "モバイル"
+        url: /VRM4U/quick-start/
+
+       
