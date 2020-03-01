@@ -14,8 +14,8 @@ vrm4udocs:
       - title: "Quick-Start Guide2"
         url: /VRM4U/quick-start/
       - title: "Structure"
-        url: /docs/structure/
+        url: /VRM4U/README/
       - title: "Installation"
-        url: /docs/installation/
+        url: /VRM4U/100-shortcut/
       - title: "Upgrading"
-        url: /docs/upgrading/
+        url: /VRM4U/030-animation/
