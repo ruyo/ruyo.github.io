@@ -1,5 +1,12 @@
-a
+---
+title: "見た目を調整する"
 
+gallery:
+  - url: /assets/images/010_top.png
+    image_path: /assets/images/010_top.png
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+---
 
 ## 見た目を正しく再現・調整する
 
@@ -13,4 +20,4 @@ System で法線調整
 
 Light で照らす
 
-
+{% include gallery caption="This is a sample gallery with **Markdown support**." %}
