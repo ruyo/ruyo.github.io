@@ -11,11 +11,11 @@ main:
 vrm4udocs:
   - title: "Getting Started2"
     children:
-      - title: "Quick-Start Guide2"
+      - title: "VRM4U導入"
         url: /VRM4U/quick-start/
-      - title: "Structure"
-        url: /VRM4U/README/
-      - title: "Installation"
-        url: /VRM4U/100-shortcut/
-      - title: "Upgrading"
-        url: /VRM4U/030-animation/
+      - title: "look"
+        url: /VRM4U/look/
+      - title: "Animation"
+        url: /VRM4U/animation/
+      - title: "とにかくプレビュー"
+        url: /VRM4U/shortcut/
