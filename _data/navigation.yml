@@ -12,7 +12,7 @@ vrm4udocs:
   - title: "Getting Started2"
     children:
       - title: "Quick-Start Guide2"
-        url: /VRM4U/quick-start-guide/
+        url: /VRM4U/quick-start/
       - title: "Structure"
         url: /docs/structure/
       - title: "Installation"
