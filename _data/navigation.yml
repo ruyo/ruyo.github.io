@@ -8,7 +8,7 @@ main:
   - title: "About"
     url: /about/
 
-docs:
+vrm4udocs:
   - title: "Getting Started2"
     children:
       - title: "Quick-Start Guide2"
