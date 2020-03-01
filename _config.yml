@@ -114,6 +114,7 @@ defaults:
       author_profile: false
       comments: true
       share: true
+      toc: true
       related: true
       sidebar:
         nav: vrm4udocs
