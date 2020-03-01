@@ -22,6 +22,8 @@ System で法線調整
 
 Light で照らす
 
-{% include gallery caption="This is a sample gallery with **Markdown support**." %}
+{% include gallery id="gallery" caption="This is a sample gallery with **Markdown support**." %}
 
 {% include gallery id="gallery2" %}
+
+[![](./assets/images/010_release.png)](./assets/images/010_release.png)

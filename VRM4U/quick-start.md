@@ -13,11 +13,11 @@ https://github.com/ruyo/VRM4U
 |![](./assets/images/010_top.png)|
 
 
-自分の利用するバージョンに合ったものをダンロードし、
+自分の利用するバージョンに合ったものをダウンロードし、
 
 ||
 |-|
-|[ ![](./assets/images/010_release.png) ](./assets/images/010_release.png)|
+|[![](./assets/images/010_release.png)](./assets/images/010_release.png)|
 
 Pluginsに配置します。
 例えばUE4のプロジェクト名が「MyGame」である場合は、
