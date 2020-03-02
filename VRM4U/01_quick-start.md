@@ -17,17 +17,14 @@ title: "セットアップ"
 
 https://github.com/ruyo/VRM4U
 
-
-||
-|-|
-|[![](/assets/images/010_top.png)](../assets/images/010_top.png)|
-
+<a href="../assets/images/010_top.png"><img src="./assets/images/010_top.png" width=60%></a>
 
 自分の利用するバージョンに合ったものをダウンロードし、
 
-||
-|-|
-|[![](/assets/images/010_release.png)](../assets/images/010_release.png)|
+
+
+
+<a href="../assets/images/010_release.png"><img src="./assets/images/010_release.png" width=60%></a>
 
 Pluginsに配置します。
 例えばUE4のプロジェクト名が「MyGame」である場合は、
@@ -49,7 +46,7 @@ Pluginsに配置します。
 
 ||
 |-|
-|[![](/assets/images/010_plugin.png)](../assets/images/010_plugin.png)|
+|[![](./assets/images/010_plugin.png)](../assets/images/010_plugin.png)|
 
 
 ## VRMモデルをインポートする
@@ -60,13 +57,13 @@ Pluginsに配置します。
 
 ||
 |-|
-|[![](/assets/images/010_import.png)](../assets/images/010_import.png)|
+|[![](./assets/images/010_import.png)](../assets/images/010_import.png)|
 
 インポート完了です。
 **まだ完全な見た目にはなりません。** 次の章を参照ください。
 
 ||
 |-|
-|[![](/assets/images/010_result.png)](../assets/images/010_result.png)|
+|[![](./assets/images/010_result.png)](../assets/images/010_result.png)|
 
 プラグイン固有機能を除き、生成されるものは標準アセットです。他プロジェクトへMigrate可能ですが、親マテリアルがプラグインフォルダにある点はご注意ください。

@@ -21,13 +21,20 @@ vrm4udocs:
         url: /VRM4U/01_animation/
   - title: "VRM4U 応用編"
     children:
-      - title: "全部入りプレビューで見る"
+      - title: "全部入りフォトモードで見る"
         url: /VRM4U/02_shortcut/
       - title: "マテリアル拡張機能"
+        url: /VRM4U/quick-start/
+      - title: "嘘パース制御機能"
         url: /VRM4U/quick-start/
       - title: "スケルトン制御機能"
         url: /VRM4U/quick-start/
       - title: "モバイルで動かす"
         url: /VRM4U/quick-start/
+      - title: "ランタイムロードする"
+        url: /VRM4U/quick-start/
+      - title: "RayTraceで動かす"
+        url: /VRM4U/quick-start/
+
 
        
