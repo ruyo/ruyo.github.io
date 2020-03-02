@@ -27,39 +27,58 @@ gallery2:
 
 以下のメニューのチェックボックスをONにして、VRM4Uフォルダを表示します。
 
-<figure>
-  <img src="./assets/images/01a_plugin.png" width=60%>
-</figure>
+||
+|-|
+|[![](./assets/images/01a_plugin.png)](../assets/images/01a_plugin.png)|
+
 
 `VRM4U Content/Util/Actor` から、`MToonAttachActor` を配置します。ドラッグ＆ドロップです。
 
-<img src="./assets/images/01a_mtoon1.png" width=60%>
+||
+|-|
+|[![](./assets/images/01a_mtoon1.png)](../assets/images/01a_mtoon1.png)|
+
 
 下図の番号順にクリックしてください。
 スポイトアイコンをクリックし、その後キャラクタをクリックします。
 
-<img src="./assets/images/01a_click.png" width=60%>
+||
+|-|
+|[![](./assets/images/01a_click.png)](../assets/images/01a_click.png)|
+
 
 輪郭線とセルフシャドウが有効化されました。
-<img src="./assets/images/01a_end.png" width=60%>
+
+||
+|-|
+|[![](./assets/images/01a_end.png)](../assets/images/01a_end.png)|
+
 
 ----## 色味を調整する
 
 `VRM4U Content/Util/Actor` から、`MToonMaterialSystem` を配置します。
 
-<img src="./assets/images/01a_sys1.png" width=60%>
+||
+|-|
+|[![](./assets/images/01a_sys1.png)](../assets/images/01a_sys1.png)|
+
 
 `details` よりパラメータを適当に変更してみましょう。
 特殊描画（輪郭線の太さ、MatCap強度、色のガンマ補正）から、ライト（オフセット、Exposure基準）を変更できます。
 
 一部のパラメータは、Litモード（後述します）のみ反応します。
 
-<img src="./assets/images/01a_syspanel.png" width=60%>
+||
+|-|
+|[![](./assets/images/01a_syspanel.png)](../assets/images/01a_syspanel.png)|
 
 ここでは大まかにキャラクタ全体の見た目を調整することができます。
 同じ調整はマテリアル個別でも可能です。応用編で解説します。
 
-<img src="./assets/images/01a_sys2.png" width=60%>
+||
+|-|
+|[![](./assets/images/01a_sys2.png)](../assets/images/01a_sys2.png)|
+
 
 ----
 ## ライティングする
@@ -67,19 +86,29 @@ gallery2:
 
 `AssetUtil`を配置します。
 
-<img src="./assets/images/01b_asset.png" width=60%>
+||
+|-|
+|[![](./assets/images/01b_asset.png)](../assets/images/01b_asset.png)|
+
 
 下図の順にクリックします。LitチェックボックスをONにします。
 
-<img src="./assets/images/01b_asset2.png" width=60%>
+||
+|-|
+|[![](./assets/images/01b_asset2.png)](../assets/images/01b_asset2.png)|
+
 
 ライトが反映されるようになります。
 
-<img src="./assets/images/01b_light2.png" width=60%>
+||
+|-|
+|[![](./assets/images/01b_light2.png)](../assets/images/01b_light2.png)|
 
 上記手順は、インポート時にも設定可能です。Litマテリアルでインポートしてください。
 
-<img src="./assets/images/01b_import.png" width=60%>
+||
+|-|
+|[![](./assets/images/01b_import.png)](../assets/images/01b_import.png)|
 
 ----
 ## 見た目の調整 その先へ
