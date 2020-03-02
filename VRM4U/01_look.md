@@ -22,6 +22,10 @@ gallery2:
 ---
 
 
+||
+|-|
+|[![](./assets/images/01b_top.png)](../assets/images/01b_top.png)|
+
 ----
 
 ## 輪郭線とシャドウを有効化する
