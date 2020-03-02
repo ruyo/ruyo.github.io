@@ -23,6 +23,7 @@ gallery2:
 
 
 ----
+
 ## 輪郭線とシャドウを有効化する
 
 以下のメニューのチェックボックスをONにして、VRM4Uフォルダを表示します。
@@ -54,7 +55,9 @@ gallery2:
 |[![](./assets/images/01a_end.png)](../assets/images/01a_end.png)|
 
 
-----## 色味を調整する
+----
+
+## 色味を調整する
 
 `VRM4U Content/Util/Actor` から、`MToonMaterialSystem` を配置します。
 
@@ -81,6 +84,7 @@ gallery2:
 
 
 ----
+
 ## ライティングする
 
 
