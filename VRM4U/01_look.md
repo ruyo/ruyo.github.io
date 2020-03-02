@@ -21,14 +21,15 @@ gallery2:
 
 ---
 
-<a href="../assets/images/01b_top.png"><img src="./assets/images/01b_top.png" width=60%></a>
 
 ----
 ## 輪郭線とシャドウを有効化する
 
 以下のメニューのチェックボックスをONにして、VRM4Uフォルダを表示します。
 
-<img src="./assets/images/01a_plugin.png" width=60%>
+<figure>
+  <img src="./assets/images/01a_plugin.png" width=60%>
+</figure>
 
 `VRM4U Content/Util/Actor` から、`MToonAttachActor` を配置します。ドラッグ＆ドロップです。
 

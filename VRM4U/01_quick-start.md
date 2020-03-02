@@ -17,14 +17,16 @@ title: "セットアップ"
 
 https://github.com/ruyo/VRM4U
 
-<a href="../assets/images/010_top.png"><img src="./assets/images/010_top.png" width=60%></a>
+||
+|-|
+|[![](./assets/images/010_top.png)](../assets/images/010_top.png)|
+
 
 自分の利用するバージョンに合ったものをダウンロードし、
 
-
-
-
-<a href="../assets/images/010_release.png"><img src="./assets/images/010_release.png" width=60%></a>
+||
+|-|
+|[![](./assets/images/010_release.png)](../assets/images/010_release.png)|
 
 Pluginsに配置します。
 例えばUE4のプロジェクト名が「MyGame」である場合は、
