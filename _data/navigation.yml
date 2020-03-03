@@ -24,7 +24,7 @@ vrm4udocs:
       - title: "全部入りフォトモードで見る"
         url: /VRM4U/02_shortcut/
       - title: "RayTraceを使う"
-        url: /VRM4U/quick-start/
+        url: /VRM4U/02_raytrace/
       #- title: "PBR背景と合わせる"
       #  url: /VRM4U/quick-start/
       #- title: "マテリアル拡張機能"
