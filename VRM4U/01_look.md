@@ -75,9 +75,9 @@ gallery2:
 
 一部のパラメータは、Litモード（後述します）のみ反応します。
 
-||
-|-|
-|[![](./assets/images/01a_syspanel.png)](../assets/images/01a_syspanel.png)|
+|||
+|-|-|
+|[![](./assets/images/01a_syspanel.png)](../assets/images/01a_syspanel.png)|.................................................|
 
 ここでは大まかにキャラクタ全体の見た目を調整することができます。
 同じ調整はマテリアル個別でも可能です。応用編で解説します。
