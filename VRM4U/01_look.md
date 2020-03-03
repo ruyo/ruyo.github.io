@@ -26,6 +26,7 @@ gallery2:
 |-|
 |[![](./assets/images/01b_top.png)](../assets/images/01b_top.png)|
 |モデル：[ヴィータ](https://hub.vroid.com/characters/6193066630030526355/models/3525604181073039892)|
+
 ----
 
 ## 輪郭線とシャドウを有効化する
