@@ -5,6 +5,7 @@ title: "アニメーションをリターゲット、揺れ骨を再現する"
 ||
 |-|
 |[![](./assets/images/01c_top.png)](../assets/images/01c_top.png)|
+|モデル：[ヴィクトリア・ルービン](https://hub.vroid.com/characters/2792872861023597723/models/5013769147837660446)|
 
 
 ----
@@ -50,9 +51,9 @@ A-Tを切り替え可能です。
 ## 揺れ骨を再現する
 
 **初期状態では揺れ骨が再現できていません。**
-PhysicsAssetである程度再現していますが不完全です。
+`PhysicsAsset`である程度再現していますが不完全です。
 
-ここではVRMSwingBoneを再現します。AnimBlueprintにノードを追加します。
+ここでは`VRMSwingBone`を再現します。`AnimBlueprint`にノードを追加します。
 
 `SkeletalMesh`より、`AnimBlueprint`を作成します。
 
