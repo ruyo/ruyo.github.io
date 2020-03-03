@@ -19,7 +19,7 @@ vrm4udocs:
         url: /VRM4U/01_look/
       - title: "アニメーション適用する"
         url: /VRM4U/01_animation/
-  - title: "VRM4U 応用編 撮影"
+  - title: "応用編 撮影"
     children:
       - title: "全部入りフォトモードで見る"
         url: /VRM4U/02_shortcut/
@@ -31,7 +31,7 @@ vrm4udocs:
       #  url: /VRM4U/quick-start/
       #- title: "嘘パース制御機能"
       #  url: /VRM4U/quick-start/
-  - title: "VRM4U 応用編 ゲーム"
+  - title: "応用編 ゲーム"
     children:
       - title: "グレイマンを置き換える"
         url: /VRM4U/03_gray/
@@ -39,7 +39,7 @@ vrm4udocs:
         url: /VRM4U/03_mobile/
       #- title: "ランタイムロード"
       #  url: /VRM4U/quick-start/
-  - title: "VRM4U 応用編 モデルをVRMにして使う"
+  - title: "応用編 モデルをVRMにして使う"
     children:
       - title: "VRChat用アバターを使う"
         url: /VRM4U/04_vrchat/

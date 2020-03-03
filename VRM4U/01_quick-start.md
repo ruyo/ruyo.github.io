@@ -4,26 +4,28 @@ title: "セットアップ"
 
 ## 正しくVRMを動作させるための手順
 
+3段階の手順があります。
+
 - プラグインの導入＆モデルインポート
 - 輪郭線、セルフシャドウの適用
   - MToonAttachActorを利用します
 - 揺れ骨の適用
-  - VRMSpringBoneを利用します。**初期状態はPhysicsAssetなので精度が悪いです**
+  - VRMSpringBoneを利用します。**初期は精度が悪いPhysicsAssetです**
 
-正しくセットアップして、かわいく再現しましょう。
+正しくセットアップして、UE4でかわいく再現しましょう。
 
 ----
 ## プラグインセットアップ
 こちらのリンクより、
 
-https://github.com/ruyo/VRM4U
+[https://github.com/ruyo/VRM4U](https://github.com/ruyo/VRM4U)
 
 ||
 |-|
 |[![](./assets/images/010_top.png)](../assets/images/010_top.png)|
 
 
-自分の利用するバージョンに合ったものをダウンロードし、
+最新版から自分の利用するUE4バージョンに合ったものをダウンロードし、
 
 ||
 |-|
@@ -69,4 +71,3 @@ Pluginsに配置します。
 |-|
 |[![](./assets/images/010_result.png)](../assets/images/010_result.png)|
 
-プラグイン固有機能を除き、生成されるものは標準アセットです。他プロジェクトへMigrate可能ですが、親マテリアルがプラグインフォルダにある点はご注意ください。
