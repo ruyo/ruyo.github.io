@@ -5,6 +5,11 @@ title: "グレイマンを置き換える"
 
 ----
 
+## Advanced Locomotion System V4 に適用する
+
+{% include video id="fsP68yQHIbs" provider="youtube" %}
+
+
 ## スケルトンをUE4の骨名で作成する
 
 インポートオプションの話。
