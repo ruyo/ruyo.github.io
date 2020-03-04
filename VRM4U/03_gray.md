@@ -75,4 +75,7 @@ Socketはプレビューで位置が異なるように見える場合があり�
 
 リターゲットの結果が変な場合は、SkeletonのA-pose/T-poseを確認してください。
 
-不明な場合は基礎編の解説を参照ください。
+
+||
+|-|-|
+|[![](./assets/images/03a_sword.png)](../assets/images/03a_sword.png)|
