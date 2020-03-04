@@ -50,7 +50,9 @@ A-Tを切り替え可能です。
 
 ## 揺れ骨をVRMSpringBoneで再現する
 
-**初期状態では揺れ骨が再現できていません。**
+初期状態では揺れ骨が再現できていません。
+{: .notice--warning}
+
 `PhysicsAsset`で揺らしていますが不完全です。
 
 まず`SkeletalMesh`より、`AnimBlueprint`を作成します。
