@@ -25,8 +25,8 @@ vrm4udocs:
         url: /VRM4U/02_shortcut/
       - title: "RayTraceを使う"
         url: /VRM4U/02_raytrace/
-      #- title: "PBR背景と合わせる"
-      #  url: /VRM4U/quick-start/
+      - title: "PBR背景と合わせる"
+        url: /VRM4U/02_pbr/
       #- title: "マテリアル拡張機能"
       #  url: /VRM4U/quick-start/
       #- title: "嘘パース制御機能"
@@ -37,8 +37,8 @@ vrm4udocs:
         url: /VRM4U/03_gray/
       - title: "モバイル・VRで動かす"
         url: /VRM4U/03_mobile/
-      #- title: "ランタイムロード"
-      #  url: /VRM4U/quick-start/
+      - title: "ランタイムロード"
+        url: /VRM4U/03_runtime/
   - title: "応用編 他形式からVRMにして使う"
     children:
       - title: "VRChat用アバターを使う"
