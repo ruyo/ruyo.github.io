@@ -48,21 +48,19 @@ A-Tを切り替え可能です。
 
 ----
 
-## 揺れ骨を再現する
+## 揺れ骨をVRMSpringBoneで再現する
 
 **初期状態では揺れ骨が再現できていません。**
-`PhysicsAsset`である程度再現していますが不完全です。
+`PhysicsAsset`で揺らしていますが不完全です。
 
-ここでは`VRMSwingBone`を再現します。`AnimBlueprint`にノードを追加します。
-
-`SkeletalMesh`より、`AnimBlueprint`を作成します。
+まず`SkeletalMesh`より、`AnimBlueprint`を作成します。
 
 ||
 |-|
 |[![](./assets/images/01c_anim1.png)](../assets/images/01c_anim1.png)|
 
 
-ノードの最後に`VRMSprintBone`を追加し、対象キャラクタの`VRMMetaObject`をセットします。
+任意のアニメーションノードを作成し、最後に`VRMSprintBone`ノードを追加します。`VRMMetaObject`に対象キャラクタのメタデータをセットします。このメタデータはVRMインポート時に作成されています。
 
 ||
 |-|

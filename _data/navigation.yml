@@ -21,7 +21,7 @@ vrm4udocs:
         url: /VRM4U/01_animation/
   - title: "応用編 撮影"
     children:
-      - title: "全部入りフォトモードで見る"
+      - title: "全部入りフォトモードを使う"
         url: /VRM4U/02_shortcut/
       - title: "RayTraceを使う"
         url: /VRM4U/02_raytrace/
@@ -39,7 +39,7 @@ vrm4udocs:
         url: /VRM4U/03_mobile/
       #- title: "ランタイムロード"
       #  url: /VRM4U/quick-start/
-  - title: "応用編 モデルをVRMにして使う"
+  - title: "応用編 他形式からVRMにして使う"
     children:
       - title: "VRChat用アバターを使う"
         url: /VRM4U/04_vrchat/
