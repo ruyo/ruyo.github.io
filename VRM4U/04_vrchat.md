@@ -5,7 +5,6 @@ title: "VRChat用アバターをVRMにして読む"
 ||
 |-|
 |[![](./assets/images/04a_top.png)](../assets/images/04a_top.png)|
-||
 |モデル：[NecoMaid](https://booth.pm/ja/items/1843586) （fbx -> VRM変換）|
 |アニメーション：[ミライ小町](https://www.bandainamcostudios.com/works/miraikomachi/dlcguideline.html)（fbx -> humanoidリターゲット）|
 
@@ -14,7 +13,7 @@ title: "VRChat用アバターをVRMにして読む"
 ## UnityでVRM変換する
 
 ### 手軽な方法、Unityわからない人向け
-Unityにインポートし、そのままVRM出力するだけでOK
+Unityにインポートし、そのままVRM出力するだけでOK。
 Unity上でのプレビューが紫色でも問題ない。ただし揺れ骨は動かない。
 
 ### Unity詳しい人向け
