@@ -4,7 +4,7 @@ title: "グレイマンを置き換える"
 
 ||
 |-|
-|[![](./assets/images/03a_top.png)](../assets/images/03a_top.png)|
+|[![](./assets/images/small/03a_top.png)](../assets/images/03a_top.png)|
 |モデル：[ミライ小町](https://www.bandainamcostudios.com/works/miraikomachi/dlcguideline.html)|
 
 ----
@@ -22,7 +22,7 @@ title: "グレイマンを置き換える"
 
 ||
 |-|
-|[![](./assets/images/03a_import.png)](../assets/images/03a_import.png)|
+|[![](./assets/images/small/03a_import.png)](../assets/images/03a_import.png)|
 
 メッシュが3つ出力されます。それぞれ骨名の命名規則が異なります。
 
@@ -36,7 +36,7 @@ Humanoidの骨が以下のような名前になります。それぞれにIKBone
 
 |左：標準、中央：VRM命名規則、右：グレイマン命名規則|
 |-|
-|[![](./assets/images/03a_bone.png)](../assets/images/03a_bone.png)|
+|[![](./assets/images/small/03a_bone.png)](../assets/images/03a_bone.png)|
 
 ----
 ## VirtualBone、Socketを複製する
@@ -50,7 +50,7 @@ Socketはプレビューで位置が異なるように見える場合があり�
 
 ||
 |-|
-|[![](./assets/images/03a_bone2.png)](../assets/images/03a_bone2.png)|
+|[![](./assets/images/small/03a_bone2.png)](../assets/images/03a_bone2.png)|
 
 ----
 ## PhysicsAssetを複製する
@@ -63,7 +63,7 @@ Socketはプレビューで位置が異なるように見える場合があり�
 
 |元データ|VRMモデルにコピーしたもの|
 |-|-|
-|[![](./assets/images/03a_bone3.png)](../assets/images/03a_bone3.png)|[![](./assets/images/03a_bone4.png)](../assets/images/03a_bone4.png)|
+|[![](./assets/images/small/03a_bone3.png)](../assets/images/03a_bone3.png)|[![](./assets/images/small/03a_bone4.png)](../assets/images/03a_bone4.png)|
 
 
 ----
@@ -78,4 +78,4 @@ Socketはプレビューで位置が異なるように見える場合があり�
 
 ||
 |-|-|
-|[![](./assets/images/03a_sword.png)](../assets/images/03a_sword.png)|
+|[![](./assets/images/small/03a_sword.png)](../assets/images/03a_sword.png)|

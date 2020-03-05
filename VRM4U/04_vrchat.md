@@ -4,7 +4,7 @@ title: "VRChat用アバターをVRMにして読む"
 
 ||
 |-|
-|[![](./assets/images/04a_top.png)](../assets/images/04a_top.png)|
+|[![](./assets/images/small/04a_top.png)](../assets/images/04a_top.png)|
 |モデル：[NecoMaid](https://booth.pm/ja/items/1843586) （fbx -> VRM変換）|
 |アニメーション：[ミライ小町](https://www.bandainamcostudios.com/works/miraikomachi/dlcguideline.html)（fbx -> humanoidリターゲット）|
 
@@ -41,7 +41,7 @@ StencilMaskを利用する。目や眉毛が前髪より手前に描画される
 
 |||
 |-|-|
-|[![](./assets/images/04a_mask1.png)](../assets/images/04a_mask1.png)|[![](./assets/images/04a_mask2.png)](../assets/images/04a_mask2.png)|
+|[![](./assets/images/small/04a_mask1.png)](../assets/images/04a_mask1.png)|[![](./assets/images/small/04a_mask2.png)](../assets/images/04a_mask2.png)|
 
 ----
 
@@ -52,7 +52,7 @@ UniVRM（の中のUniGLTF）を拡張しUV2を利用します。
 
 |AngelRingなし|AngelRingあり|
 |-|-|
-|[![](./assets/images/04a_angel2.png)](../assets/images/04a_angel2.png)|[![](./assets/images/04a_angel3.png)](../assets/images/04a_angel3.png)|
+|[![](./assets/images/small/04a_angel2.png)](../assets/images/04a_angel2.png)|[![](./assets/images/small/04a_angel3.png)](../assets/images/04a_angel3.png)|
 |モデル：[幽狐族のお姉様](https://booth.pm/ja/items/1484117) （fbx -> VRM変換）|
 
 
@@ -74,6 +74,6 @@ Unityでソースをビルドすると何度かエラーが出ます。その都
 
 ||
 |-|
-|[![](./assets/images/04a_angel1.png)](../assets/images/04a_angel1.png)|
+|[![](./assets/images/small/04a_angel1.png)](../assets/images/04a_angel1.png)|
 
 厳密には再現されません。簡略化した処理を行っています。

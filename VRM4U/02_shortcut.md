@@ -4,7 +4,7 @@ title: "とにかく可愛く撮影したい"
 
 ||
 |-|
-|[![](./assets/images/02a_top.png)](../assets/images/02a_top.png)|
+|[![](./assets/images/small/02a_top.png)](../assets/images/02a_top.png)|
 |モデル：[ビビ](https://hub.vroid.com/characters/945152946522067123/models/1622417912888236740)|
 
 
@@ -25,7 +25,7 @@ title: "とにかく可愛く撮影したい"
 
 ||
 |-|
-|[![](./assets/images/02a_s1.png)](../assets/images/02a_s1.png)|
+|[![](./assets/images/small/02a_s1.png)](../assets/images/02a_s1.png)|
 
 ----
 
@@ -40,7 +40,7 @@ Playすると、被写界深度が浅く 画角が狭いカメラがセットさ
 
 ||
 |-|
-|[![](./assets/images/02a_s3.png)](../assets/images/02a_s3.png)|
+|[![](./assets/images/small/02a_s3.png)](../assets/images/02a_s3.png)|
 
 ----
 ## キャラクタ用ライト
@@ -54,11 +54,11 @@ Playすると、被写界深度が浅く 画角が狭いカメラがセットさ
 
 ||
 |-|
-|[![](./assets/images/02a_s2.png)](../assets/images/02a_s2.png)|
+|[![](./assets/images/small/02a_s2.png)](../assets/images/02a_s2.png)|
 
 |キャラライトON|キャラライトOFF|
 |-|-|
-|[![](./assets/images/02a_s5.png)](../assets/images/02a_s5.png)|[![](./assets/images/02a_s6.png)](../assets/images/02a_s6.png)|
+|[![](./assets/images/small/02a_s5.png)](../assets/images/02a_s5.png)|[![](./assets/images/small/02a_s6.png)](../assets/images/02a_s6.png)|
 
 ----
 ## シェーディング調整
@@ -84,7 +84,7 @@ Playすると、被写界深度が浅く 画角が狭いカメラがセットさ
 
 |左：標準、中央：ShaderToony=0.5、右：NormalToLight=0.2|
 |-|
-|[![](./assets/images/02a_s7.png)](../assets/images/02a_s7.png)|
+|[![](./assets/images/small/02a_s7.png)](../assets/images/02a_s7.png)|
 
 
 
@@ -106,5 +106,5 @@ Playすると、被写界深度が浅く 画角が狭いカメラがセットさ
 
 ||
 |-|
-|[![](./assets/images/02a_s4.png)](../assets/images/02a_s4.png)|
+|[![](./assets/images/small/02a_s4.png)](../assets/images/02a_s4.png)|
 

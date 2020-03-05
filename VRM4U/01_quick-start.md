@@ -22,14 +22,14 @@ title: "セットアップ"
 
 ||
 |-|
-|[![](./assets/images/010_top.png)](../assets/images/010_top.png)|
+|[![](./assets/images/small/010_top.png)](../assets/images/010_top.png)|
 
 
 最新版から自分の利用するUE4バージョンに合ったものをダウンロードし、
 
 ||
 |-|
-|[![](./assets/images/010_release.png)](../assets/images/010_release.png)|
+|[![](./assets/images/small/010_release.png)](../assets/images/010_release.png)|
 
 Pluginsに配置します。
 例えばUE4のプロジェクト名が「MyGame」である場合は、
@@ -51,7 +51,7 @@ Pluginsに配置します。
 
 ||
 |-|
-|[![](./assets/images/010_plugin.png)](../assets/images/010_plugin.png)|
+|[![](./assets/images/small/010_plugin.png)](../assets/images/010_plugin.png)|
 
 ----
 ## VRMモデルをインポートする
@@ -62,7 +62,7 @@ Pluginsに配置します。
 
 ||
 |-|
-|[![](./assets/images/010_import.png)](../assets/images/010_import.png)|
+|[![](./assets/images/small/010_import.png)](../assets/images/010_import.png)|
 
 インポート完了です。
 
@@ -71,5 +71,5 @@ Pluginsに配置します。
 
 ||
 |-|
-|[![](./assets/images/010_result.png)](../assets/images/010_result.png)|
+|[![](./assets/images/small/010_result.png)](../assets/images/010_result.png)|
 

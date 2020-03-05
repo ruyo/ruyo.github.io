@@ -4,7 +4,7 @@ title: "アニメーションをリターゲット、揺れ骨を再現する"
 
 ||
 |-|
-|[![](./assets/images/01c_top.png)](../assets/images/01c_top.png)|
+|[![](./assets/images/small/01c_top.png)](../assets/images/01c_top.png)|
 |モデル：[ヴィクトリア・ルービン](https://hub.vroid.com/characters/2792872861023597723/models/5013769147837660446)|
 
 
@@ -21,7 +21,7 @@ A-poseとT-poseの違いに注意ください。
 
 |正しい組み合わせ|間違った組み合わせ|
 |-|-|
-|[![](./assets/images/01c_reta.png)](../assets/images/01c_reta.png)|[![](./assets/images/01c_rett.png)](../assets/images/01c_rett.png)|
+|[![](./assets/images/small/01c_reta.png)](../assets/images/01c_reta.png)|[![](./assets/images/small/01c_rett.png)](../assets/images/01c_rett.png)|
 
 
 
@@ -31,20 +31,20 @@ VRM4Uアセットはポーズを切り替え可能です。
 
 ||
 |-|
-|[![](./assets/images/01c_ta.png)](../assets/images/01c_ta.png)|
+|[![](./assets/images/small/01c_ta.png)](../assets/images/01c_ta.png)|
 
 A-Tを切り替え可能です。
 
 |A-pose|T-pose|
 |-|-|
-|[![](./assets/images/01c_a.png)](../assets/images/01c_a.png)|[![](./assets/images/01c_t.png)](../assets/images/01c_t.png)|
+|[![](./assets/images/small/01c_a.png)](../assets/images/01c_a.png)|[![](./assets/images/small/01c_t.png)](../assets/images/01c_t.png)|
 
 
 補足です。標準のTPSテンプレートののグレイマンはリターゲット設定がありません。これを利用する場合は下図のように`Humanoid`を選択してください。（前述の公式ドキュメント前半と同じ手順です）
 
 ||
 |-|
-|[![](./assets/images/01c_gray1.png)](../assets/images/01c_gray1.png)|
+|[![](./assets/images/small/01c_gray1.png)](../assets/images/01c_gray1.png)|
 
 ----
 
@@ -59,26 +59,26 @@ A-Tを切り替え可能です。
 
 ||
 |-|
-|[![](./assets/images/01c_anim1.png)](../assets/images/01c_anim1.png)|
+|[![](./assets/images/small/01c_anim1.png)](../assets/images/01c_anim1.png)|
 
 
 任意のアニメーションノードを作成し、最後に`VRMSprintBone`ノードを追加します。`VRMMetaObject`に対象キャラクタのメタデータをセットします。このメタデータはVRMインポート時に作成されています。
 
 ||
 |-|
-|[![](./assets/images/01c_anim2.png)](../assets/images/01c_anim2.png)|
+|[![](./assets/images/small/01c_anim2.png)](../assets/images/01c_anim2.png)|
 
 `PhysicsAsset`による揺れ骨を無効化します。SkeletalMeshより`PhysicsAsset`の欄で `clear` を選択し空欄にします。
 
 ||
 |-|
-|[![](./assets/images/01c_anim3.png)](../assets/images/01c_anim3.png)|
+|[![](./assets/images/small/01c_anim3.png)](../assets/images/01c_anim3.png)|
 
 VRMの設定値で揺れました。
 
 ||
 |-|
-|[![](./assets/images/01c_anim4.png)](../assets/images/01c_anim4.png)|
+|[![](./assets/images/small/01c_anim4.png)](../assets/images/01c_anim4.png)|
 
 揺れが大きい場合は `VRMSprintBone` のパラメータで調節可能です。
 
@@ -89,5 +89,5 @@ UE4でアクションさせる場合は `StiffnessScale` を2～3あたりに設
 
 ||
 |-|
-|[![](./assets/images/01c_anim5.png)](../assets/images/01c_anim5.png)|
+|[![](./assets/images/small/01c_anim5.png)](../assets/images/01c_anim5.png)|
 

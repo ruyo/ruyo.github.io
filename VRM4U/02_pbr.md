@@ -4,7 +4,7 @@ title: "PBR背景と合わせる"
 
 ||
 |-|
-|[![](./assets/images/02c_top.png)](../assets/images/02c_top.png)|
+|[![](./assets/images/small/02c_top.png)](../assets/images/02c_top.png)|
 |モデル：[幽狐族のお姉様](https://booth.pm/ja/items/1484117) （fbx -> VRM変換）|
 |アニメーション：[ミライ小町](https://www.bandainamcostudios.com/works/miraikomachi/dlcguideline.html)（fbx -> humanoidリターゲット）|
 
@@ -28,7 +28,7 @@ PBR用のパラメータを有効化できます。Toon本来の雰囲気が損�
 
 |異方性反射、ラフネス（衣服）|サブサーフェス（髪、肌）|
 |-|-|
-|[![](./assets/images/02c_mat1.png)](../assets/images/02c_mat1.png)|[![](./assets/images/02c_mat2.png)](../assets/images/02c_mat2.png)|
+|[![](./assets/images/small/02c_mat1.png)](../assets/images/02c_mat1.png)|[![](./assets/images/small/02c_mat2.png)](../assets/images/02c_mat2.png)|
 
 ----
 ## ライティング
@@ -43,7 +43,7 @@ DirectionalLight/SkyLightの影響度合いや、テクスチャのガンマ補�
 
 |順光|逆光|暗め（ほぼSkyLight影響のみ）|
 |-|-|-|
-|[![](./assets/images/02c_day2.png)](../assets/images/02c_day2.png)|[![](./assets/images/02c_day3.png)](../assets/images/02c_day3.png)|[![](./assets/images/02c_day1.png)](../assets/images/02c_day1.png)|
+|[![](./assets/images/small/02c_day2.png)](../assets/images/02c_day2.png)|[![](./assets/images/small/02c_day3.png)](../assets/images/02c_day3.png)|[![](./assets/images/small/02c_day1.png)](../assets/images/02c_day1.png)|
 
 ----
 ## ポストプロセス
@@ -54,7 +54,7 @@ DirectionalLight/SkyLightの影響度合いや、テクスチャのガンマ補�
 
 |標準|色調整、レンス効果追加|
 |-|-|
-|[![](./assets/images/02c_light.png)](../assets/images/02c_light.png)|[![](./assets/images/02c_light2.png)](../assets/images/02c_light2.png)|
+|[![](./assets/images/small/02c_light.png)](../assets/images/02c_light.png)|[![](./assets/images/small/02c_light2.png)](../assets/images/02c_light2.png)|
 
 
 ----

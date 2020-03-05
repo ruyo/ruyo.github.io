@@ -13,7 +13,7 @@ title: "見た目を調整する"
 
 # {% include gallery id="gallery2" %}
 
-# [![](./assets/images/010_release.png)](../assets/images/010_release.png)
+# [![](./assets/images/small/010_release.png)](../assets/images/010_release.png)
 
 # [![](/assets/images/010_release.png)](/assets/images/010_release.png)
 
@@ -24,7 +24,7 @@ title: "見た目を調整する"
 
 ||
 |-|
-|[![](./assets/images/01b_top.png)](../assets/images/01b_top.png)|
+|[![](./assets/images/small/01b_top.png)](../assets/images/01b_top.png)|
 |モデル：[ヴィータ](https://hub.vroid.com/characters/6193066630030526355/models/3525604181073039892)|
 
 ----
@@ -35,14 +35,14 @@ title: "見た目を調整する"
 
 ||
 |-|
-|[![](./assets/images/01a_plugin.png)](../assets/images/01a_plugin.png)|
+|[![](./assets/images/small/01a_plugin.png)](../assets/images/01a_plugin.png)|
 
 
 `VRM4U Content/Util/Actor` から、`MToonAttachActor` を配置します。ドラッグ＆ドロップです。
 
 ||
 |-|
-|[![](./assets/images/01a_mtoon1.png)](../assets/images/01a_mtoon1.png)|
+|[![](./assets/images/small/01a_mtoon1.png)](../assets/images/01a_mtoon1.png)|
 
 
 下図の番号順にクリックしてください。
@@ -50,14 +50,14 @@ title: "見た目を調整する"
 
 ||
 |-|
-|[![](./assets/images/01a_click.png)](../assets/images/01a_click.png)|
+|[![](./assets/images/small/01a_click.png)](../assets/images/01a_click.png)|
 
 
 輪郭線とセルフシャドウが有効化されました。
 
 ||
 |-|
-|[![](./assets/images/01a_end.png)](../assets/images/01a_end.png)|
+|[![](./assets/images/small/01a_end.png)](../assets/images/01a_end.png)|
 
 
 ----
@@ -68,7 +68,7 @@ title: "見た目を調整する"
 
 ||
 |-|
-|[![](./assets/images/01a_sys1.png)](../assets/images/01a_sys1.png)|
+|[![](./assets/images/small/01a_sys1.png)](../assets/images/01a_sys1.png)|
 
 
 `details` よりパラメータを適当に変更してみましょう。
@@ -78,7 +78,7 @@ title: "見た目を調整する"
 
 |||
 |-|-|
-|[![](./assets/images/01a_syspanel.png)](../assets/images/01a_syspanel.png)|.................................................|
+|[![](./assets/images/small/01a_syspanel.png)](../assets/images/01a_syspanel.png)|.................................................|
 
 大まかにキャラクタ全体の見た目を調整することができます。
 シーンに応じて、明暗や色味、リアル寄り/アニメ寄り を調整することができます。
@@ -87,7 +87,7 @@ title: "見た目を調整する"
 
 ||
 |-|
-|[![](./assets/images/01a_sys2.png)](../assets/images/01a_sys2.png)|
+|[![](./assets/images/small/01a_sys2.png)](../assets/images/01a_sys2.png)|
 
 
 ----
@@ -101,27 +101,27 @@ title: "見た目を調整する"
 
 ||
 |-|
-|[![](./assets/images/01b_asset.png)](../assets/images/01b_asset.png)|
+|[![](./assets/images/small/01b_asset.png)](../assets/images/01b_asset.png)|
 
 
 下図の順にクリックします。LitチェックボックスをONにして、スポイトをクリック、キャラを選択します。その後 `ChangeParentMat` ボタンを押します。
 
 ||
 |-|
-|[![](./assets/images/01b_asset2.png)](../assets/images/01b_asset2.png)|
+|[![](./assets/images/small/01b_asset2.png)](../assets/images/01b_asset2.png)|
 
 
 マテリアルが切り替わり、ライトが反映されるようになります。
 
 ||
 |-|
-|[![](./assets/images/01b_light2.png)](../assets/images/01b_light2.png)|
+|[![](./assets/images/small/01b_light2.png)](../assets/images/01b_light2.png)|
 
 上記手順は、インポート時にも設定可能です。Litマテリアルでインポートしてください。
 
 ||
 |-|
-|[![](./assets/images/01b_import.png)](../assets/images/01b_import.png)|
+|[![](./assets/images/small/01b_import.png)](../assets/images/01b_import.png)|
 
 ----
 ## 見た目の調整 その先へ
