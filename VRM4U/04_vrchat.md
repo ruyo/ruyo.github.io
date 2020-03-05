@@ -24,27 +24,29 @@ DynamicBoneからVRMSpringBoneへの置き換え、BlendShapeの登録をして�
 ----
 ## マテリアルをセットアップする
 
-インポート時のマテリアル最適化をOFFにします。
+インポート時にマテリアル最適化をOFFにします。
+これは共通マテリアルをマージする機能です。今回はVRM用のマテリアルでないため、マージすると不都合が起きてしまいます。
 
 生成されたマテリアルより2箇所に同じテクスチャをセットすればOKです。影色テクスチャがある場合はそれを割り当てましょう。
-
-なお、影色は`MToonMaterialSystem`で一括適用できます。ある程度あたりを付けた後、マテリアル毎に設定すると良いでしょう。
-
-他の調整は基礎編や撮影編を参照ください。
 
 |||
 |-|-|
 |[![](./assets/images/small/04a_merge.png)](../assets/images/04a_merge.png)|[![](./assets/images/small/04a_tex.png)](../assets/images/04a_tex.png)|
 
 
+なお、影色は`MToonMaterialSystem`で一括適用できます。ある程度あたりを付けた後、マテリアル毎に設定すると良いでしょう。
+
+他の調整は基礎編や撮影編を参照ください。
+
 ----
 ## 目を前面に描画する（中級者向け）
 
-StencilMaskを利用する。目や眉毛が前髪より手前に描画される。
+目や眉毛を前髪より手前に描画します。
 
-マテリアル設定により、Stencilが2の場所について、透明度を任意に設定できるようになる。
+StencilMaskを有効化します。
+初期状態では、Stencilが2の場所について、透明度を任意に設定できるようになっています。マテリアルより有効化できます。
 
-|||
+|Stencilで目を手間にした例|Stencil値|
 |-|-|
 |[![](./assets/images/small/04a_mask1.png)](../assets/images/04a_mask1.png)|[![](./assets/images/small/04a_mask2.png)](../assets/images/04a_mask2.png)|
 
@@ -61,9 +63,6 @@ UniVRM（の中のUniGLTF）を拡張しUV2を利用します。
 |モデル：[幽狐族のお姉様](https://booth.pm/ja/items/1484117) （fbx -> VRM変換）|
 
 
-
-
-
 ### UniGLTFでUV2を出力する
 
 起点のソースは`MeshExporter.cs`です。
@@ -75,7 +74,7 @@ Unityでソースをビルドすると何度かエラーが出ます。その都
 
 ### テクスチャをセットする
 
-マテリアル設定により、テクスチャを設定すればOKです。
+マテリアル設定により、AngelRingのテクスチャを設定すればOKです。
 
 ||
 |-|
