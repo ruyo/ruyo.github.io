@@ -24,13 +24,18 @@ DynamicBoneからVRMSpringBoneへの置き換え、BlendShapeの登録をして�
 ----
 ## マテリアルをセットアップする
 
-前段でそのまま出力した人向け。
-インポート時のマテリアル最適化をOFFする。
-テクスチャを2箇所セットすればOK。
+インポート時のマテリアル最適化をOFFにします。
 
-影色はMToonMaterialSystemで一括適用できる。マテリアル毎に設定しても良い。
+生成されたマテリアルより2箇所に同じテクスチャをセットすればOKです。影色テクスチャがある場合はそれを割り当てましょう。
 
-他の調整は基礎編や撮影編へ。
+なお、影色は`MToonMaterialSystem`で一括適用できます。ある程度あたりを付けた後、マテリアル毎に設定すると良いでしょう。
+
+他の調整は基礎編や撮影編を参照ください。
+
+|||
+|-|-|
+|[![](./assets/images/small/04a_merge.png)](../assets/images/04a_merge.png)|[![](./assets/images/small/04a_tex.png)](../assets/images/04a_tex.png)|
+
 
 ----
 ## 目を前面に描画する（中級者向け）
