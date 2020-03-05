@@ -45,6 +45,6 @@ vrm4udocs:
         url: /VRM4U/04_vrchat/
   - title: "モデル・アニメーションデータ"
     children:
-      - title: "データ配布先"
+      - title: "データを扱っているところ"
         url: /VRM4U/10_link/
 
