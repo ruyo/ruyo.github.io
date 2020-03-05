@@ -39,12 +39,12 @@ vrm4udocs:
         url: /VRM4U/03_mobile/
       - title: "ランタイムロード"
         url: /VRM4U/03_runtime/
-  - title: "応用編 他形式からVRMにして使う"
+  - title: "応用編 他フォーマット形式からVRMにして使う"
     children:
       - title: "VRChat用アバターを使う"
         url: /VRM4U/04_vrchat/
+  - title: "モデル・アニメーションデータ"
+    children:
+      - title: "データ配布先"
+        url: /VRM4U/10_data/
 
-
-       
-
-       
