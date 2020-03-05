@@ -58,7 +58,7 @@ plugins:
 
 author:
   name   : "Harube"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/author.jpg"
   bio    : "ゲームプログラマ"
   links:
     - label: "Twitter"
@@ -124,7 +124,7 @@ twitter:
 #  username               : &facebook "----"
 #  app_id                 :
 #  publisher              :
-#og_image                 : "/assets/images/site-logo.png" # Open Graph/Twitter default site image
+og_image                 : "/assets/images/top_small.png" # Open Graph/Twitter default site image
 # For specifying social profiles, used in _includes/seo.html
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:

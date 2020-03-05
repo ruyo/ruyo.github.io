@@ -47,3 +47,10 @@ UniVRMを拡張し、UV2をエクスポートできるようにする。
 `TEXCOORD_0`のデータ作成時に`.uv`を参照している箇所があります。`TEXCOORD_1`向けには`.uv2`に書き換えます。
 
 Unityでソースをビルドすると何度かエラーが出ます。その都度 `TEXCOORD_1`の処理を追加すればOKです。
+
+### テクスチャをセットする
+
+||
+|-|
+|[![](./assets/images/04a_angel1.png)](../assets/images/04a_angel1.png)|
+
