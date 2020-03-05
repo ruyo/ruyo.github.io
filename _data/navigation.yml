@@ -39,7 +39,7 @@ vrm4udocs:
         url: /VRM4U/03_mobile/
       - title: "ランタイムロード"
         url: /VRM4U/03_runtime/
-  - title: "応用編 VRM以外のモデル
+  - title: "応用編 VRM以外のモデル"
     children:
       - title: "VRChat用アバターを使う"
         url: /VRM4U/04_vrchat/
