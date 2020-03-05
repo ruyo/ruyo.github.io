@@ -79,3 +79,4 @@ Socketはプレビューで位置が異なるように見える場合があり�
 ||
 |-|-|
 |[![](./assets/images/small/03a_sword.png)](../assets/images/03a_sword.png)|
+

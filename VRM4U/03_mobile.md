@@ -2,17 +2,48 @@
 title: "モバイル、VRで動かす"
 ---
 
+||
+|-|-|
+|[![](./assets/images/small/03b_top.png)](../assets/images/03b_top.png)|
+|モデル：[千駄ヶ谷 渋](https://hub.vroid.com/characters/675572020956181239/models/4479743608263344465)|
+
+
 
 ----
 
+## PCVRでの動作
+
+特別な設定は不要です。そのままVRPreviewで動作します。
+
+`deferred`と`forward`両方の描画方式にも対応しています。
+レイトレースも並用可能です。
+
 ## モバイル用インポートオプション
 
-骨数制限インポートオプションの話
+モバイル向けには、モデルインポート時に `Reduce bonemap <=75`のオプションを有効にします。
 
-## モバイルやVRで利用する
+1パーツ内の骨数が多くUE4で表示できないモデルを自動でリダクションします。制限内のモデルには影響ありません。
 
-そのままでOK
+||
+|-|-|
+|[![](./assets/images/small/03b_import.png)](../assets/images/03b_import.png)|
 
-`deferred`と`forward`どちらの描画方式にも対応している。
 
-クオリティオプションで、描画負荷を下げることができる。機能が減ったり色味が変わる。
+## エディタで確認する
+
+モバイルプレビューで確認可能です。PCと比べて多少色味が異なります。描画負荷軽減の影響です。
+
+||
+|-|-|
+|[![](./assets/images/small/03b_preview.png)](../assets/images/03b_preview.png)|
+
+
+## モバイル、OculusQuestで利用する
+
+そのまま転送でOKです。
+
+
+描画負荷が高い場合は、`MaterialQualityLevel`を下げることで負荷を下げることができます。シェーディングが簡略化され、色味が変わります。
+
+
+
