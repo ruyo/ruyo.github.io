@@ -9,17 +9,17 @@ title: "Toonを豪華にする"
 |アニメーション：[ミライ小町](https://www.bandainamcostudios.com/works/miraikomachi/dlcguideline.html)（fbx -> humanoidリターゲット）|
 
 ----
-## Toon AO とは
-
-AmbientOcculusionをToonの影色で塗ります。
+## Toon AO を使う
 
 「Toon AO」という単語はVRM4Uが勝手に名付けているだけのものです。一般名称ではありません。
 {: .notice--info}
 
-標準的なAOは黒色が合成されます。下図に差異を並べました。
+AmbientOcculusionをToonの影色で塗ります。（一般的にはAOは黒色が合成されます）
+
+下図に差異を並べました。
 なおレイトレースでAOの精度を高くしています。
 
-細かな凹凸に対して影色が入っています。AOの暗い箇所について閾値（`MToonMaterialSystem`で設定）をつけて影色を入れることができます。
+細かな凹凸に対して影色が入っています。AOで暗くなる箇所について閾値（`MToonMaterialSystem`で設定）をつけて影色を入れることができます。
 
 |AOなし|Toon AO|AO|
 |-|-|-|
@@ -48,9 +48,9 @@ AOを調整して影色の変化を見ましょう。
 ----
 ## 2号影の設定（テスト実装）
 
-マテリアルで2号影を指定することが出来ます。テスト実装となっています。
+マテリアルで2号影を指定することが出来ます。
 
-扱いにくいパラメータになっています。
+扱いにくいです。テスト実装です。
 なおカラーRGBAのうちの、Aで色相が変わります。
 {: .notice--info}
 
