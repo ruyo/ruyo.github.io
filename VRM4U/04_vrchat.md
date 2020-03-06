@@ -56,8 +56,9 @@ StencilMaskを有効化します。
 
 ## AngelRingを描画する（上級者向け）
 
-UV2でAngelRingを設定しているモデルのみ。
-UniVRM（の中のUniGLTF）を拡張しUV2を利用します。
+UTS2（ユニティちゃんトゥーンシェーダー2.0）を割り当ててAngelRingを設定しているモデルのみ。
+
+AngelRingの描画にはUV2の情報が必要です。UniVRM（の中のUniGLTF）を拡張し、UV2を持ったVRMを出力します。
 
 |AngelRingなし|AngelRingあり|
 |-|-|
@@ -70,7 +71,7 @@ UniVRM（の中のUniGLTF）を拡張しUV2を利用します。
 起点のソースは`MeshExporter.cs`です。
 
 キーワード`TEXCOORD_0`で検索し、その行の後ろに`TEXCOORD_1`として同じ処理を追加します。
-`TEXCOORD_0`のデータ作成時に`.uv`を参照している箇所があります。`TEXCOORD_1`向けには`.uv2`に書き換えます。
+`TEXCOORD_0`のデータ作成時には`.uv`を参照しています。`TEXCOORD_1`向けには`.uv2`を参照するよう書き換えます。
 
 Unityでソースをビルドすると何度かエラーが出ます。その都度 `TEXCOORD_1`の処理を追加すればOKです。
 

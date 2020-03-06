@@ -41,8 +41,10 @@ Humanoidの骨が以下のような名前になります。それぞれにIKBone
 ----
 ## VirtualBone、Socketを複製する
 
-`AssetUtil` を利用して、VirtualBoneとSocketを複製することができます。
-対象はHumanoid骨の子供になっているものだけです。
+`AssetUtil` を利用して、既存のSkeletalMeshからVirtualBoneとSocketを複製することができます。
+対象はHumanoid骨の子供だけです。
+
+VirtualBoneでIKを制御したり、Socketで武器をアタッチするためのものです。
 
 Socketはプレビューで位置が異なるように見える場合がありますが、問題ありません。初期姿勢がA-pose/T-poseで異なる影響です。同じポーズをとった時に座標が一致します。
 {: .notice--info}
@@ -55,8 +57,10 @@ Socketはプレビューで位置が異なるように見える場合があり�
 ----
 ## PhysicsAssetを複製する
 
-`AssetUtil` を利用して、PhysicsAssetを複製することができます。
-対象はHumanoid骨についているコリジョンのみです。
+`AssetUtil` を利用して、既存のSkeletalMeshからPhysicsAssetを複製することができます。
+対象はHumanoid骨についているコリジョンだけです。
+
+ラグドールの下地として有用です。
 
 コリジョンの回転は反映されません。骨の軸向きを補正できないためです。正確に当てはめる場合は手動で調整ください。
 {: .notice--info}
