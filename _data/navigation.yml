@@ -27,6 +27,8 @@ vrm4udocs:
         url: /VRM4U/02_raytrace/
       - title: "PBR背景と合わせる"
         url: /VRM4U/02_pbr/
+      - title: "Toonを豪華にする"
+        url: /VRM4U/02_toon/
       #- title: "マテリアル拡張機能"
       #  url: /VRM4U/quick-start/
       #- title: "嘘パース制御機能"

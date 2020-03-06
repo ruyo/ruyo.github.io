@@ -13,18 +13,20 @@ title: "VRChat用アバターをVRMにして読む"
 ## UnityでVRM変換する
 
 ### 手軽な方法、Unityわからない人向け
-Unityにインポートし、そのままVRM出力するだけでOK。
-Unity上でのプレビューが紫色でも問題ない。ただし揺れ骨は動かない。
+Unityにインポートし、そのままVRM出力すればOK。
+Unity上でのプレビューが紫色でも問題ありません。UE4側で設定します。ただし揺れ骨は動作しません。
 
 ### Unity詳しい人向け
 
-ある程度MToonマテリアルを組んでおくと後段の手順が減る。
-DynamicBoneからVRMSpringBoneへの置き換え、BlendShapeの登録をしておくとさらにスムーズ。
+一般的なVRMセットアップと同じです。
+ある程度MToonマテリアルを組んでおくと後段の手順が減ります。
+
+アニメーションも考慮するなら、DynamicBoneからVRMSpringBoneへの置き換え、BlendShapeの登録があるとスムーズです。
 
 ----
 ## マテリアルをセットアップする
 
-インポート時にマテリアル最適化をOFFにします。
+インポート時にMaterialTypeを`MToonLit`に、最適化をOFFにします。
 これは共通マテリアルをマージする機能です。今回はVRM用のマテリアルでないため、マージすると不都合が起きてしまいます。
 
 生成されたマテリアルより2箇所に同じテクスチャをセットすればOKです。影色テクスチャがある場合はそれを割り当てましょう。
@@ -46,7 +48,7 @@ DynamicBoneからVRMSpringBoneへの置き換え、BlendShapeの登録をして�
 StencilMaskを有効化します。
 初期状態では、Stencilが2の場所について、透明度を任意に設定できるようになっています。マテリアルより有効化できます。
 
-|Stencilで目を手間にした例|Stencil値|
+|Stencilで目を手前にした例|Stencil値|
 |-|-|
 |[![](./assets/images/small/04a_mask1.png)](../assets/images/04a_mask1.png)|[![](./assets/images/small/04a_mask2.png)](../assets/images/04a_mask2.png)|
 
