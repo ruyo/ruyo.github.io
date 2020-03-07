@@ -46,7 +46,7 @@ vrm4udocs:
       - title: "VRChat用アバターを使う"
         url: /VRM4U/04_vrchat/
       - title: "BVHアニメーションを使う"
-        url: /VRM4U/04_vrchat/
+        url: /VRM4U/04_bvh/
   - title: "モデル・アニメーションデータ"
     children:
       - title: "データを扱っているところ"
