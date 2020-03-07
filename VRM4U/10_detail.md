@@ -16,8 +16,8 @@ title: "VRM4Uの仕組みを知りたい"
 
 |トピック|内容|
 |-|-|
-|[UE4のUnlitでトゥーンレンダリングをキメる！](https://speakerdeck.com/ruyo/vrm4u-ue4)|色をコントロールする解説です|
-|[UE4でMToonを再現したい](https://speakerdeck.com/ruyo/vrm4u-wakaru/)|Toon実装へのアプローチです|
+|[UE4のUnlitでトゥーンレンダリングをキメる！](https://qiita.com/ruyo/items/28255f26725a6b6bd475)|色をコントロールする解説です|
+|[UE4でMToonを再現したい](https://qiita.com/ruyo/items/ec082d81dea3033e1500)|Toon実装へのアプローチです|
 |[Editor画面でもキャラを可愛くしたい](https://qiita.com/ruyo/items/4c9cc96ec1db5f2deebd)|キャラライトの解説です|
 
 ## 連絡先
