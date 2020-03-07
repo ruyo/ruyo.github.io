@@ -47,8 +47,10 @@ vrm4udocs:
         url: /VRM4U/04_vrchat/
       - title: "BVHアニメーションを使う"
         url: /VRM4U/04_bvh/
-  - title: "モデル・アニメーションデータ"
+  - title: "外部リンク"
     children:
-      - title: "データを扱っているところ"
+      - title: "モデル・アニメーション"
         url: /VRM4U/10_link/
+      - title: "VRM4Uの仕組みを知りたい"
+        url: /VRM4U/10_detail/
 
