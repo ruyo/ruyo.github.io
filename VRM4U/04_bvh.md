@@ -20,17 +20,17 @@ BVHファイルをコンテンツブラウザにドラッグ＆ドロップし�
 
 |||
 |-|-|
-|[![](./assets/images/small/04b_bvh1.png)](../assets/images/04a_bvh1.png)|[![](./assets/images/small/04b_bvh2.png)](../assets/images/04a_bvh2.png)|
+|[![](./assets/images/small/04b_bvh1.png)](../assets/images/04b_bvh1.png)|[![](./assets/images/small/04b_bvh2.png)](../assets/images/04b_bvh2.png)|
 
 リターゲットしたら完成です。HumanoidRIGは登録済です。
 
 ||
 |-|
-|[![](./assets/images/small/04b_ret.png)](../assets/images/04a_ret.png)|
+|[![](./assets/images/small/04b_ret.png)](../assets/images/04b_ret.png)|
 
 色々なアニメーションを適用してみましょう。
 
 ||
 |-|
-|[![](./assets/images/small/04b_side.png)](../assets/images/04a_side.png)|
+|[![](./assets/images/small/04b_side.png)](../assets/images/04b_side.png)|
 
