@@ -18,11 +18,15 @@ title: "BVHアニメーションファイルを読む"
 
 BVHファイルをコンテンツブラウザにドラッグ＆ドロップします。インポート時のオプションにて、scale を0.01にします。
 
+ファイルを続けて複数インポートする場合は「Skeleton」の項目にベースのSkeletonを設定しましょう。アセットが共通化されます。
+
 |||
 |-|-|
 |[![](./assets/images/small/04b_bvh1.png)](../assets/images/04b_bvh1.png)|[![](./assets/images/small/04b_bvh2.png)](../assets/images/04b_bvh2.png)|
 
-リターゲットしたら完成です。HumanoidRIGは登録済です。
+## BVHをリターゲットする
+
+標準のリターゲット手順で可能です。HumanoidRIGは登録済です。A-pose/T-pose切り替えも可能です。
 
 ||
 |-|
