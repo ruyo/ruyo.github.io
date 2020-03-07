@@ -1,5 +1,5 @@
 ---
-title: "とにかく可愛く撮影したい"
+title: "フォトモードを使う"
 ---
 
 ||
@@ -10,6 +10,11 @@ title: "とにかく可愛く撮影したい"
 
 ----
 
+## とにかく可愛く撮影したい
+
+撮影に特化した機能を利用します。扱えるものは、顔・ボディアニメーション、カメラ、ライティング、視線追従 です。
+
+----
 ## 簡易キャラクタセットアップ
 
 `BP_VrmCharacterBase`を配置します。
@@ -87,7 +92,22 @@ Playすると、被写界深度が浅く 画角が狭いカメラがセットさ
 |[![](./assets/images/small/02a_s7.png)](../assets/images/02a_s7.png)|
 
 
+----
+## 視線追従
+`/VRM4U/Util/Actor/Misc/LookAtPoint` を配置し`TargetActor` に対象のモデルをセットします。
 
+キャラクタが`LookAtPoint`を追うよう動きます。
+
+|||
+|-|-|
+|[![](./assets/images/small/02a_look2.png)](../assets/images/02a_look2.png)|[![](./assets/images/small/02a_look1.png)](../assets/images/02a_look1.png)|
+
+
+視線のみ動かすことも可能です。オプションを参照ください。
+
+||
+|-|
+|[![](./assets/images/small/02a_look3.png)](../assets/images/02a_look3.png)|
 
 ----
 ## 表情変更
@@ -95,16 +115,19 @@ Playすると、被写界深度が浅く 画角が狭いカメラがセットさ
 
 モーフ制御は2つ方法があります。
 
+標準的にはMorphGroupで制御するのが良いでしょう。特殊な表情や複数組み合わせたい場合はMorphTargetで制御可能です。
+
 |方法|用途|
 |-|-|
-|VRMのMorphGroup制御|標準的な表情|
-|個別のMorphTarget制御|VRM定義外の特殊な表情。「＞＜」(目が✕になるもの)や「照れ」など|
+|MorphGroup（VRM標準）|VRMに登録した表情|
+|MorphTarget（モデル固有）|上記+特殊な表情。「＞＜」(目が✕になるもの)や「照れ」など|
 
-**Play中のみ反映されます！ エディタ作業中は動作しません**
+**Play中のみ反映されます！ エディタ作業中は動作しません。**
 {: .notice--info}
 
 
 ||
 |-|
 |[![](./assets/images/small/02a_s4.png)](../assets/images/02a_s4.png)|
+
 

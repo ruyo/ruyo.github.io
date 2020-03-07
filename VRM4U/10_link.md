@@ -14,10 +14,10 @@ title: "VRM4Uで扱うと楽しいデータ"
 
 |リンク先|内容（VRM4Uで利用しやすいものだけ抜粋）|
 |-|-|
-|[VRoid Hub](https://hub.vroid.com/)|VRM|
+|[VRoid Hub](https://hub.vroid.com/)|VRM（ダウンロード可のみ）|
 |[BOOTH](https://booth.pm/ja/browse/3D%E3%83%A2%E3%83%87%E3%83%AB)|VRChatアバター、VRM、fbx|
-|[ニコニ立体](https://3d.nicovideo.jp/)|VRMモデル（VRMダウンロード可のみ）|
-|[ネオン](http://airtone-vr.com/news/hp0001/index00130000.html)|UE4用 モデル、アクションアニメーション|
+|[ニコニ立体](https://3d.nicovideo.jp/)|VRM（ダウンロード可のみ）|
+|[ネオン](http://airtone-vr.com/news/hp0001/index00130000.html)|UE4モデル、アクションアニメーション|
 |[ミライ小町](https://www.bandainamcostudios.com/works/miraikomachi/dlcguideline.html)|VRM、ダンスアニメーション（Unityプロジェクト同梱のfbx）|
 
 ----
