@@ -6,10 +6,12 @@ share: true
 #gallery:
 #  - url: /VRM4U/assets/images/010_top.png
 #    image_path: /VRM4U/assets/images/010_top.png
+#![](../assets/images/top_256x256.png){: .align-left}
+
 ---
 
 ## はじめに
-[![](../assets/images/top_256x256.png){: .align-left}](../assets/images/top_l.png)
+[![](../assets/images/top_256x256.png)](../assets/images/top_l.png)
 
  **VRM4U**はUE4で動作する、VRMファイルのインポーターです。
 
