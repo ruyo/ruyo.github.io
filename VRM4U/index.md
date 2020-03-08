@@ -10,11 +10,12 @@ share: true
 
 ---
 
-## はじめに
 [![](../assets/images/top_256x256.png)](../assets/images/top_l.png)
 
- **VRM4U**はUE4で動作する、VRMファイルのインポーターです。
+----
+## VRM4Uとは
 
+UE4で動作する、VRMファイルのインポーターです。
 
 
 [導入はこのリンクから](./01_quick-start/)
