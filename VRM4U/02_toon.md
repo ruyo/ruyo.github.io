@@ -9,9 +9,16 @@ title: "Toonを豪華にする"
 |アニメーション：[ミライ小町](https://www.bandainamcostudios.com/works/miraikomachi/dlcguideline.html)（fbx -> humanoidリターゲット）|
 
 ----
+## 効果は限定的です
+
+凹凸が複雑なモデルで、シンプルなライト環境 の場合に効果が出やすいです。
+
+指定した色のみ が適用されます。ライトが利用できないため表現に制限があります。
+
+----
 ## Toon AO を使う
 
-「Toon AO」という単語はVRM4Uが勝手に名付けているだけのものです。一般名称ではありません。
+「Toon AO」という単語はVRM4Uが勝手に名付けているものです。一般名称ではありません。
 {: .notice--info}
 
 AmbientOcculusionをToonの影色で塗ります。（一般的にはAOは黒色が合成されます）

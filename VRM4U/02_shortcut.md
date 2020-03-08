@@ -12,7 +12,7 @@ title: "フォトモードを使う"
 
 ## とにかく可愛く撮影したい
 
-撮影に特化した機能を利用します。扱えるものは、顔・ボディアニメーション、カメラ、ライティング、視線追従 です。
+撮影に特化した機能が多数あります。扱えるものは、顔・ボディアニメーション、カメラ、ライティング、視線追従 です。
 
 ----
 ## 簡易キャラクタセットアップ
@@ -100,7 +100,7 @@ Playすると、被写界深度が浅く 画角が狭いカメラがセットさ
 
 |||
 |-|-|
-|[![](./assets/images/small/02a_look2.png)](../assets/images/02a_look2.png)|[![](./assets/images/small/02a_look1.png)](../assets/images/02a_look1.png)|
+|[![](./assets/images/small/02a_look1.png)](../assets/images/02a_look1.png)|[![](./assets/images/small/02a_look2.png)](../assets/images/02a_look2.png)|
 
 
 視線のみ動かすことも可能です。オプションを参照ください。
