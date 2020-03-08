@@ -9,7 +9,10 @@ share: true
 ---
 
 ## はじめに
-**VRM4U**はUE4で動作する、VRMファイルのインポーターです。
+[![](../assets/images/top_small.png)](../assets/images/top_l.png)
+{: .align-left} **VRM4U**はUE4で動作する、VRMファイルのインポーターです。
+
+
 
 [導入はこのリンクから](./01_quick-start/)
 
