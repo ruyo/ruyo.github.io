@@ -37,6 +37,8 @@ vrm4udocs:
       #  url: /VRM4U/quick-start/
   - title: "応用編 ゲーム"
     children:
+      - title: "配布用EXEを作成する"
+        url: /VRM4U/03_exe/
       - title: "グレイマンを置き換える"
         url: /VRM4U/03_gray/
       - title: "モバイル・VRで動かす"
