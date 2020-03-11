@@ -20,12 +20,12 @@ title: "フォトモードを使う"
 利用したいアニメーションを `SKEL_VRoidSimple` にリターゲットします。
 モデルが見つからない場合は表示オプションを確認ください。以下のようにセットします。
 
-**`SKEL_VRoidSimple` です！  撮影対象のモデルではありません！  このアニメーションはすぐ次の解説で使います**
-{: .notice--info}
-
 ||
 |-|
 |[![](./assets/images/small/02a_retarget.png)](../assets/images/02a_retarget.png)|
+
+**`SKEL_VRoidSimple` です！  撮影対象のモデルではありません！  このアニメーションはすぐ次の解説で使います**
+{: .notice--info}
 
 このモデルにアニメーションが適用されていればOKです。
 
@@ -40,7 +40,7 @@ title: "フォトモードを使う"
 
 ||
 |-|
-|[![](./assets/images/small/02a_s1.png)](../assets/images/02a_s1.png)|
+|[![](./assets/images/small/02a_s0.png)](../assets/images/02a_s0.png)|
 
 これでキャラクタセットアップは完了です。
 基礎編で解説した輪郭線やシャドウ、揺れ骨が動作します。
