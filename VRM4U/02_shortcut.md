@@ -4,7 +4,7 @@ title: "フォトモードを使う"
 
 ||
 |-|
-|[![](./assets/images/small/02a_top.png)](../assets/images/02a_top.png)|
+|[![](./assets/images/small/02a_top2.png)](../assets/images/02a_top2.png)|
 |モデル：[ビビ](https://hub.vroid.com/characters/945152946522067123/models/1622417912888236740)|
 
 
