@@ -15,22 +15,42 @@ title: "フォトモードを使う"
 撮影に特化した機能が多数あります。扱えるものは、顔・ボディアニメーション、カメラ、ライティング、視線追従 です。
 
 ----
-## 簡易キャラクタセットアップ
+## アニメーションの準備
 
-`BP_VrmCharacterBase`を配置します。
-下図のように、`VrmAssetList`と`CustomAnimSequence`をセットします。
+利用したいアニメーションを `SKEL_VRoidSimple` にリターゲットします。
+モデルが見つからない場合は表示オプションを確認ください。以下のようにセットします。
 
-**`CustomAnimSequence`にはVRoidSimpleモデルにリターゲットしたアニメーションをセットします！ このモデルはプラグインに同梱されています。**
+**`SKEL_VRoidSimple` です！  撮影対象のモデルではありません！  このアニメーションはすぐ次の解説で使います**
 {: .notice--info}
 
-これでキャラクタセットアップは完了です。
-基礎編で解説した輪郭線やシャドウ、揺れ骨が動作します。
+||
+|-|
+|[![](./assets/images/small/02a_retarget.png)](../assets/images/02a_retarget.png)|
 
-キャラクタを変更したい場合は `VrmAssetList` を差し替えれば完了です。
+このモデルにアニメーションが適用されていればOKです。
+
+||
+|-|
+|[![](./assets/images/small/02a_retarget2.png)](../assets/images/02a_retarget2.png)|
+
+## 簡易キャラクタセットアップ
+
+`BP_VrmModelActor`を配置します。
+使いたいモデルを `VrmAssetList` に、使いたいアニメーション（さきほどリターゲットしたもの）を `RetargetSrcAnimation` にセットします。下図の赤丸の部分です。
 
 ||
 |-|
 |[![](./assets/images/small/02a_s1.png)](../assets/images/02a_s1.png)|
+
+これでキャラクタセットアップは完了です。
+基礎編で解説した輪郭線やシャドウ、揺れ骨が動作します。
+キャラクタを変更したい場合は `VrmAssetList` を差し替えれば完了です。
+
+Playするとアニメーションが適用されます。
+
+|Play中|
+|-|
+|[![](./assets/images/small/02a_play.png)](../assets/images/02a_play.png)|
 
 ----
 
@@ -112,22 +132,57 @@ Playすると、被写界深度が浅く 画角が狭いカメラがセットさ
 ----
 ## 表情変更
 `MorphControl` を配置し `TargetActor` に対象のモデルをセットします。
+「台座+キャラクタモデル」のActorが作られます。これで表情を制御します。
 
-モーフ制御は2つ方法があります。
-
-標準的にはMorphGroupで制御するのが良いでしょう。特殊な表情や複数組み合わせたい場合はMorphTargetで制御可能です。
-
-|方法|用途|
+|配置した状態。台座のみ|対象のモデルをスポイトで選択。台座+モデル|
 |-|-|
-|MorphGroup（VRM標準）|VRMに登録した表情|
-|MorphTarget（モデル固有）|上記+特殊な表情。「＞＜」(目が✕になるもの)や「照れ」など|
+|[![](./assets/images/small/02a_morph1.png)](../assets/images/02a_morph1.png)|[![](./assets/images/small/02a_morph2.png)](../assets/images/02a_morph2.png)|
 
-**Play中のみ反映されます！ エディタ作業中は動作しません。**
+
+`MorphControl`にMorphが一覧表示されます。適当にウェイトを変更してみましょう。コントローラの表情が変わります。
+
+Playすると`TargetActor`に適用されます。コントローラは非表示になります。
+
+|エディタでウェイト調整|Play中。コントローラは消える|
+|-|-|
+|[![](./assets/images/small/02a_morph3.png)](../assets/images/02a_morph3.png)|[![](./assets/images/small/02a_morph4.png)](../assets/images/02a_morph4.png)|
+
+
+
+リストは2つあり、制御方法が異なります。
+
+|リスト項目|制御できる表情パターン|
+|-|-|
+|VRMMorphWeight|VRMに登録した表情|
+|MorphWeight|上記+特殊な表情。「＞＜」(目が✕になるもの)や「照れ」など|
+
+
+**まばたき中に不具合が出る場合は`EnableBlink`をOFFにしてください**
 {: .notice--info}
 
+||
+|-|
+|[![](./assets/images/small/02a_moset.png)](../assets/images/02a_moset.png)|
+
+色々組み合わせて見ましょう。
 
 ||
 |-|
 |[![](./assets/images/small/02a_s4.png)](../assets/images/02a_s4.png)|
 
+
+----
+## 小物を追加する
+
+レベルに配置したモデルをキャラクタにアタッチします。
+`BP_VrmModelActor` を利用していれば、アタッチ時に追従する骨を選択できます。
+
+下図で取り付けたメガネは`J_Bip_C_Head`にアタッチしています。
+モデルの設定は「Movable」「コリジョンなし」です。
+
+||
+|-|
+|[![](./assets/images/small/02a_prop.png)](../assets/images/02a_prop.png)|
+
+モデルによって骨や設定を変更してください。
 
