@@ -154,7 +154,7 @@ Playすると`TargetActor`に適用されます。コントローラは非表示
 |リスト項目|制御できる表情パターン|
 |-|-|
 |VRMMorphWeight|VRMに登録した表情|
-|MorphWeight|上記+特殊な表情。「＞＜」(目が✕になるもの)や「照れ」など|
+|MorphWeight|全てのMorphパターン。「＞＜」(目が✕になるもの)や「照れ」など|
 
 
 **まばたき中に不具合が出る場合は`EnableBlink`をOFFにしてください**

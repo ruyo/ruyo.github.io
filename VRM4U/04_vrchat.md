@@ -41,6 +41,42 @@ Unity上でのプレビューが紫色でも問題ありません。UE4側で設
 他の調整は基礎編や撮影編を参照ください。
 
 ----
+## 揺れ骨をセットアップする（中級者向け）
+
+簡易的な機能です。突き抜け対処や微調整が必要な場合はUniVRMで設定ください。
+{: .notice--info}
+
+### 手順
+
+|揺れ骨をVrmMetaに書き込み|←で作成したVrmMetaを利用して揺らす|
+|-|-|
+|[![](./assets/images/small/04a_spr1.png)](../assets/images/04a_spr1.png)|[![](./assets/images/small/04a_spr2.png)](../assets/images/04a_spr2.png)|
+
+
+- 対象キャラクタのVrmMetaアセットを複製する。これが新揺れ骨データ。
+- 対象キャラクタを配置する。(SkeletalMeshActorとして)
+- BP_SpringBoneUtilを配置し、TargetActorに↑のActorをセット、TargetMetaに↑の複製したVrmMetaをセットする。
+- BoneToSpringParamに揺らしたい根本の骨名と、SpringParamID（後述。ひとまず0）を入力する。
+- `GenerateSpringParam`を押す。
+- `BP_VrmModelActor`を配置し、`CustomSpringParam`に上記のVrmMetaをセットする
+
+### 詳細
+
+揺れ方パラメータを`SpringParamSet`で設定可能です。初期値として0番に髪揺れ、1番にスカート揺れ を設定済です。
+どのパラメータを利用するかSpringParamIDで選択できます。任意に編集・追加可能です。
+
+揺れ骨で指定する骨は、子が一直線に繋がるものを選択ください。途中で枝分かれする場合は、奇妙な動きをすることがあります。
+
+手足コリジョンの大きさを`HumanoidCollisionRadius`で設定可能です。
+
+設定した揺れ骨はAnimBlueprintから確認可能です。
+
+|揺れ骨デバッグ表示|
+|-|
+|[![](./assets/images/small/04a_spr3.png)](../assets/images/04a_spr3.png)|
+
+
+----
 ## 目を前面に描画する（中級者向け）
 
 目や眉毛を前髪より手前に描画します。
