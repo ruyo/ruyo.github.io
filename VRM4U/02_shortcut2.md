@@ -17,9 +17,9 @@ title: "フォトモードTips"
 
 エディタ上で直接CineCameraを回転して調整することも可能です。
 
-|ロール回転|縦|
+|縦|ロール回転|
 |-|-|
-|[![](./assets/images/small/02g_roll.png)](../assets/images/02g_roll.png)|[![](./assets/images/small/02g_roll2.png)](../assets/images/02g_roll2.png)|
+|[![](./assets/images/small/02g_roll2.png)](../assets/images/02g_roll2.png)|[![](./assets/images/small/02g_roll.png)](../assets/images/02g_roll.png)|
 |モデル：[NecoMaid](https://booth.pm/ja/items/1843586) （fbx -> VRM変換）||
 
 ----
@@ -63,7 +63,20 @@ title: "フォトモードTips"
 
 
 ----
-## マッハバンドを消したい＆色が濃いのを修正したい
+## 背景色を指定したい
+
+ステンシルバッファを利用します。エディタ設定より有効化し、キャラクタモデルに任意のステンシル値(ひとまず１）を指定してください。
+`WindowTransparent`を配置し、実行中にキーボード「T」を押下すれば、Actorで指定した背景色で抜けます。
+
+Windowモードの場合は、Windowが透過モードになります。ただし透過を一度有効化すると実行中のCPU負荷が上がります。中断すると戻ります。
+{: .notice--info}
+
+||
+|-|
+|[![](./assets/images/small/02g_trans.png)](../assets/images/02g_trans.png)|
+
+----
+## マッハバンドを消したい＆色が濃いのを修正したい（上級者向け）
 
 |初期状態|対応後（色再現モードON）|
 |-|-|
@@ -71,14 +84,23 @@ title: "フォトモードTips"
 |モデル：[ノワ](https://booth.pm/ja/items/1859878)||
 
 色再現モードを利用することで、なだらかなグラデーションや淡い色の再現が可能です。
-`MToonMaterialSystem` より切り替えます。
+`MToonMaterialSystem`のToggleTonemapModeより切り替えます。
 画面全体の色合いが大きく変わるため、背景と合わせて確認ください。
+
+||
+|-|
+|[![](./assets/images/small/02g_color3.png)](../assets/images/02g_color3.png)|
 
 
 ### 色再現モードの細かい話
-VRM4Uのデフォルトマテリアルはマッハバンド（不連続なグラデーション）や色ズレが出やすいです。これはUE4標準のFilmicTonemapperを逆変換してテクスチャ原色を出しているためです。
+VRM4Uのデフォルトマテリアルはマッハバンド（不連続なグラデーション）や色ズレが出やすいです。これはUE4標準の **FilmicTonemapperを逆変換** してテクスチャ原色を出しているためです。
 
-色再現モードで行っていることは2つです。Tonemapモードの切り替えと、マテリアルの逆変換処理のスキップです。マッハバンドは解消されますが、画面全体の色合いが大きく変わります。
+それぞれのモードの違いをまとめます。
 
-さらに厳密に色再現したい場合はTonemapを無効化してください。ただしポストフィルタの効果（被写界深度やカラーグレーディングなど）がなくなります。無効化時は影響範囲を十分ご確認ください。
+|モード|VRM4Uへの影響|UE4への影響|
+|-|-|-|
+|標準|マッハバンド出やすい。色濃い。FilmicTonemapperを逆変換|問題なし。UE4標準|
+|色再現モード|マッハバンドは減る。色やや薄め|古いTonemapを利用|
+|Tonamep無効|ほぼオリジナル色|Tonamep無し。ポストフィルタが効かない。背景は合わない|
 
+各モードは一長一短あります。切り替える場合は十分ご確認ください。標準ままであればトラブルは起きません。
