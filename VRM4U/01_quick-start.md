@@ -57,19 +57,28 @@ Pluginsに配置します。
 ## VRMモデルをインポートする
 
 拡張子「.vrm」のファイルを、コンテンツブラウザにDrag&Dropしてください。
+オプションウインドウが出ます。モデルの利用ライセンスを確認ください。
 
-オプションウインドウが出ます。そのままimportをクリックしてください。
+[ライセンスの細かな分類はこちら](https://vrm.dev/univrm/components/univrm_meta/)
 
 ||
 |-|
 |[![](./assets/images/small/010_import.png)](../assets/images/010_import.png)|
 
-インポート完了です。
+importボタンを押せば完了です。
 
 **まだ完全な見た目にはなりません。 次の章を参照ください。**
 {: .notice--info}
+
 
 ||
 |-|
 |[![](./assets/images/small/010_result.png)](../assets/images/010_result.png)|
 
+ライセンスは後からVrmLisenceアセットより確認することが可能です。
+
+||
+|-|
+|[![](./assets/images/small/010_import2.png)](../assets/images/010_import2.png)|
+
+[次の章へ](../01_look/)

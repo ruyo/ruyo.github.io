@@ -48,14 +48,16 @@ Unity上でのプレビューが紫色でも問題ありません。UE4側で設
 
 ### 手順
 
+下図の赤丸を設定します。煩雑なテキストですが順を追って設定していきましょう。
+
 |揺れ骨をVrmMetaに書き込み|←で作成したVrmMetaを利用して揺らす|
 |-|-|
 |[![](./assets/images/small/04a_spr1.png)](../assets/images/04a_spr1.png)|[![](./assets/images/small/04a_spr2.png)](../assets/images/04a_spr2.png)|
 
 
-- 対象キャラクタのVrmMetaアセットを複製する。これが新揺れ骨データ。
-- 対象キャラクタを配置する。SkeletalMeshActorとして。
-- BP_SpringBoneUtilを配置し、TargetActorに↑のActorをセット、TargetMetaに↑の複製したVrmMetaをセットする。
+- 対象キャラクタのVrmMetaアセットを複製する。
+- 対象キャラクタのSkeletalMeshを配置する。
+- `BP_SpringBoneUtil`を配置し、TargetActorに↑のActorをセット、TargetMetaに↑の複製したVrmMetaをセットする。
 - BoneToSpringParamに揺らしたい根本の骨名と、SpringParamID（後述。ひとまず0）を入力する。
 - `GenerateSpringParam`を押す。
 - `BP_VrmModelActor`を配置し、`CustomSpringParam`に上記のVrmMetaをセットする
@@ -75,9 +77,9 @@ Unity上でのプレビューが紫色でも問題ありません。UE4側で設
 |-|
 |[![](./assets/images/small/04a_spr3.png)](../assets/images/04a_spr3.png)|
 
-揺れ骨が足りず突き抜けが発生する場合は`BoneToSpringParamAll` で設定し`GenerateTailBone`をONにしてください。書式は`BoneToSpringParam`と同じです。
+揺れ骨が足りず突き抜けが発生する場合は`BoneToSpringParam`の代わりに`BoneToSpringParamAll`に骨名を設定します。`GenerateTailBone`をONにすると揺れ骨先端に骨が追加されコリジョンが増えます。
 
-揺れ骨先端に骨が追加されコリジョンが増えます。あくまで簡易設定です。細かな設定はできません。
+あくまで簡易設定です。細かな設定はできません。
 
 ----
 ## 目を前面に描画する（中級者向け）
