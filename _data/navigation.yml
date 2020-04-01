@@ -23,6 +23,8 @@ vrm4udocs:
     children:
       - title: "フォトモードを使う"
         url: /VRM4U/02_shortcut/
+      - title: "フォトモードTips"
+        url: /VRM4U/02_shortcut2/
       - title: "RayTraceを使う"
         url: /VRM4U/02_raytrace/
       - title: "PBR背景と合わせる"
