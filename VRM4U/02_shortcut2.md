@@ -17,9 +17,9 @@ title: "フォトモードTips"
 
 エディタ上で直接CineCameraを回転して調整することも可能です。
 
-|縦|ロール回転|
+|ロール回転|縦|
 |-|-|
-|[![](./assets/images/small/02g_roll2.png)](../assets/images/02g_roll2.png)|[![](./assets/images/small/02g_roll.png)](../assets/images/02g_roll.png)|
+|[![](./assets/images/small/02g_roll.png)](../assets/images/02g_roll.png)|[![](./assets/images/small/02g_roll2.png)](../assets/images/02g_roll2.png)|
 |モデル：[NecoMaid](https://booth.pm/ja/items/1843586) （fbx -> VRM変換）||
 
 ----
