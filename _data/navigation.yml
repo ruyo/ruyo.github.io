@@ -31,11 +31,11 @@ vrm4udocs:
         url: /VRM4U/02_pbr/
       - title: "Toonを豪華にする"
         url: /VRM4U/02_toon/
+      - title: "ポーズを調整する"
+        url: /VRM4U/02_pose/
       - title: "嘘パースを使う"
         url: /VRM4U/02_pers/
       #- title: "マテリアル拡張機能"
-      #  url: /VRM4U/quick-start/
-      #- title: "嘘パース制御機能"
       #  url: /VRM4U/quick-start/
   - title: "応用編 ゲーム"
     children:
