@@ -7,6 +7,7 @@ title: "ポーズを調整する"
 |[![](./assets/images/small/02r_top.png)](../assets/images/02r_top.png)|
 |モデル：[アルグレイ](https://booth.pm/ja/items/1935911)（fbx -> VRM変換）|
 |アニメーション：T-poseからアセット生成+rig調整|
+
 ----
 ## 概要
 
