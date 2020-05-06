@@ -29,6 +29,8 @@ vrm4udocs:
         url: /VRM4U/02_raytrace/
       - title: "PBR背景と合わせる"
         url: /VRM4U/02_pbr/
+      - title: "もっとPBR背景と合わせる"
+        url: /VRM4U/02_sss/
       - title: "Toonを豪華にする"
         url: /VRM4U/02_toon/
       - title: "ポーズを調整する"
