@@ -38,19 +38,23 @@ UE4の描画に寄せたマテリアルで、リアリスティックな表現�
 |MaterialUtil|マテリアル調整のメインパネル|
 |MToonMaterialSystem|調整補助|
 
-レベルに最初から配置されているライト（DirectionalLight、SkyLight）をMovableにします。
 
 ----
-## SSS適用
+## SSSモード設定
 
+### ライト設定
+CharacterLightRigより、Key、Rimを無効化、AmbientBackを有効化するようチェックボックスを操作します。
+
+ボタン`ApplyRayTraceCastShadow`を押して影の設定を変更します。レイトレース用の設定ですが、とりあえず押せばOKです。
+
+レベルに最初から配置されているライト（DirectionalLight、SkyLight）をMovableにします。
+DirectionalLightのDynamicShadowDistanceMovableLightを3000に設定します。（近距離の影の精度が上がります。お好みで変更ください）
+
+### マテリアル切り替え
 対象のSkeletalMeshをレベルに配置し、MaterialUtilのTargetActorにセットします。
-ボタン `2 PBR SSSMode` をクリックするとマテリアルが切り替わり、シェーダ生成が始まります。完了まで待ちます。（生成途中で描画されているものは不完全です。完了まで待ちましょう）
+ボタン `2 PBR SSSMode` をクリックするとマテリアルが切り替わり、シェーダ生成が始まります。完了まで待ちます。（SkeletalMeshを配置しますが、見た目はBP_VrmModelActorで確認ください）
 
-CharacterLightRigより、Key、Rimを無効化、AmbientBackを有効化します。
-
-ボタン`ApplyRayTraceCastShadow`を押して影の設定を変更します。レイトレース時のみ影響ありますが、とりあえず押します。
-
-最後にVrmCharacterの`RefreshDummy`をONにします。ここまでの設定がキャラクタに正しく反映されます。チェックボックスは自動でOFFになります。
+最後にBP_VrmModelActorの`RefreshDummy`をONにします。ここまでの設定がキャラクタに正しく反映されます。チェックボックスは自動でOFFになります。
 
 ||
 |-|
