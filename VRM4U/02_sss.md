@@ -21,7 +21,7 @@ UE4の描画に寄せたマテリアルで、リアリスティックな表現�
 やっていることは「全てのマテリアルをSubsurfaceで作成して補助ライトを当てる」です。
 
 ----
-## 前準備
+## 下準備をする
 
 新規レベルにて、標準背景を選択します。
 
@@ -40,7 +40,7 @@ UE4の描画に寄せたマテリアルで、リアリスティックな表現�
 
 
 ----
-## SSSモード設定
+## SSSモードに切り替える
 
 ### ライト設定
 CharacterLightRigより、Key、Rimを無効化、AmbientBackを有効化するようチェックボックスを操作します。
@@ -50,11 +50,13 @@ CharacterLightRigより、Key、Rimを無効化、AmbientBackを有効化する�
 レベルに最初から配置されているライト（DirectionalLight、SkyLight）をMovableにします。
 DirectionalLightのDynamicShadowDistanceMovableLightを3000に設定します。（近距離の影の精度が上がります。お好みで変更ください）
 
-### マテリアル切り替え
-対象のSkeletalMeshをレベルに配置し、MaterialUtilのTargetActorにセットします。
+### マテリアル、影設定の切り替え
+対象のSkeletalMeshをレベルに配置します。
+MaterialUtilより、TargetSkeletalMeshActorに前述のSkeletalMeshをセットします。
 ボタン `2 PBR SSSMode` をクリックするとマテリアルが切り替わり、シェーダ生成が始まります。完了まで待ちます。（SkeletalMeshを配置しますが、見た目はBP_VrmModelActorで確認ください）
 
-最後にBP_VrmModelActorの`RefreshDummy`をONにします。ここまでの設定がキャラクタに正しく反映されます。チェックボックスは自動でOFFになります。
+BP_VrmModelActorより、DisableCustomShadowmapをONにします。
+最後に`RefreshDummy`をONにします。ここまでの設定がキャラクタに正しく反映されます。チェックボックスは自動でOFFになります。
 
 ||
 |-|
@@ -62,7 +64,7 @@ DirectionalLightのDynamicShadowDistanceMovableLightを3000に設定します。
 
 ----
 
-## 調整 基本編
+## 調整する 基本編
 
 ### 露出の固定
 MaterialSystemより`OverrideExposure`をONにします。調整時に画面全体の明るさが変わってしまうのを抑えます。まずはONで、調整後に好みによってOFFにしましょう。
@@ -76,7 +78,7 @@ CharacterLightRigより、AmbientBackLightScaleを変更します。陰側をラ
 
 
 ----
-## 調整 応用編
+## 調整する 応用編
 
 ### 色味 個別調整
 マテリアルごとにTexturePow, TextureSaturate, SubsurfaceColorを変更できます。
