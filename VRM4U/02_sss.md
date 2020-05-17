@@ -60,13 +60,13 @@ CharacterLightRigより、Key、Rimを無効化、AmbientBackを有効化する�
 |-|
 |[![](./assets/images/small/02s_light1.png)](../assets/images/02s_light1.png)|
 
-レベルに最初から配置されているライト（DirectionalLight、SkyLight）をMovableにします。
+初期配置されているライト（DirectionalLight、SkyLight）をMovableにします。
 DirectionalLightのDynamicShadowDistanceMovableLightを3000に設定します。（近距離の影の精度が上がります。お好みで変更ください）
 
 ### マテリアルの切り替え
 対象のSkeletalMeshをレベルに配置します。
-MaterialUtilより、TargetSkeletalMeshActorに前述のSkeletalMeshをセットします。
-ボタン `2 PBR SSSMode` をクリックするとマテリアルが切り替わり、シェーダ生成が始まります。完了まで待ちます。（SkeletalMeshを配置しますが、見た目はBP_VrmModelActorで確認ください）
+MaterialUtilより、TargetSkeletalMeshActorにそれをセットします。
+ボタン `2 PBR SSSMode` をクリックするとマテリアルが切り替わります。
 
 ||
 |-|
@@ -77,11 +77,12 @@ BP_VrmModelActorより、DisableCustomShadowmapをONにします。
 
 
 ----
-## 調整する 基本編
+## 調整する 基礎編
 
 ### 露出の固定
-MaterialSystemより`OverrideExposure`をONにします。調整時に画面全体の明るさが変わってしまうのを抑えます。まずはONで、調整後に好みによってOFFにしましょう。
-値は背景の明るさに応じて任意に設定ください。ここでは-0.5としています。
+MaterialSystemより`OverrideExposure`をONにします。調整後に好みによってOFFにしましょう。
+
+調整中に画面全体の明るさが変わってしまうのを抑えます。
 
 ||
 |-|
@@ -91,21 +92,22 @@ MaterialSystemより`OverrideExposure`をONにします。調整時に画面全�
 ### 色味
 MaterialSystemより以下の項目を変更して色味を調整します。
 また肌の色味が合わない場合は、MaterialUtilより、SubsurfaceColorで操作します。
-が、これらのパラメータのみで意図した色味にすることは難しいです。ここではやや薄め/暗めに調整し、キャラライトやポストプロセスで補正するのが良いでしょう。
+
+ここではやや薄め/暗めに調整しましょう。
+後でキャラライトやポストプロセスで補正します。
 
 ||
 |-|
 |[![](./assets/images/small/02s_texpow.png)](../assets/images/02s_texpow.png)|
 
 ### ライト
-CharacterLightRigより、AmbientBackLightScaleを変更します。陰側をライトで照らすことができます。ある程度明るさのバランスが取れたらrimを有効化し、輪郭を強調しましょう。
+CharacterLightRigより、AmbientBackLightScaleを変更します。ある程度明るさのバランスが取れたらrimを有効化し、輪郭を強調しましょう。
 
 ### カラーグレーディング
 
-必要です！ 軽く調整するだけで大きく効果が出ます。のでパラメータを触ってみましょう。
+軽く調整するだけで大きく効果が出ます。のでパラメータを触ってみましょう。
 
 [こちらのオンラインラーニングコース](https://www.unrealengine.com/ja/onlinelearning-courses/creating-photoreal-cinematics-with-quixel)が参考になります。
-ライト調整のみで絵を作るのは難しいです。
 
 
 ----
@@ -113,13 +115,10 @@ CharacterLightRigより、AmbientBackLightScaleを変更します。陰側をラ
 
 ### 色味・ラフネス個別調整
 前述の色味パラメータは、マテリアル毎に変更できます。
-特にSubsurfaceColorの初期値は肌用に調整してあります。手間でなければ個別に調整するのが良いでしょう。
 同時にラフネスを調整してスペキュラを出すこともできます。
 
 ### ライト配置
-SSSの特性上、やや逆光だと雰囲気が出やすいです。合わせてkeyを有効化して顔を照らします。
-
-またCharacterLightRigCustomを利用すると、キャラクタ用ライトを自由に追加可能です。慣れたら全てCustom版で構成した方が都合良いでしょう。
+CharacterLightRigCustomを利用すると、キャラクタ用ライトを自由に追加可能です。慣れたらCustom版で構成しましょう。
 
 BP_Bloomを利用すると、ハイライト部分に色味を残したBloomがかかります。お好みでご利用ください。
 
@@ -127,13 +126,14 @@ BP_Bloomを利用すると、ハイライト部分に色味を残したBloomが�
 |-|-|
 |[![](./assets/images/small/02s_light.png)](../assets/images/02s_light.png)|[![](./assets/images/small/02s_custom.png)](../assets/images/02s_custom.png)|
 
+UE4の機能をフル活用しましょう！
 
 ----
-## どうしても思ったような絵にならないんだけど？
+## どうしても絵がまとまらないんだけど？
 
-この調整は難しいです。元素材がToon向けであり、周囲のライティングや元素材の造形・テクスチャによる変化幅が大きいためです。（全てがPBR素材であれば、このような問題は起きにくいです）
+この調整は難しいです。元素材がToon向けであり、周囲のライティングや元素材の造形・テクスチャによる変化幅が大きいためです。元素材がPBR向けであれば、このような問題は起きにくいです。
 
-私個人の経験的には「顔を補助ライトで照らして中間的な明るさにまとめ、最後にカラーグレーディングで締める」と上手くまとまるようです。
+私個人の経験則ですが「顔を補助ライトで照らして中間的な明るさにまとめ、最後にカラーグレーディングで締める」と上手くまとまるようです。
 
 ||
 |-|
