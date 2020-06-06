@@ -102,7 +102,6 @@ defaults:
     values:
       layout: single
       author_profile: false
-      permalink: /:title/
       comments: true
       share: false
       toc: true
