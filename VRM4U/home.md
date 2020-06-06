@@ -1,6 +1,6 @@
 ---
 title: "VRM4U"
-permalink:
+permalink: /
 share: true
 
 ---
