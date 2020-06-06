@@ -48,6 +48,8 @@
 {%- endif -%}
 
 <title>{{ seo_title | default: site.title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
+<meta name="google-site-verification" content="ksjCt8RZRTCVl5QiB8_txnGuznJ__vWf1ELv-ZhyRZk" />
+
 <meta name="description" content="{{ seo_description }}">
 
 {% if author.name %}
