@@ -21,7 +21,7 @@ UE4で動作する、VRMファイルのインポーターです。
 |||
 |----|----|
 |![](/assets/images/03.png)|![](/assets/images/04.png)|
-|![](/assets/images/01a.png)|![](/assets/images/01_b.png)|
+|![](/assets/images/01_a.png)|![](/assets/images/01_b.png)|
 
 
  - VRMファイルをインポートできます。
