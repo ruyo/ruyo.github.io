@@ -116,6 +116,8 @@ tag_archive:
   type: liquid
   path: /tags/
 
+# SEO Related
+google_site_verification: ksjCt8RZRTCVl5QiB8_txnGuznJ__vWf1ELv-ZhyRZk
 
   # Social Sharing
 twitter:
