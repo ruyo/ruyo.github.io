@@ -13,10 +13,18 @@ GitHubアカウントとEpicGamesアカウントの紐付けが必要です。
 
 404エラーページが出る場合は紐付けが必要です。[こちらのリンク](https://www.unrealengine.com/ja/blog/updated-authentication-process-for-connecting-epic-github-accounts)よりGitHubアカウントの紐付けを行ってください。
 
+ブラウザからの操作とメールによる確認で紐付け完了です。ユーザ情報にEpicのアイコンが表示されていることを確認ください。
+
+||
+|-|
+|[![](./assets/images/small/03e_con.png)](../assets/images/03e_con.png)|
+
 
 ||
 |-|
 |[![](./assets/images/small/03e_exe.png)](../assets/images/03e_exe.png)|
+
+
 
 導入は従来のプラグイン同様 `MyProject/Plugins/VRM4U` となるよう配置すれば完了です。
 
