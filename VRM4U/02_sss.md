@@ -68,7 +68,7 @@ DirectionalLight
 
 SkyLight
 - LowerHemisphereIsSolidColor を OFF
-  - 下方が環境光が照らされます。
+  - 下方が環境光で照らされます。
 
 設定したらライトをベイクしましょう。エディタ上部のアイコン「Build」の▼をクリックして、「BuildLightingOnly」で完了です。
 ベイクしないと、PlayIn中のみ古いライトが参照されます。
