@@ -31,15 +31,25 @@ title: "フォトモードTips"
 |モデル：[ヴィクトリア・ルービン](https://hub.vroid.com/characters/2792872861023597723/models/5013769147837660446)||
 
 
-マテリアルパラメータで制御可能です。`mtoon_ReceiveShadowRate`を0にしてください。
+複数の対処方法があります。
+
+### その１ マテリアルパラメータで制御
+`mtoon_ReceiveShadowRate`を0にしてください。
 これはMToonの機能です。
 
 ||
 |-|
 |[![](./assets/images/small/02g_shadow3.png)](../assets/images/02g_shadow3.png)|
 
-またセルフシャドウ自体を無効化して対応することも可能です。
+### その２ 
 
+シャドウ自体を無効化することでも対応可能です。この設定は描画プリミティブ毎のON/OFFのため、モデル構成によっては上手く機能しません。
+
+またインポート時にPrimitiveOptimizeが有効化されている場合はプリミティブがマージされてしまい、細かな制御ができないことがあります。
+
+||
+|-|
+|[![](./assets/images/small/02g_shadowmat.png)](../assets/images/02g_shadowmat.png)|
 
 ----
 ## 顔色が悪い/暗いのを修正したい
@@ -61,6 +71,33 @@ title: "フォトモードTips"
 レベル上にPostProcessVolumeが配置されていることを確認してから、
 `MToonMaterialSystem`よりSSAOを弱めてください。全体の明るさも調整可能です。
 
+----
+## 顔の陰影を消したい
+
+|SSSマテリアル初期状態|対応後|
+|-|-|
+|[![](./assets/images/small/02g_norm1.png)](../assets/images/02g_norm1.png)|[![](./assets/images/small/02g_norm2.png)](../assets/images/02g_norm2.png)|
+|モデル：[NecoMaid PREMIUM](https://booth.pm/ja/items/2147201)||
+
+ライトによる陰影の影響です。LitやSSSモードで陰影がついた影響です。Toonでは境界がクッキリしており問題が起きにくいです。
+
+補助ライトを当てて陰影を消すのが正攻法です。まずはライトで補正しましょう。
+対応が難しい場合は法線補正を利用します。
+
+顔のマテリアルより`NormalToCameraMat`か`NormalToLightMat`を変更します。
+
+||
+|-|
+|[![](./assets/images/small/02g_norm3.png)](../assets/images/02g_norm3.png)|
+
+`MToonMaterialSystem`にも同じ項目があり、こちらはキャラクタ全体に適用されます。
+
+
+|初期状態の法線|全体を法線補正したもの|
+|-|-|
+|[![](./assets/images/small/02g_normall1.png)](../assets/images/02g_normall1.png)|[![](./assets/images/small/02g_normall2.png)](../assets/images/02g_normall2.png)|
+
+法線向きを変える都合上、MatCapやリムライトの入り方が変わってしまいます。十分確認しましょう。
 
 ----
 ## 背景色を指定したい
