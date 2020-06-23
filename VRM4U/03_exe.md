@@ -7,7 +7,7 @@ title: "配布用EXEを作成する"
 GitHubアカウントとEpicGamesアカウントの紐付けが必要です。
 {: .notice--info}
 
-C++プロジェクトにする必要があります。Blueprintプロジェクトの場合は、C++ファイルを追加してC++プロジェクトにします。後述します。
+C++プロジェクトにする必要があります。変換の際はデータをバックアップしてから後述の手順を辿ってください。
 {: .notice--info}
 
 ## EXE作成に必要なファイルをダウンロードする
@@ -50,8 +50,8 @@ VisualStudioによるビルド環境が必要です。セットアップ済で�
 プロジェクトのフルパス内に日本語があるとEXE化できません。EpicGamesLauncherでプロジェクトをCloneするか、エクスプローラでプロジェクトフォルダごと移動してください。
 
 エディタが起動しない場合は、以下のキャッシュフォルダを削除してから再度起動してください。
-「MyProject/Intermediate」
-「MyProject/Plugins/VRM4U/Intermediate」
+- 「MyProject/Intermediate」
+- 「MyProject/Plugins/VRM4U/Intermediate」
 
 複数のUE4バージョンを行き来したり、プロジェクトをBP→CPPに切り替えた直後にエラーが起きやすいです。
 
