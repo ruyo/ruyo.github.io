@@ -32,7 +32,7 @@ UE4のサブサーフェスを利用したマテリアルです。素直にラ�
 ----
 ## 下準備をする
 
-新規レベルにて、標準背景を選択します。
+新規にレベルを作成し、標準背景(default)を選択します。
 
 ライトやポストプロセスボリュームの些細な違いで調整幅が大きく変わります。
 まずは標準背景で特性を掴むことをオススメします。
@@ -48,19 +48,41 @@ UE4のサブサーフェスを利用したマテリアルです。素直にラ�
 |MToonMaterialSystem|調整補助|
 |BP_Bloom|色味が強い特殊なBloom。お好みで|
 
+----
+## 背景ライトを整える
+
+ライト設定は重要です！ SSSマテリアルを利用する場合は、必ず以下の項目を確認しましょう。
+{: .notice--info}
+
+手順1.
+初期配置されているDirectionalLight、SkyLightをMovableにする。
+
+手順2.
+各ライトを以下にセットアップする。
+
+DirectionalLight
+- CastRaytracingShadows を OFF
+  - 陰影を和らげます。レイトレース時のみ影響します。
+- DynamicShadowDistanceMovableLight を 3000に設定
+  - 近距離の影の精度が上がります。
+
+SkyLight
+- LowerHemisphereIsSolidColor を OFF
+  - 下方が環境光が照らされます。
+
+設定したらライトをベイクしましょう。エディタ上部のアイコン「Build」の▼をクリックして、「BuildLightingOnly」で完了です。
+ベイクしないと、PlayIn中のみ古いライトが参照されます。
 
 ----
 ## SSSモードに切り替える
 
-### ライトを設定する
+### キャラクタライトを設定する
 CharacterLightRigより、Key、Rimを無効化、AmbientBackを有効化するようチェックボックスを操作します。
 
 ||
 |-|
 |[![](./assets/images/small/02s_light1.png)](../assets/images/02s_light1.png)|
 
-初期配置されているライト（DirectionalLight、SkyLight）をMovableにします。
-DirectionalLightのDynamicShadowDistanceMovableLightを3000に設定します。（近距離の影の精度が上がります。お好みで変更ください）
 
 ### マテリアルの切り替え
 対象のSkeletalMeshをレベルに配置します。
@@ -73,7 +95,6 @@ MaterialUtilより、TargetSkeletalMeshActorにそれをセットします。
 
 BP_VrmModelActorより、DisableCustomShadowmapをONにします。
 最後に`RefreshDummy`をONにします。ここまでの設定がキャラクタに正しく反映されます。チェックボックスは自動でOFFになります。
-
 
 ----
 ## 調整する 基礎編
@@ -119,11 +140,13 @@ CharacterLightRigより、AmbientBackLightScaleを変更します。ある程度
 ### ライト配置
 CharacterLightRigCustomを利用すると、キャラクタ用ライトを自由に追加可能です。慣れたらCustom版で構成しましょう。
 
-BP_Bloomを利用すると、ハイライト部分に色味を残したBloomがかかります。お好みでご利用ください。
-
 |全てCustomで調整した様子。ライト4灯||
 |-|-|
 |[![](./assets/images/small/02s_light.png)](../assets/images/02s_light.png)|[![](./assets/images/small/02s_custom.png)](../assets/images/02s_custom.png)|
+
+BP_Bloomを利用すると、ハイライト部分に色味を残したBloomがかかり鮮やかになります。お好みでご利用ください。
+
+BP_ColorGradationを利用すると、画面全体にカラーフィルタをかけることができます。上部2隅に色を薄く乗せると雰囲気が出ます。
 
 これらに加えてUE4の機能をフル活用しましょう！
 
