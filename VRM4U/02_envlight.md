@@ -24,7 +24,7 @@ title: "ライト環境に合わせる"
 ||
 |-|
 |[![](./assets/images/small/02e_top.png)](../assets/images/02e_top.png)|
-|モデル：[FORTUNA](https://booth.pm/ja/items/1590375)|
+|モデル：[FORTUNA](https://booth.pm/ja/items/1590375) MToonLitモード|
 |背景：ArchVizInterior (照明1000lux)|
 
 
@@ -36,7 +36,7 @@ UE4のライト環境は多種多様であり、キャラクタが極端に「�
 ----
 ## 先に要点
 
-MaterialSystemより、`PreLightScale`　と　`PostLightScale` を組合せて補正します。
+MaterialSystemより、`PreLightScale` と `PostLightScale` を組合せて補正します。
 
 ||
 |-|
@@ -60,6 +60,12 @@ MaterialSystemより、`PreLightScale`　と　`PostLightScale` を組合せて�
 |3.14 lux|補正必要なし|新規作成Defaultテンプレート|
 |3.14～10,000 lux 以上|Preを下げてPostを上げる|現実のライトや太陽光を再現した環境|
 
+||
+|-|
+|[![](./assets/images/small/02e_out.png)](../assets/images/02e_out.png)|
+|モデル：[NecoMaid PREMIUM](https://booth.pm/ja/items/2147201) SSSモード|
+|背景：Automotive Beach Scene (照明11lux)|
+
 
 ----
 ## 補正の詳しい話
@@ -74,3 +80,4 @@ VRM4UではFilmicTonemapperを逆変換しています。逆変換処理には�
 対応としてMaterialSystemには彩度やテクスチャガンマ補正機能がありますので、合わせて利用ください。
 
 `PostLightScale`に初期値として0.5を利用しています。これは原色テクスチャをAlbedoとして違和感なく利用するための補正値です。大抵うまく動きますが、適宜調整して構いません。
+
