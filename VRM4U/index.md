@@ -1,7 +1,7 @@
 ---
 title: "VRM4U"
 share: true
-
+toc: false
 ---
 
 [![](../assets/images/top_256x256.png)](../assets/images/top_l.png)
@@ -23,15 +23,13 @@ UE4で動作する、VRMファイルのインポーターです。
 |![](/assets/images/03.png)|![](/assets/images/04.png)|
 |![](/assets/images/01_a.png)|![](/assets/images/01_b.png)|
 
-雰囲気を知りたい方は、[簡易的ですがYoutubeの動画](https://www.youtube.com/channel/UC9Xuvwk9YLisxtNbTAjryDQ)や ハッシュタグ[#VRM4U](https://twitter.com/hashtag/VRM4U)も参考にどうぞ。
-
  - VRMファイルをインポートできます。
- - 便利なアニメーション機能
+ - アニメーション
      - 手軽にリターゲット可能です。A-pose/T-pose、RIGが生成されます。
      - 揺れ骨にVRMSpringBoneを利用可能です。PhysicsAssetも選択できます。
      - 顔アニメ（Morphtarget・BlendShapeGroup）も利用可能です。
      - 簡易的なポーズ調整機能があります。
- - 複数マテリアルを切り替え可能
+ - マテリアル
      - MToonを再現したマテリアル。影色の指定や、アウトラインの色・太さ調整、MatCapなどが全て適用されます。
      - PBR背景に合わせて描画モードを切り替えできます。馴染ませるための拡張機能があります。
      - 既存のポストフィルタも同時に利用できます。レイトレースも併用可能です。
@@ -42,4 +40,7 @@ UE4で動作する、VRMファイルのインポーターです。
      - シンプルな機能で構成しているため破綻しません。
      - 描画はForward/Deferred両方に対応しています。
 
+----
+## 雰囲気を知りたい
 
+[簡易的ですがYoutubeの動画](https://www.youtube.com/channel/UC9Xuvwk9YLisxtNbTAjryDQ)や、ハッシュタグ[#VRM4U](https://twitter.com/hashtag/VRM4U)を参考にどうぞ
