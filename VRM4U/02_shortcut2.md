@@ -41,9 +41,10 @@ title: "フォトモードTips"
 |-|
 |[![](./assets/images/small/02g_shadow3.png)](../assets/images/02g_shadow3.png)|
 
-### その２ 
+### その２ 対象パーツのシャドウを無効化する
 
-シャドウ自体を無効化することでも対応可能です。この設定は描画プリミティブ毎のON/OFFのため、モデル構成によっては上手く機能しません。
+描画プリミティブ毎にON/OFFします。モデル構成によっては上手く機能しません。
+これはUE4の機能です。
 
 またインポート時にPrimitiveOptimizeが有効化されている場合はプリミティブがマージされてしまい、細かな制御ができないことがあります。
 
@@ -79,9 +80,9 @@ title: "フォトモードTips"
 |[![](./assets/images/small/02g_norm1.png)](../assets/images/02g_norm1.png)|[![](./assets/images/small/02g_norm2.png)](../assets/images/02g_norm2.png)|
 |モデル：[NecoMaid PREMIUM](https://booth.pm/ja/items/2147201)||
 
-ライトによる陰影の影響です。LitやSSSモードで陰影がついた影響です。Toonでは境界がクッキリしており問題が起きにくいです。
+ライトによる陰影の影響です。LitやSSSモードでよく見かけます。Toonでは境界がクッキリしており問題が起きにくいです。
 
-補助ライトを当てて陰影を消すのが正攻法です。まずはライトで補正しましょう。
+正攻法は補助ライトを当てて陰影を消すことです。まずはライトで補正しましょう。
 対応が難しい場合は法線補正を利用します。
 
 顔のマテリアルより`NormalToCameraMat`か`NormalToLightMat`を変更します。

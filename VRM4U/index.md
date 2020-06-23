@@ -23,16 +23,18 @@ UE4で動作する、VRMファイルのインポーターです。
 |![](/assets/images/03.png)|![](/assets/images/04.png)|
 |![](/assets/images/01_a.png)|![](/assets/images/01_b.png)|
 
+雰囲気を知りたい方は、[簡易的ですがYoutubeの動画](https://www.youtube.com/channel/UC9Xuvwk9YLisxtNbTAjryDQ)や ハッシュタグ[#VRM4U](https://twitter.com/hashtag/VRM4U)も参考にどうぞ。
 
  - VRMファイルをインポートできます。
- - アニメーション
+ - 便利なアニメーション機能
      - 手軽にリターゲット可能です。A-pose/T-pose、RIGが生成されます。
      - 揺れ骨にVRMSpringBoneを利用可能です。PhysicsAssetも選択できます。
      - 顔アニメ（Morphtarget・BlendShapeGroup）も利用可能です。
- - マテリアル
+     - 簡易的なポーズ調整機能があります。
+ - 複数マテリアルを切り替え可能
      - MToonを再現したマテリアル。影色の指定や、アウトラインの色・太さ調整、MatCapなどが全て適用されます。
-     - PBR背景に合わせてキャラクタを描画できます。馴染ませるための拡張機能があります。
-     - 既存のポストフィルタに加えて、レイトレースも併用可能です。
+     - PBR背景に合わせて描画モードを切り替えできます。馴染ませるための拡張機能があります。
+     - 既存のポストフィルタも同時に利用できます。レイトレースも併用可能です。
  - モバイル 利用可能
      - BoneMapリダクション機能により手軽に表示可能です。
      - 描画クオリティを選択できます。ロースペック対応です。
