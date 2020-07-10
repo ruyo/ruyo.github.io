@@ -47,11 +47,12 @@ Pluginsに配置します。
       - :
 ```
 
-プラグインウィンドウにVRM4Uが表示されたら完了です。
+プラグインウィンドウにVRM4Uが表示されます。`Enabled` をONにして右下のRestartNowボタンよりエディタを再起動してくだい。
 
 ||
 |-|
 |[![](./assets/images/small/010_plugin.png)](../assets/images/010_plugin.png)|
+
 
 ----
 ## VRMモデルをインポートする
