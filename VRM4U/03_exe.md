@@ -5,6 +5,7 @@ title: "配布用EXEを作成する"
 ----
 
 GitHubアカウントとEpicGamesアカウントの紐付けが必要です。
+VRM4Uフォルダにソースファイルを上書き追加します。
 {: .notice--info}
 
 VisualStudioが必要です。時間がかかります。
@@ -28,7 +29,7 @@ VisualStudioが必要です。時間がかかります。
 |[![](./assets/images/small/03e_exe.png)](../assets/images/03e_exe.png)|
 
 
-導入は従来のプラグイン同様 `MyProject/Plugins/VRM4U` となるよう配置すれば完了です。
+ダウンロードしたファイルを従来のプラグイン置き場に上書き保存します。 `MyProject/Plugins/VRM4U/Source/` などのファイルがあればOKです。
 
 ----
 ## EXEを作る
