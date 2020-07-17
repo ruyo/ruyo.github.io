@@ -75,7 +75,7 @@ BP_LiveLinkFaceをコピーして、カスタマイズして利用ください�
 
 OculusQuestで認識した手指を、キャラクタに適用します。
 
-OculusQuestが必要です。PCにOculusLinkで接続します。
+OculusQuestが必要です。OculusLinkでPCに接続します。
 {: .notice--info}
 
 Oculus社が公開しているUE4が必要です。githubよりダウンロードしエディタビルドする必要があります。
@@ -86,9 +86,9 @@ Oculus社が公開しているUE4が必要です。githubよりダウンロー�
 
 [ビルドのセットアップは こちらを参照ください。](https://qiita.com/ruyo/items/08ac751ba61cb1201e96)
 
-### VRM4Uよりトラッキングを有効化する
+### VRM4Uのハンドトラッキングを有効化する
 
-`VRM4U.Build.cs`にて、`bUseQuestTracking = true`　としてください。
+`VRM4U.Build.cs`にて、`bUseQuestTracking = true;` としてください。
 
 ### ハンドトラッキングする
 
