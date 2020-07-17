@@ -2,6 +2,11 @@
 title: "フェイシャルキャプチャ、ハンドトラッキング"
 ---
 
+||
+|-|
+|[![](./assets/images/small/05t_top.png)](../assets/images/05t_top.png)|
+|モデル：[ヴィクトリア・ルービン](https://hub.vroid.com/characters/2792872861023597723/models/5013769147837660446)|
+
 ----
 
 このドキュメントは書きかけです。
@@ -14,14 +19,17 @@ LiveLinkFaceでキャプチャした表情を、キャラクタに適用しま�
 LiveLinkFaceが動作するiPhone/iPadが必要です。UE4.25以降で動作します。
 {: .notice--info}
 
+ここで紹介するのは、VRM4Uの撮影モードやランタイムリターゲットと連動した使い方です。
+[UE4での標準的な使い方はドキュメントを参照ください。](https://docs.unrealengine.com/ja/Engine/Animation/FacialRecordingiPhone/index.html)
+
+
 以下のサンプルマップを参照してください。UE4.25以降でのみコンテンツブラウザに表示されます。
 
 Maps/latest/VRM4U_LiveLinkFace
 
 端末にてLiveLinkFaceを起動し顔を認識させます。
 うまく動作していれば、以下のように端末が認識されます。
-
-表示される項目は端末によって異なると思います。
+iPhone/iPadによって表示される項目は異なります。
 
 ||
 |-|
@@ -36,31 +44,33 @@ Maps/latest/VRM4U_LiveLinkFace
 
 PlayInで動きます。
 
+||
+|-|
+|[![](./assets/images/small/05t_play.png)](../assets/images/05t_play.png)|
+
 認識されない場合は設定を確認ください
 - エディタの設定
   - プラグイン`AppleARKitFaceSupport`を有効にする
 - 端末の設定
   - `設定 > livelink > ターゲット` にエディタ起動しているPCのIPアドレスを記入する
-  - 例えば「192.168.1.---:11111」のように。(---には実際のPCのアドレスから数値を入れてください)
+  - 例えば「192.168.1.---:11111」など。(---には実際のPCのアドレスから数値を入れてください)
 
-----
-## キャラクタ毎にカスタマイズする
+### キャラクタ毎にカスタマイズする
 
 BP_LiveLinkFaceをコピーして、カスタマイズして利用ください。
 
 - VRoidモデル
-  - そのままである程度動作します。
+  - ある程度それなりに動作します。
 - その他フルスクラッチのモデル
   - VRMのBlendShapeGroupに登録された表情のみ動きます。
-
-任意の表情を利用したい場合はノードを改変してください。
-未整理ですみません…
+  - 任意の表情を利用したい場合はノードを改変してください。未整理ですみません…
 
 ||
 |-|
 |[![](./assets/images/small/05t_detail.png)](../assets/images/05t_detail.png)|
 
 
+----
 ## ハンドトラッキング（上級者向け）
 
 OculusQuestで認識した手指を、キャラクタに適用します。
@@ -82,7 +92,11 @@ Oculus社が公開しているUE4が必要です。githubよりダウンロー�
 
 ### ハンドトラッキングする
 
-以下のサンプルマップを利用ください。VRPreviewすると、頭と手が動きます。
+以下のサンプルマップを利用ください。`VRPreview`で頭と手が動きます。
 
 Maps/VRM4U_Tracking
 
+
+||
+|-|
+|[![](./assets/images/small/05t_hand.png)](../assets/images/05t_hand.png)|
