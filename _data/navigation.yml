@@ -53,12 +53,16 @@ vrm4udocs:
         url: /VRM4U/04_vrchat/
       - title: "BVHアニメーションを使う"
         url: /VRM4U/04_bvh/
+      - title: "その他のモデルを使う"
+        url: /VRM4U/04_import/
   - title: "番外編 マイナーな機能"
     children:
       - title: "Toonを豪華にする"
         url: /VRM4U/02_toon/
       - title: "嘘パースを使う"
         url: /VRM4U/02_pers/
+      - title: "フェイシャルトラッキング"
+        url: /VRM4U/05_tracking/
   - title: "外部リンク"
     children:
       - title: "モデル・アニメーション"
