@@ -61,7 +61,7 @@ vrm4udocs:
         url: /VRM4U/02_toon/
       - title: "嘘パースを使う"
         url: /VRM4U/02_pers/
-      - title: "フェイシャルトラッキング"
+      - title: "フェイシャルキャプチャ"
         url: /VRM4U/05_tracking/
   - title: "外部リンク"
     children:
