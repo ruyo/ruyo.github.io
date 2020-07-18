@@ -32,8 +32,11 @@ iPhone/iPadによって表示される項目は異なります。
 |-|
 |[![](./assets/images/small/05t_live.png)](../assets/images/05t_live.png)|
 
-端末が認識されたら、BP_LiveLinkFaceにセットします。
+`BP_LiveLinkFace`に端末の名前をセットします。
 認識されていない場合はリストに表示されません。後述の確認事項を参照ください。
+
+表情を変更するターゲットは、BP_VrmModelActorかSkeletalMeshActorを選択可能です。
+前者は表情と頭の向きが動作します。後者は頭は動かず、別途AnimationBPを組む必要があります。
 
 ||
 |-|
@@ -45,6 +48,12 @@ PlayInで動きます。
 |-|
 |[![](./assets/images/small/05t_play.png)](../assets/images/05t_play.png)|
 
+キャラクタの差し替えやアニメーションの併用が可能です。`BP_VrmModelActor`より設定ください。
+
+||
+|-|
+|[![](./assets/images/small/05t_cust.png)](../assets/images/05t_cust.png)|
+
 認識されない場合は設定を確認ください
 - エディタの設定
   - プラグイン`LiveLink`, `ARKit`, `AppleARKitFaceSupport`を有効にする
@@ -52,6 +61,7 @@ PlayInで動きます。
   - PCと同じネットワークにつながっているか確認する
   - LiveLinkFaceより`設定 > livelink > ターゲット` にエディタ起動しているPCのIPアドレスを記入する
   - 例えば「192.168.1.---:11111」など。(---には実際のPCのアドレスから数値を入れてください)
+
 
 ### キャラクタ毎にカスタマイズする
 
@@ -66,7 +76,6 @@ BP_LiveLinkFaceをコピーして、カスタマイズして利用ください�
 ||
 |-|
 |[![](./assets/images/small/05t_detail.png)](../assets/images/05t_detail.png)|
-
 
 ----
 ## ハンドトラッキング（上級者向け）
