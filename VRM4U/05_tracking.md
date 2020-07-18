@@ -7,9 +7,6 @@ title: "フェイシャルキャプチャ、ハンドトラッキング"
 |[![](./assets/images/small/05t_top.png)](../assets/images/05t_top.png)|
 |モデル：[ヴィクトリア・ルービン](https://hub.vroid.com/characters/2792872861023597723/models/5013769147837660446)|
 
-----
-
-このドキュメントは書きかけです。
 
 ----
 ## フェイシャルキャプチャ
@@ -19,7 +16,7 @@ LiveLinkFaceでキャプチャした表情を、キャラクタに適用しま�
 LiveLinkFaceが動作するiPhone/iPadが必要です。UE4.25以降で動作します。
 {: .notice--info}
 
-ここで紹介するのは、VRM4Uの撮影モードやランタイムリターゲットと連動した使い方です。
+ここで紹介するのは、VRM4Uのフォトモードやランタイムリターゲットと連動した使い方です。
 [UE4での標準的な使い方はドキュメントを参照ください。](https://docs.unrealengine.com/ja/Engine/Animation/FacialRecordingiPhone/index.html)
 
 
@@ -28,7 +25,7 @@ LiveLinkFaceが動作するiPhone/iPadが必要です。UE4.25以降で動作し
 Maps/latest/VRM4U_LiveLinkFace
 
 端末にてLiveLinkFaceを起動し顔を認識させます。
-うまく動作していれば、以下のように端末が認識されます。
+うまく設定されていれば、以下のように端末が認識されます。
 iPhone/iPadによって表示される項目は異なります。
 
 ||
@@ -36,7 +33,7 @@ iPhone/iPadによって表示される項目は異なります。
 |[![](./assets/images/small/05t_live.png)](../assets/images/05t_live.png)|
 
 端末が認識されたら、BP_LiveLinkFaceにセットします。
-認識されていない場合はリストに表示されません。
+認識されていない場合はリストに表示されません。後述の確認事項を参照ください。
 
 ||
 |-|
@@ -50,9 +47,10 @@ PlayInで動きます。
 
 認識されない場合は設定を確認ください
 - エディタの設定
-  - プラグイン`ARKit`, `ARKit`, `AppleARKitFaceSupport`を有効にする
+  - プラグイン`LiveLink`, `ARKit`, `AppleARKitFaceSupport`を有効にする
 - 端末の設定
-  - `設定 > livelink > ターゲット` にエディタ起動しているPCのIPアドレスを記入する
+  - PCと同じネットワークにつながっているか確認する
+  - LiveLinkFaceより`設定 > livelink > ターゲット` にエディタ起動しているPCのIPアドレスを記入する
   - 例えば「192.168.1.---:11111」など。(---には実際のPCのアドレスから数値を入れてください)
 
 ### キャラクタ毎にカスタマイズする
@@ -73,7 +71,7 @@ BP_LiveLinkFaceをコピーして、カスタマイズして利用ください�
 ----
 ## ハンドトラッキング（上級者向け）
 
-OculusQuestで認識した手指を、キャラクタに適用します。
+OculusQuestで認識した手と指を、キャラクタに適用します。
 
 OculusQuestが必要です。OculusLinkでPCに接続します。
 {: .notice--info}
@@ -81,7 +79,6 @@ OculusQuestが必要です。OculusLinkでPCに接続します。
 Oculus社が公開しているUE4が必要です。githubよりダウンロードしエディタビルドする必要があります。
 {: .notice--info}
 
-### エディタをビルドする
 [こちらのgithubより、UE4.25をダウンロードします。](https://github.com/Oculus-VR/UnrealEngine)
 
 [ビルドのセットアップは こちらを参照ください。](https://qiita.com/ruyo/items/08ac751ba61cb1201e96)
@@ -92,7 +89,7 @@ Oculus社が公開しているUE4が必要です。githubよりダウンロー�
 
 ### ハンドトラッキングする
 
-以下のサンプルマップを利用ください。`VRPreview`で頭と手が動きます。
+以下のサンプルマップを利用ください。`VRPreview`で頭と手・指が動きます。
 
 Maps/VRM4U_Tracking
 
