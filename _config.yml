@@ -103,10 +103,12 @@ defaults:
       type: pages
     values:
       layout: single
+      classes: wide
       author_profile: false
       comments: true
       share: false
       toc: true
+      toc_sticky: true
       related: true
       sidebar:
         nav: vrm4udocs
