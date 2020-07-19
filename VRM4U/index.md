@@ -10,7 +10,7 @@ classes: wide
 ----
 ## VRM4Uとは
 
-UE4で動作する、VRMファイルのインポーターです。
+UnrealEngine4で動作する、VRMファイルのインポーターです。
 
 [導入はこのリンクから](./01_quick-start/)
 
@@ -21,14 +21,14 @@ UE4で動作する、VRMファイルのインポーターです。
 
 |||
 |----|----|
-|![](/assets/images/03.png)|![](/assets/images/04.png)|
-|![](/assets/images/01_a.png)|![](/assets/images/01_b.png)|
+|[![](./assets/images/03.png)](./assets/images/small/03.png)|[![](./assets/images/04.png)](./assets/images/small/04.png)|
+|[![](./assets/images/01_a.png)](./assets/images/small/01_a.png))|[![](./assets/images/01_b.png)](./assets/images/small/01_b.png)|
 
- - VRMファイルをインポートできます。
+ - VRMファイルをインポートできます
  - アニメーション
-     - 手軽にリターゲット可能です。A-pose/T-pose、RIGが生成されます。
+     - 手軽にリターゲット可能です。A-pose/T-pose、BoneMapが生成されます。
      - 揺れ骨にVRMSpringBoneを利用可能です。PhysicsAssetも選択できます。
-     - 顔アニメ（Morphtarget・BlendShapeGroup）も利用可能です。
+     - 顔アニメ（Morphtarget・BlendShapeGroup）を利用可能です。
      - 簡易的なポーズ調整機能があります。
  - マテリアル
      - MToonを再現したマテリアル。影色の指定や、アウトラインの色・太さ調整、MatCapなどが全て適用されます。
@@ -36,10 +36,16 @@ UE4で動作する、VRMファイルのインポーターです。
      - 既存のポストフィルタも同時に利用できます。レイトレースも併用可能です。
  - モバイル 利用可能
      - BoneMapリダクション機能により手軽に表示可能です。
-     - 描画クオリティを選択できます。ロースペック対応です。
+     - 描画クオリティを切り替えできます。ロースペック対応です。
  - VR/AR 利用可能
      - シンプルな機能で構成しているため破綻しません。
      - 描画はForward/Deferred両方に対応しています。
+ - ランタイムロード可能
+     - パッケージング後のEXEファイルから、ユーザの任意のVRMファイルを読み込むことができます。
+     - 読み込んだキャラクタをそのままゲームに利用できます。アニメーションはランタイムでリターゲットできます。
+ - UE4との相性の良さ
+     - モデルをインポートすると標準的なSkeletalMeshアセットになります。
+     - 対応するUE4のバージョンは4.20~4.25です（2020/07現在）最新版への対応も容易です。
 
 ----
 ## 雰囲気を知りたい
