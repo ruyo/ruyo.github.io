@@ -2,6 +2,7 @@
 title: "VRM4U"
 share: true
 toc: false
+classes: wide
 ---
 
 [![](../assets/images/top_256x256.png)](../assets/images/top_l.png)

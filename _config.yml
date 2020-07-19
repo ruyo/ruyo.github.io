@@ -108,6 +108,7 @@ defaults:
       share: false
       toc: true
       toc_sticky: true
+      toc_label: "目次"
       related: true
       sidebar:
         nav: vrm4udocs

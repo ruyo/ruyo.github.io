@@ -36,14 +36,12 @@ VisualStudioが必要です。時間がかかります。
 
 ひとまずUE4のメニューからパッケージ作成してみて、エラーが出るようならVisualStudioのセットアップを行います。
 
-エラーがで場合は以下のページより、「VisualStudioのダウンロード」をクリック「Community2019」を選択します。(UE4.23以前であれば2017が必要です)
+エラーが出る場合は[こちらのページ](https://visualstudio.microsoft.com/ja/vs/older-downloads/)
+より、「VisualStudioのダウンロード」をクリック「Community2019」を選択します。(UE4.23以前であれば2017が必要です)
 
-https://visualstudio.microsoft.com/ja/vs/older-downloads/
-
-インストールオプションは以下のページを参照ください。表記のVisualStudioのバージョンが古いですが、適宜読み替えてOKです。
+インストールオプションは[こちら](https://docs.unrealengine.com/ja/Programming/Development/VisualStudioSetup/index.html)
+を参照ください。表記のVisualStudioのバージョンが古いですが、適宜読み替えてOKです。
 項目は「VisualStudioのインストール」まで辿ればOKです。「推奨設定」以降はスキップです。
-
-https://docs.unrealengine.com/ja/Programming/Development/VisualStudioSetup/index.html
 
 
 ----
