@@ -29,3 +29,14 @@ toc: false
 |[公式サンプル](https://docs.unrealengine.com/ja/Resources/Showcases/index.html)|背景|
 |[マーケットプレイス](https://www.unrealengine.com/marketplace/)|背景、アニメーション、アクションシステム|
 
+----
+## その他のVRMローダー
+
+VRM4Uで読み込みでエラーが出たら、他のローダで読めるか確認してみてください。
+
+|ローダー|解説|
+|-|-|
+|[UniVRM](https://github.com/vrm-c/UniVRM)|VRM本家。Unity|
+|[VRM Viewer](https://vrm-viewer.yukimochi.io/)|webブラウザで動く|
+|3D Viewer|Windows標準搭載アプリ。拡張子を .glb にリネームしてダブルクリック|
+
