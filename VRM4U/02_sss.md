@@ -48,7 +48,7 @@ SSSマテリアルをレベル上でキレイに描画するためには、い�
 |[![](./assets/images/small/02s_pre2.png)](../assets/images/02s_pre2.png)|[![](./assets/images/small/02s_pre3.png)](../assets/images/02s_pre3.png)|
 
 ----
-## 下準備をする
+## 準備するもの
 
 新規にレベルを作成し、標準背景(default)を選択します。
 
@@ -61,10 +61,10 @@ SSSマテリアルをレベル上でキレイに描画するためには、い�
 |||
 |-|-|
 |BP_VrmModelActor|調整対象のキャラクタ|
-|CharacterLightRig|キャラライト|
+|CharacterLightRigCustom|キャラライト|
 |MToonMaterialSystem|調整補助|
 |BP_Bloom|色味が強い特殊なBloom。お好みで|
-|MaterialUtil|マテリアル調整のパネル。お好みで|
+|MaterialUtil|マテリアル一括調整パネル。お好みで|
 
 ----
 ## 背景ライトを整える
@@ -92,7 +92,7 @@ SkyLight
 ベイクしないと、PlayIn中のみ古いライトが参照されます。
 
 ----
-## 調整する 基礎編
+## 大まかに色味を整える
 
 ### 露出の固定
 MaterialSystemより`OverrideExposure`をONにします。調整後に好みによってOFFにしましょう。
@@ -125,14 +125,14 @@ CharacterLightRigCustomを配置、ターゲット指定してパラメータを
 [こちらのオンラインラーニングコース](https://www.unrealengine.com/ja/onlinelearning-courses/creating-photoreal-cinematics-with-quixel)が参考になります。
 
 ----
-## 調整する 応用編
+## 細かく個別に整える
 
 ### 色味・ラフネス個別調整
 色味パラメータは、マテリアル毎に変更できます。
 同時にラフネスを調整してスペキュラを出すこともできます。
 
 ### ライト配置
-CharacterLightRigCustomを複数利用して、キーライトやバックライトを配置しましょう。
+CharacterLightRigCustomを複数利用して、キーライトやバックライトとして配置しましょう。
 バックライトはRectLight設定に切り替えるのをオススメします。
 
 |調整した様子。ライト4灯||
