@@ -10,9 +10,10 @@ title: "フォトモードTips"
 |-|-|
 |移動：前後左右|w a s d|
 |移動：上下|q e|
-|ズーム変更|z c （xで初期値）|
-|ピント調整|shift+z shift+c （shift+xで初期値）|
+|ズーム変更|z c,v （xで初期値）|
+|ピント調整|shift+z shift+c,v （shift+xで初期値）|
 |ロール回転|1 3 （2で初期値）|
+|フォーカス距離変更|f h （gで初期値）|
 |ピッチ、ヨー回転|マウス前後左右|
 
 エディタ上で直接CineCameraを回転して調整することも可能です。
@@ -21,6 +22,11 @@ title: "フォトモードTips"
 |-|-|
 |[![](./assets/images/small/02g_roll.png)](../assets/images/02g_roll.png)|[![](./assets/images/small/02g_roll2.png)](../assets/images/02g_roll2.png)|
 |モデル：[NecoMaid](https://booth.pm/ja/items/1843586) （fbx -> VRM変換）||
+
+BreathingをONにすることで、ピント調整時の画角ずれやズーム時のピントずれ を再現します。
+
+3rd CameraをONにすることで、VRPreview時に観客視点として利用できます。
+
 
 ----
 ## 顔に落ちる影を消したい

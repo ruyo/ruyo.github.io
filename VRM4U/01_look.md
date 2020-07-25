@@ -104,7 +104,7 @@ title: "見た目を調整する"
 |[![](./assets/images/small/01b_asset.png)](../assets/images/01b_asset.png)|
 
 
-下図の順にクリックします。LitチェックボックスをONにして、スポイトをクリック、キャラを選択します。その後 `ChangeParentMat` ボタンを押します。
+下図の順にクリックします。MaterialTypeをMToonLitにして、スポイトをクリック、キャラを選択します。その後 `ChangeParentMat` ボタンを押します。
 
 ||
 |-|

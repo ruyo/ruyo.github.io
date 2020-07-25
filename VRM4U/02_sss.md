@@ -18,6 +18,7 @@ Toon向けのデータを無理やりPBRに利用します。
 モデルは法線やテクスチャをToon向けに加工していたり、アウトラインと合わせてデザインされています。
 PBRでの利用はモデル製作者の本意でないことがありますので、ご配慮の上でご利用ください。
 
+----
 ## 概要
 
 UE4のサブサーフェスを利用したマテリアルです。素直にライト効果を受けます。
@@ -28,6 +29,23 @@ UE4のサブサーフェスを利用したマテリアルです。素直にラ�
  - 全てのマテリアルをSubsurfaceで作成して色味をあわせる
  - 補助ライトを当てる
  - カラーグレーディングで整える
+
+----
+## SSSマテリアルでインポートする
+
+インポート時のオプションで選択可能です。後からAssetUtilで切り替えることもできます。
+
+|||
+|-|-|
+|[![](./assets/images/small/02s_import.png)](../assets/images/02s_import.png)|[![](./assets/images/small/02s_pre1.png)](../assets/images/02s_pre1.png)|
+
+モデルのプレビューを開くとキレイに描画されているはずです。しかしレベルに配置すると意図どおりの見た目にならないでしょう。
+
+SSSマテリアルをレベル上でキレイに描画するためには、いくつか設定が必要です。
+
+|新規作成の初期マップに配置したもの|←のマップを調整したもの|
+|-|-|
+|[![](./assets/images/small/02s_pre2.png)](../assets/images/02s_pre2.png)|[![](./assets/images/small/02s_pre3.png)](../assets/images/02s_pre3.png)|
 
 ----
 ## 下準備をする
@@ -44,9 +62,9 @@ UE4のサブサーフェスを利用したマテリアルです。素直にラ�
 |-|-|
 |BP_VrmModelActor|調整対象のキャラクタ|
 |CharacterLightRig|キャラライト|
-|MaterialUtil|マテリアル調整のメインパネル|
 |MToonMaterialSystem|調整補助|
 |BP_Bloom|色味が強い特殊なBloom。お好みで|
+|MaterialUtil|マテリアル調整のパネル。お好みで|
 
 ----
 ## 背景ライトを整える
@@ -74,29 +92,6 @@ SkyLight
 ベイクしないと、PlayIn中のみ古いライトが参照されます。
 
 ----
-## SSSモードに切り替える
-
-### キャラクタライトを設定する
-CharacterLightRigより、Key、Rimを無効化、AmbientBackを有効化するようチェックボックスを操作します。
-
-||
-|-|
-|[![](./assets/images/small/02s_light1.png)](../assets/images/02s_light1.png)|
-
-
-### マテリアルの切り替え
-対象のSkeletalMeshをレベルに配置します。
-MaterialUtilより、TargetSkeletalMeshActorにそれをセットします。
-ボタン `2 PBR SSSMode` をクリックするとマテリアルが切り替わります。
-
-||
-|-|
-|[![](./assets/images/small/02s_matutil.png)](../assets/images/02s_matutil.png)|
-
-BP_VrmModelActorより、DisableCustomShadowmapをONにします。
-最後に`RefreshDummy`をONにします。ここまでの設定がキャラクタに正しく反映されます。チェックボックスは自動でOFFになります。
-
-----
 ## 調整する 基礎編
 
 ### 露出の固定
@@ -111,17 +106,17 @@ MaterialSystemより`OverrideExposure`をONにします。調整後に好みに�
 
 ### 色味
 MaterialSystemより以下の項目を変更して色味を調整します。
-また肌の色味が合わない場合は、MaterialUtilより、SubsurfaceColorで操作します。
+また肌以外のマテリアルのSubsurfaceColorを調整します。
+MaterialUtilにより一括変更も可能です。
 
-ここではやや薄め/暗めに調整しましょう。
-後でキャラライトやポストプロセスで補正します。
+後でキャラライトやポストプロセスでの補正もあるので程々で次に進みましょう。
 
 ||
 |-|
 |[![](./assets/images/small/02s_texpow.png)](../assets/images/02s_texpow.png)|
 
 ### ライト
-CharacterLightRigより、AmbientBackLightScaleを変更します。ある程度明るさのバランスが取れたらrimを有効化し、輪郭を強調しましょう。
+CharacterLightRigCustomを配置、ターゲット指定してパラメータを変更してみましょう。
 
 ### カラーグレーディング
 
@@ -129,18 +124,18 @@ CharacterLightRigより、AmbientBackLightScaleを変更します。ある程度
 
 [こちらのオンラインラーニングコース](https://www.unrealengine.com/ja/onlinelearning-courses/creating-photoreal-cinematics-with-quixel)が参考になります。
 
-
 ----
 ## 調整する 応用編
 
 ### 色味・ラフネス個別調整
-前述の色味パラメータは、マテリアル毎に変更できます。
+色味パラメータは、マテリアル毎に変更できます。
 同時にラフネスを調整してスペキュラを出すこともできます。
 
 ### ライト配置
-CharacterLightRigCustomを利用すると、キャラクタ用ライトを自由に追加可能です。慣れたらCustom版で構成しましょう。
+CharacterLightRigCustomを複数利用して、キーライトやバックライトを配置しましょう。
+バックライトはRectLight設定に切り替えるのをオススメします。
 
-|全てCustomで調整した様子。ライト4灯||
+|調整した様子。ライト4灯||
 |-|-|
 |[![](./assets/images/small/02s_light.png)](../assets/images/02s_light.png)|[![](./assets/images/small/02s_custom.png)](../assets/images/02s_custom.png)|
 
