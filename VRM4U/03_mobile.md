@@ -44,7 +44,18 @@ VRM4Uのソースが必要です。[EXEを作成する](../03_exe/)の解説よ�
 
 配置後はそのまま転送できます。
 
-描画負荷が高い場合は、`MaterialQualityLevel`で負荷を下げることができます。シェーディングが簡略化され、色味が変わります。
+描画負荷が高い場合は、`MaterialQualityLevel`で負荷を下げることができます。
+切り替えには コンソールコマンド `r.MaterialQualityLevel 0` を利用ください。`1`で戻ります。
 
+軽量版(Low)では描画負荷は半分以下になります。
+かわりにシェーディングが簡略化され、リムライトやエミッシブの省略、色味の再現度などが下がります。
 
+|標準(High)|軽量版(Low)|
+|-|-|
+|[![](./assets/images/small/03b_h2.png)](../assets/images/03b_h2.png)|[![](./assets/images/small/03b_h1.png)](../assets/images/03b_h1.png)
 
+|シェーダの負荷（参考）|
+|-|
+|[![](./assets/images/small/03b_shader.png)](../assets/images/03b_shader.png)|
+
+同時にモバイル向けの一般的な最適化（MobileHDRの無効化やシェーダ機能のOFFなど）を検討ください。
