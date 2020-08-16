@@ -56,6 +56,15 @@ VisualStudioが必要です。時間がかかります。
 複数のUE4バージョンを行き来したり、プロジェクトをBP→CPPに切り替えた直後にエラーが起きやすいです。
 
 ----
+## エラーが出た場合
+
+以下のログファイルを [GitHubIssues](https://github.com/ruyo/VRM4U/issues) または [@ruyo_h](https://twitter.com/ruyo_h)のDM などでお送りください。
+
+ログ内にはユーザー名やファイルパス名が含まれます。気になる方はテキストエディタ等で該当文字列を削除の上でお知らせください。
+
+- MyProject/Saved/Log/MyProject.log
+
+----
 ## （VRM4U_20200625以前を使っている場合）C++プロジェクトにする
 [こちらのリンク](https://docs.unrealengine.com/ja/Programming/QuickStart/2/index.html)を参考に、新規のC++ファイルを追加してください。
 
