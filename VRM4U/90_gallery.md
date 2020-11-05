@@ -5,11 +5,18 @@ toc: false
 
 ----
 
-VRM4Uの利用例や検証結果です。Twitterで貼ったものからピックアップしています。
+VRM4Uの利用例や検証結果です。
+Twitterで貼ったものからピックアップしています。
 
-下に行くほど古いです。
+先頭は新しいもの、下に行くほど古いです。
 
 ----
+
+<style type="text/css">
+<!--
+video {max-width: 80%;}
+-->
+</style>
 
 {% for image in site.static_files reversed %}
   {% if image.path contains 'gallery/' %}
@@ -19,6 +26,7 @@ VRM4Uの利用例や検証結果です。Twitterで貼ったものからピッ�
     {% if image.path contains '.mp4' %}
 <video src="{{ site.baseurl }}{{ image.path }}" controls></video>
     {% endif %}
+<hr />
   {% endif %}
 {% endfor %}
 
