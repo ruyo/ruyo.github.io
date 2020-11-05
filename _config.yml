@@ -112,6 +112,10 @@ defaults:
       related: true
       sidebar:
         nav: vrm4udocs
+  - scope:
+      path: "/assets/gallery"
+    values:
+      image: true
 
 category_archive:
   type: liquid
