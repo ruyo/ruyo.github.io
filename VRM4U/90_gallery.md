@@ -11,8 +11,7 @@ VRM4Uの利用例や検証結果です。Twitterで貼ったものからピッ�
 
 ----
 
-{% assign tmpFiles = site.static_files | sort | reverse %}
-{% for image in tmpfiles %}
+{% for image in site.static_files reversed %}
   {% if image.path contains 'gallery/' %}
     {% if image.path contains '.png' or image.path contains '.jpg' %}
 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
@@ -20,7 +19,6 @@ VRM4Uの利用例や検証結果です。Twitterで貼ったものからピッ�
     {% if image.path contains '.mp4' %}
 <video src="{{ site.baseurl }}{{ image.path }}" controls />
     {% endif %}
-<br>
   {% endif %}
 {% endfor %}
 
