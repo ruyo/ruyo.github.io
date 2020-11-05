@@ -11,20 +11,14 @@ VRM4Uの利用例や検証結果です。Twitterで貼ったものからピッ�
 
 ----
 
-{% assign files2 = site.static_files %}
-
-{% for image in files2 %}
+{% for image in site.static_files %}
   {% if image.path contains 'gallery/' %}
-<figure>
-
     {% if image.path contains '.png' or image.path contains '.jpg' %}
 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
     {% endif %}
     {% if image.path contains '.mp4' %}
-<video src="{{ site.baseurl }}{{ image.path }}" controls preload="none"></video>
+<video src="{{ site.baseurl }}{{ image.path }}" controls preload="none" />
     {% endif %}
-
-</figure>
 <br>
   {% endif %}
 {% endfor %}
