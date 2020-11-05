@@ -15,6 +15,7 @@ Twitterで貼ったものからピックアップしています。
 <style type="text/css">
 <!--
 video {max-width: 100%;}
+img {width: 100%;}
 -->
 </style>
 
