@@ -1,5 +1,5 @@
 ---
-title: "a"
+title: "a5"
 toc: false
 ---
 
@@ -7,7 +7,9 @@ toc: false
 ----
 
 {% for image in site.static_files %}
-        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+  {% if image.path contains 'gallery' %}
+    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+  {% endif %}
 {% endfor %}
 
 
