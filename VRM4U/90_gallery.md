@@ -26,7 +26,7 @@ video {max-width: 100%;}
   {% endif %}
   {% if image.path contains 'gallery/' %}
     {% if image.path contains '.png' or image.path contains '.jpg' %}
-<a href="{{ site.baseurl }}{{ image.path }}"><img src="{{ site.baseurl }}{{ image.path | replace: 'gallery/', 'gallery/small/' }}" alt="" /></a>
+<a href="{{ site.baseurl }}{{ image.path }}"><img src="{{ site.baseurl }}{{ image.path | replace: 'gallery/', 'gallery/small/' | replace: '.png', '.jpg' }}" alt="" /></a>
     {% endif %}
     {% if image.path contains '.mp4' %}
 <video src="{{ site.baseurl }}{{ image.path }}" controls></video>
