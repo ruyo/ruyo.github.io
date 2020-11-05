@@ -1,14 +1,19 @@
 ---
-title: "a6"
+title: "ギャラリー"
 toc: false
 ---
 
+----
+
+VRM4Uの利用例や検証結果です。Twitterで貼ったものからピックアップしています。
+
+下に行くほど古いです。
 
 ----
 
-{% assign files = site.static_files | sort | reverse %}
+{% assign files2 = site.static_files %}
 
-{% for image in files %}
+{% for image in files2 %}
   {% if image.path contains 'gallery/' %}
 <figure>
 
