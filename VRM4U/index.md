@@ -24,6 +24,8 @@ UnrealEngine4で動作する、VRMファイルのインポーターです。
 |[![](./assets/images/small/03.png)](./assets/images/03.png)|[![](./assets/images/small/04.png)](./assets/images/04.png)|
 |[![](./assets/images/small/01_a.png)](./assets/images/01_a.png)|[![](./assets/images/small/01_b.png)](./assets/images/01_b.png)|
 
+[他の作例はこちらからどうぞ](./90_gallery/)
+
  - VRMファイルをインポートできます
  - アニメーション
      - 手軽にリターゲット可能です。A-pose/T-pose、BoneMapが生成されます。
