@@ -61,6 +61,8 @@ vrm4udocs:
         url: /VRM4U/02_pers/
       - title: "フェイシャルキャプチャ"
         url: /VRM4U/05_tracking/
+      - title: "リミテッドアニメ"
+        url: /VRM4U/05_limitedanim/
   - title: "その他の情報"
     children:
       - title: "モデル・アニメーション"
