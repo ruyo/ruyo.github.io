@@ -15,7 +15,7 @@ toc: false
     {% if image.path contains '.png' or image.path contains '.jpg' %}
 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
     {% endif %}
-    {% if image.path contains 'gallery/' %}
+    {% if image.path contains '.mp4' %}
 <video src="{{ site.baseurl }}{{ image.path }}" controls preload="none"></video>
     {% endif %}
 
