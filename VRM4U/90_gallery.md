@@ -1,5 +1,5 @@
 ---
-title: "VRM4Uで扱うと楽しいデータ2"
+title: "a"
 toc: false
 ---
 
