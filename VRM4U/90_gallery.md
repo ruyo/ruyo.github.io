@@ -12,7 +12,6 @@ Twitterで貼ったものからピックアップしています。
 
 ----
 
-
 <style type="text/css">
 <!--
 video {max-width: 100%;}
