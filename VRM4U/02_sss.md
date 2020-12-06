@@ -63,7 +63,7 @@ SSSマテリアルをレベル上でキレイに描画するためには、い�
 |BP_VrmModelActor|調整対象のキャラクタ|
 |CharacterLightRigCustom|キャラライト|
 |MToonMaterialSystem|調整補助|
-|BP_Bloom|色味が強い特殊なBloom。お好みで|
+|BP_Bloom|色味が強い特殊なBloom|
 |MaterialUtil|マテリアル一括調整パネル。お好みで|
 
 ----
@@ -139,9 +139,22 @@ CharacterLightRigCustomを複数利用して、キーライトやバックライ
 |-|-|
 |[![](./assets/images/small/02s_light.png)](../assets/images/02s_light.png)|[![](./assets/images/small/02s_custom.png)](../assets/images/02s_custom.png)|
 
-BP_Bloomを利用すると、ハイライト部分に色味を残したBloomがかかり鮮やかになります。お好みでご利用ください。
+### 色味を強調したBloomを使う
+BP_Bloomを利用すると、色味を残したBloomがかかり鮮やかになります。`DebugDraw`オプションをONにすることで、どのようなBloom色が乗っているか確認できます。
+標準のBloomは全体的に白くなりやすいので、上手く使い分けましょう。
 
-BP_ColorGradationを利用すると、画面全体にカラーフィルタをかけることができます。上部2隅に色を薄く乗せると雰囲気が出ます。
+|Bloomなし|色味強調Bloom|標準Bloom|
+|-|-|-|
+|[![](./assets/images/small/02s_bloom1.png)](../assets/images/02s_bloom1.png)|[![](./assets/images/small/02s_bloom2.png)](../assets/images/02s_bloom2.png)|[![](./assets/images/small/02s_bloom3.png)](../assets/images/02s_bloom3.png)|
+
+
+### 特殊ColorGradationを使う
+
+BP_ColorGradationを利用すると、画面全体にカラーフィルタをかけることができます。上部2隅に色を薄く乗せると雰囲気が出ます。上記の特殊Bloomと組み合わせることで、色味や鮮やかさをコントロールできます。
+
+|通常|グラデーションON|
+|-|-|
+|[![](./assets/images/small/02s_col1.png)](../assets/images/02s_col1.png)|[![](./assets/images/small/02s_col2.png)](../assets/images/02s_col2.png)|
 
 これらに加えてUE4の機能をフル活用しましょう！
 
