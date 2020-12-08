@@ -88,7 +88,7 @@ OculusQuestが必要です。OculusLinkでPCに接続します。
 Oculus社が公開しているUE4が必要です。githubよりダウンロードしエディタビルドする必要があります。
 {: .notice--info}
 
-[こちらのgithubより、UE4.25をダウンロードします。](https://github.com/Oculus-VR/UnrealEngine)
+[こちらのgithubより、UE4.25以降をダウンロードします。](https://github.com/Oculus-VR/UnrealEngine)
 
 [ビルドのセットアップは こちらを参照ください。](https://qiita.com/ruyo/items/08ac751ba61cb1201e96)
 
