@@ -34,6 +34,16 @@ ExtList より読み込みたいファイルの拡張子を追加し、エディ
 |-|
 |[![](./assets/images/small/04i_option2.png)](../assets/images/04i_option2.png)|
 
+||
+|-|
+|[![](./assets/images/small/04i_miku.png)](../assets/images/04i_miku.png)|
+|モデル：[初音ミク by む～ぶさん](https://piapro.jp/t/0Hwp)|
+
+
+||
+|-|
+|[![](./assets/images/small/04i_genshin.png)](../assets/images/04i_genshin.png)|
+|モデル：[Genshin](https://genshin.mihoyo.com/ja/news/detail/5885)|
 
 ----
 ## 内部処理の話
