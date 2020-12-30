@@ -33,7 +33,9 @@ vrm4udocs:
         url: /VRM4U/02_sss/
       - title: "ライティング環境に合わせる"
         url: /VRM4U/02_envlight/
-      - title: "ポーズを調整する"
+      - title: "ポーズ(ControlRIg)"
+        url: /VRM4U/06_controlrig/
+      - title: "ポーズ(VRM4U)"
         url: /VRM4U/02_pose/
   - title: "ゲームで使う"
     children:
