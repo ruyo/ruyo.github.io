@@ -12,10 +12,12 @@ title: "ポーズを調整する(ControlRig)"
 
 VRM4Uが用意したControlRigを対象のモデルに割り当てます。
 
+ControlRigとシーケンサーを利用することで、任意のポージング、アニメーションを作成することができます。
+
 開発中のため、このページの操作手順は、適宜に変更されます。
 {: .notice--info}
 
-ControlRigはベータ版です。(UE4.26現在)
+ControlRigはベータ版であり、適切な公式ドキュメントはありません。情報を参照する際は、対象のバージョンを十分確認ください。(UE4.26現在)
 モデルのポージング機能としては十分利用可能です。
 複雑な操作時にエディタが停止することがあります。
 {: .notice--info}
@@ -56,6 +58,11 @@ UE4.26以降で動きます。
 |FKテンプレート|全ての骨をFK制御したい時のテンプレート|
 
 ### IKテンプレートを利用する
+
+|IKテンプレート|
+|-|
+|[![](./assets/images/small/06a_rig.png)](../assets/images/06a_rig.png)|
+|手足と視線はIKです。指(開閉)、頭、肩、つま先、背骨-頭はFKで動作します|
 
 `CR_VRoidSimple`を複製(duplicate)して開きます。
  
@@ -103,7 +110,7 @@ UE4.26以降で動きます。
 
 |-log オプションで起動したUE4。スクリプト進行状況が表示される|
 |-|
-|[![](./assets/images/small/06s_log.png)](../assets/images/06s_log.png)|
+|[![](./assets/images/small/06a_log.png)](../assets/images/06a_log.png)|
 
 
 ----
