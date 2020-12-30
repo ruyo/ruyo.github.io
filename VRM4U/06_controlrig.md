@@ -95,6 +95,11 @@ UE4.26以降で動きます。
 {: .notice--info}
 
 ### FKテンプレートを利用する
+|FKテンプレート|
+|-|
+|[![](./assets/images/small/06a_fk.png)](../assets/images/06a_fk.png)|
+|全ての骨がFKで制御できます。リグの位置(赤線の骨構造)は適宜変更ください。|
+
 
 手順は上記とほぼ同じです。違いは、
  - テンプレートとして、`RC_VRoidSimpleAll`を複製する
