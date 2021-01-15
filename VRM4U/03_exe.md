@@ -15,9 +15,16 @@ VisualStudioが必要です。時間がかかります。
 
 [こちらのリンク](https://github.com/ruyo/UnrealEngine_VRM4UPlugin)より、VRM4Uのソース入りzipをダウンロードします。
 
+このページを自動翻訳で見ている場合、リンクが正しいか十分確認ください。
+
+https://github.com/ruyo/UnrealEngine_VRM4UPlugin
+
+
 404エラーページが出る場合は紐付けが必要です。[こちらのリンク](https://www.unrealengine.com/ja/blog/updated-authentication-process-for-connecting-epic-github-accounts)よりGitHubアカウントの紐付けを行ってください。
 
-ブラウザからの操作とメールによる確認で紐付け完了です。ユーザ情報にEpicのアイコンが表示されていることを確認ください。
+https://www.unrealengine.com/ja/blog/updated-authentication-process-for-connecting-epic-github-accounts
+
+ブラウザからの操作と**メールによる確認**で紐付け完了です。ユーザ情報にEpicのアイコンが表示されていることを確認ください。
 
 ||
 |-|
