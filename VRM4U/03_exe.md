@@ -36,7 +36,22 @@ https://www.unrealengine.com/ja/blog/updated-authentication-process-for-connecti
 |[![](./assets/images/small/03e_exe.png)](../assets/images/03e_exe.png)|
 
 
-ダウンロードしたファイルを従来のプラグイン置き場に上書き保存します。 `MyProject/Plugins/VRM4U/Source/` などのファイルがあればOKです。
+ダウンロードしたファイルを従来のプラグイン置き場に上書き保存します。 
+最終的に以下のようなディレクトリ構成になっていればOKです。
+
+```
+-MyGame
+  -MyGame.uproject
+  -Config
+  -Content
+  -Plugins
+    -VRM4U
+      -VRM4U.uplugin
+      -Source          <- new
+      -ThirdParty      <- a few files will be added
+      - :
+```
+
 
 ----
 ## EXEを作る
@@ -56,11 +71,13 @@ https://www.unrealengine.com/ja/blog/updated-authentication-process-for-connecti
 
 ### Githubページで404エラーが出る
 
-Epicのリポジトリは参照できますか？
+あなたのブラウザでEpicのリポジトリは参照できますか？
 
 https://github.com/EpicGames/UnrealEngine
 
 こちらで404エラーが出ている場合、あなたのアカウントが正しく紐付けできていません。手続きには**メールによる認証**が必要です。githubから確認メールが届いていない場合、紐付けしなおしてください。
+
+Epicのページからアカウントを紐付けする際は、githubのメールアドレスの入力が必要です。アカウント名ではありません。
 
 ### 日本語ファイル名によるエラー対応
 
