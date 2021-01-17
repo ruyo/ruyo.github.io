@@ -79,6 +79,11 @@ https://github.com/EpicGames/UnrealEngine
 
 Epicのページからアカウントを紐付けする際は、githubのメールアドレスの入力が必要です。アカウント名ではありません。
 
+### `/VRM4U/Util/Actor/latest` のアセットでエラーが出る
+
+エラーが出る場合は `/VRM4U/Util/Actor/latest` のディレクトリごと削除してください。
+これは実験的なデータ（ControlRigやFaceTrackingのActor）が入っています。プロジェクト設定によって、エラーが出ないこともあります。
+
 ### 日本語ファイル名によるエラー対応
 
 プロジェクトのフルパス内に日本語があるとEXE化できません。EpicGamesLauncherでプロジェクトをCloneするか、エクスプローラでプロジェクトフォルダごと移動してください。
