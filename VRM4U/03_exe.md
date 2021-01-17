@@ -24,7 +24,7 @@ https://github.com/ruyo/UnrealEngine_VRM4UPlugin
 
 https://www.unrealengine.com/ja/blog/updated-authentication-process-for-connecting-epic-github-accounts
 
-ブラウザからの操作と**メールによる確認**で紐付け完了です。ユーザ情報にEpicのアイコンが表示されていることを確認ください。
+**メールによる確認**で紐付け完了です。ユーザ情報にEpicのアイコンが表示されていることを確認ください。
 
 ||
 |-|
@@ -53,6 +53,14 @@ https://www.unrealengine.com/ja/blog/updated-authentication-process-for-connecti
 
 ----
 ## よくあるトラブル
+
+### Githubページで404エラーが出る
+
+Epicのリポジトリは参照できますか？
+
+https://github.com/EpicGames/UnrealEngine
+
+こちらで404エラーが出ている場合、あなたのアカウントが正しく紐付けできていません。手続きには**メールによる認証**が必要です。githubから確認メールが届いていない場合、紐付けしなおしてください。
 
 ### 日本語ファイル名によるエラー対応
 
