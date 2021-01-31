@@ -85,16 +85,14 @@ OculusQuestで認識した手と指を、キャラクタに適用します。
 OculusQuestが必要です。OculusLinkでPCに接続します。
 {: .notice--info}
 
-Oculus社が公開しているUE4が必要です。githubよりダウンロードしエディタビルドする必要があります。
+UE4.26で動作します。VRM4Uのビルド環境が必要です。（Oculusリポジトリの場合はUE4.25でも動作します）
 {: .notice--info}
 
-[こちらのgithubより、UE4.25以降をダウンロードします。](https://github.com/Oculus-VR/UnrealEngine)
-
-[ビルドのセットアップは こちらを参照ください。](https://qiita.com/ruyo/items/08ac751ba61cb1201e96)
+VRM4UのビルドについてはEXE化のページを参照ください。[こちらのページです](../03_exe/)
 
 ### VRM4Uのハンドトラッキングを有効化する
 
-`VRM4U.Build.cs`にて、`bUseQuestTracking = true;` としてください。
+`VRM4U.Build.cs`にて、`bUseQuestTracking = true;` としてビルドしてください。
 
 ### ハンドトラッキングする
 
