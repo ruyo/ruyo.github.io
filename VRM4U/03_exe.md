@@ -11,6 +11,12 @@ VRM4Uフォルダにソースファイルを上書き追加します。
 VisualStudioが必要です。時間がかかります。
 {: .notice--info}
 
+おおまかな手順は以下です。
+
+ - ソースをダウンロードし、プラグインフォルダに展開する
+ - 試しにEXEを作成する
+ - エラーがでなければ完了。エラーが出た場合は、/VRM4U/Util/Actor/latest 以下を削除し、再度EXE作成する
+
 ## EXE作成に必要なファイルをダウンロードする
 
 [こちらのリンク](https://github.com/ruyo/UnrealEngine_VRM4UPlugin)より、VRM4Uのソース入りzipをダウンロードします。
