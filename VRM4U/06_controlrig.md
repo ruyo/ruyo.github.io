@@ -120,3 +120,13 @@ UE4.26以降で動きます。
 
 
 ----
+
+## シーケンサー操作時に揺れ骨が動くようにする
+
+`PostProcessAnimBlueprint`を利用します。
+
+以下のようなAnimBPを作成し、SkeletalMeshのPostProcessAnimBlueprintにセットすれば完了です。
+
+|作成するAnimBP|SkeletalMeshにセット。プレビューに表示が増える|
+|-|-|
+|[![](./assets/images/small/06a_post1.png)](../assets/images/06a_post1.png)|[![](./assets/images/small/06a_post2.png)](../assets/images/06a_post2.png)|

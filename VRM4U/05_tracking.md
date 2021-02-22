@@ -9,18 +9,33 @@ title: "フェイシャルキャプチャ、ハンドトラッキング"
 
 
 ----
-## フェイシャルキャプチャ
+## VRM4Uがサポートするキャプチャ機能
 
-LiveLinkFaceでキャプチャした表情を、キャラクタに適用します。
+以下の3タイプの機能があります。これ以外は改造して利用ください。
 
-LiveLinkFaceが動作するiPhone/iPadが必要です。UE4.25以降で動作します。
+|タイプ|必要なデバイス|解説|
+|-|-|-|
+|フェイシャルキャプチャ|iPhone<br>iPad|VRMのBlendShapeClipで動かします<br>BPでカーブ設定、AnimBPで骨制御|
+|パーフェクトシンク|iPhone<br>iPad|ARKitのBlendShapeLocationで動かします<br>AnimBPでカーブ設定、ControlRigで骨制御|
+|ハンドドラッキング|OculusQuest|手/指をキャプチャします<br>AnimBPで骨制御|
+
+iPhone/iPadは LiveLinkFace対応のものが必要です。VRM4UのキャプチャシステムはUE4.26以降で動作します。
 {: .notice--info}
 
+OculusQuestは OculusLinkでPCに接続して利用します。
+{: .notice--info}
+
+
+----
+## フェイシャルキャプチャ
+
+LiveLinkFaceでキャプチャした表情を、キャラクタに適用します。VRMBlendShapeClipの設定を利用するため、表情パターンが少ないです。
+
 ここで紹介するのは、VRM4Uのフォトモードやランタイムリターゲットと連動した使い方です。
-[UE4での標準的な使い方はドキュメントを参照ください。](https://docs.unrealengine.com/ja/Engine/Animation/FacialRecordingiPhone/index.html)
+UE4での標準的な使い方は[ドキュメント](https://docs.unrealengine.com/ja/Engine/Animation/FacialRecordingiPhone/index.html)を参照するか、後述のパーフェクトシンクを参考にしてください。
 
 
-以下のサンプルマップを参照してください。UE4.25以降でのみコンテンツブラウザに表示されます。
+以下のサンプルマップを参照してください。UE4.26以降でのみコンテンツブラウザに表示されます。
 
 Maps/latest/VRM4U_LiveLinkFace
 
@@ -78,14 +93,57 @@ BP_LiveLinkFaceをコピーして、カスタマイズして利用ください�
 |[![](./assets/images/small/05t_detail.png)](../assets/images/05t_detail.png)|
 
 ----
+## パーフェクトシンク（上級者向け）
+
+LiveLinkFaceでキャプチャした表情を、キャラクタに適用します。ARKitのパラメータを全て利用します。パーフェクトシンクに対応したモデルが必要です。
+
+||
+|-|
+|[![](./assets/images/small/05t_p4.png)](../assets/images/05t_p4.png)|
+|モデル：[QuQuオリジナルアバター “U”](https://booth.pm/ja/items/2736146)|
+----
+
+モデル毎にBlueprintを作成する必要があります。
+
+/VRM4U/Util/Actor/latest にあるサンプルを参考に、同様のアセットを作成ください。ノードをコピペして、要所を変更します。
+
+手順は以下です。工程が前後しますが、AnimBPを先に組むのが良いでしょう。アニメーションを確認しながら進められます。
+
+ - AnimBPを作成する
+   - 目的：ARKitパラメータをMorphTargetに適用し、ControlRigに接続する
+   - サンプル：ABP_VRoidPostProcess
+ - ControlRigを作成する
+   - 目的：頭の向きや視線を変更する。骨のアニメーションを制御する
+   - サンプル：CR_VRoidSimple_PostProcess
+ - SkeletalMesh の PostProcessAnimBlueprint を変更する
+   - 目的：動作をプレビューできるようにする
+
+赤丸で示した箇所について、設定忘れに注意ください。
+
+|AnimBPの作成|ControlRigの作成|
+|-|-|
+|[![](./assets/images/small/05t_p1.png)](../assets/images/05t_p1.png)|[![](./assets/images/small/05t_p2.png)](../assets/images/05t_p2.png)|
+
+|PostProcessAnimBlueprintの設定|
+|-|
+|[![](./assets/images/small/05t_p3.png)](../assets/images/05t_p3.png)|
+
+### 仕組みの解説
+
+ - AnimBlueprintでやっていること
+   - LiveLinkFaceからパラメータ（カーブパラメータ）を受け取る
+   - POSE_face_ アセットを利用して、カーブ名をMorphTarget名にマッピングする（MorphTarget名がARKitと一致している場合は不要）
+   - カーブパラメータをControlRigに渡す
+   - 揺れ骨を設定する
+ - ControlRigでやっていること
+   - カーブパラメータを参照し、骨アニメーションさせる
+
+----
 ## ハンドトラッキング（上級者向け）
 
 OculusQuestで認識した手と指を、キャラクタに適用します。
 
-OculusQuestが必要です。OculusLinkでPCに接続します。
-{: .notice--info}
-
-UE4.26で動作します。VRM4Uのビルド環境が必要です。（Oculusリポジトリの場合はUE4.25でも動作します）
+UE4.26で動作します。VRM4Uのビルド環境が必要です。
 {: .notice--info}
 
 VRM4UのビルドについてはEXE化のページを参照ください。[こちらのページです](../03_exe/)
