@@ -31,7 +31,7 @@ UnrealEngine4で動作する、VRMファイルのインポーターです。
      - 手軽にリターゲット可能です。A-pose/T-pose、BoneMapが生成されます。
      - 顔アニメ（Morphtarget・BlendShapeGroup）を利用可能です。
      - 揺れ骨にVRMSpringBone、PhysicsAssetを選択できます。
-     - 簡易的なポーズ調整機能があります。
+     - 汎用のControlRigがあります。
  - マテリアル
      - MToonを再現したマテリアル。影色の指定や、アウトラインの色・太さ調整、MatCapなどが全て適用されます。
      - PBR背景に合わせて描画モードを切り替え・調整できます。
