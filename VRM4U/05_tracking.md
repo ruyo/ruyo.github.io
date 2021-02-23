@@ -93,7 +93,7 @@ BP_LiveLinkFaceをコピーして、カスタマイズして利用ください�
 |[![](./assets/images/small/05t_detail.png)](../assets/images/05t_detail.png)|
 
 ----
-## パーフェクトシンク（上級者向け）
+## パーフェクトシンク（カスタムする場合は上級者向け）
 
 LiveLinkFaceでキャプチャした表情を、キャラクタに適用します。ARKitのパラメータを全て利用します。パーフェクトシンクに対応したモデルが必要です。
 
@@ -104,7 +104,9 @@ LiveLinkFaceでキャプチャした表情を、キャラクタに適用しま�
 
 ----
 
-モデル毎にBlueprintを作成する必要があります。
+標準的な作りのモデルであれば、前述の `BP_LiveLinkFace`より、`Use ARKit Morph Curve Name`ONにすれば、ある程度利用できます。（Morph名によっては効果がないものがあったり、骨制御による視線は動きません）
+
+機能を全て利用する場合は、モデル毎にBlueprintを作成する必要があります。
 実装例は前述のサンプルマップ VRM4U_LiveLinkFace に配置しています。
 
 手順は以下です。/VRM4U/Util/Actor/latest にあるサンプルを参考に、2つのアセットを作成します。ノードをコピペして、要所を変更します。
