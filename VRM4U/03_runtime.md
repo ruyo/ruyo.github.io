@@ -13,7 +13,7 @@ title: "ランタイムロード"
 
 Play中に「ゲームウインドウ」にVRMファイルを送ると、その場でSkeletalMeshを生成します。
 
-||
+|||
 |-|-|
 |[![](./assets/images/small/03b_option.png)](../assets/images/03b_option.png)|
 

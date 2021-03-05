@@ -3,7 +3,7 @@ title: "モバイル、VRで動かす"
 ---
 
 ||
-|-|-|
+|-|
 |[![](./assets/images/small/03b_top.png)](../assets/images/03b_top.png)|
 |モデル：[千駄ヶ谷 渋](https://hub.vroid.com/characters/675572020956181239/models/4479743608263344465)|
 

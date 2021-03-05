@@ -130,3 +130,9 @@ UE4.26以降で動きます。
 |作成するAnimBP|SkeletalMeshにセット。プレビューに表示が増える|
 |-|-|
 |[![](./assets/images/small/06a_post1.png)](../assets/images/06a_post1.png)|[![](./assets/images/small/06a_post2.png)](../assets/images/06a_post2.png)|
+
+----
+
+## 見た目のセットアップを忘れずに！
+
+輪郭線やセルフシャドウを手動で設定する必要があります。[前章の解説を参照ください](../01_look/)

@@ -40,12 +40,11 @@ Parentの`MI_VrmMToonOptLitTranslucentTwoSided`を、`MI_VrmMToonOptLitOpaque`�
 ----
 ## AmbientOcclusionを調整可能にする
 
-レベルに`PostProcessVolume`を配置し、影響範囲を`Unbound`にします。
-以降は`MToonMaterialSystem`によりAOパラメータを調整可能です。
+`MToonMaterialSystem`によりAOパラメータを調整可能です。
 
-|||
-|-|-|
-|[![](./assets/images/small/02b_aos2.png)](../assets/images/02b_aos2.png)|[![](./assets/images/small/02b_aos.png)](../assets/images/02b_aos.png)|
+||
+|-|
+|[![](./assets/images/small/02b_aos.png)](../assets/images/02b_aos.png)|
 
 AOと同時に、Normalなどを調整します。キャラライトも適用しましょう。
 
