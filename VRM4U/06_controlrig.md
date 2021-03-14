@@ -67,18 +67,22 @@ UE4.26以降で動きます。
 `CR_VRoidSimple`を複製(duplicate)して開きます。
  
 **ControlRig編集画面より**
- - プレビューモデルを対象モデルにセット
- - 階層ウインドウを右クリック、Refreshより、対象モデルをセット
 
 |複製したControlRigを開いて、、|
 |-|
 |[![](./assets/images/small/06a_copy0.png)](../assets/images/06a_copy0.png)|
 
 
-|PreviewMesh と 階層右クリック->Refresh->SelectMesh の2箇所にモデルをセット|
+|Rootを選択、Deleteキーを押す（一時的にモデルが崩れます）|
 |-|
 |[![](./assets/images/small/06a_copy1.png)](../assets/images/06a_copy1.png)|
 
+|モデルを2箇所にセット。「PreviewMesh」 と 「階層右クリック->Import->SelectMesh」|
+|-|
+|[![](./assets/images/small/06a_copy3.png)](../assets/images/06a_copy3.png)|
+
+モデルは「Import」メニューで更新してください。「Refresh」で更新するとMorphTarget用のアニメーションカーブが変更されません。
+{: .notice--info}
 
 **テンプレート複製UIより**
  - 上記設定を行ったControlRigをセット
