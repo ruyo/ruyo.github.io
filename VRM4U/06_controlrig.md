@@ -48,6 +48,8 @@ UE4.26以降で動きます。
 |-|
 |[![](./assets/images/small/06a_ui2.png)](../assets/images/06a_ui2.png)|
 
+UI表示でエラーが出る場合は、前述のプラグインが正しく有効化されているか確認ください。
+
 ## 手順の要約
 
  1. テンプレートRigを複製し、SkeletalMeshを差し替える
@@ -57,7 +59,7 @@ UE4.26以降で動きます。
 
 テンプレートは3種類あります。通常は `IK Rig` を複製すればOKです。表情を付けたい場合は `Morph Rig` も複製ください。
 
-### IKテンプレートからControlRigを作成する
+### IK Rigを作成する
 
 `CR_VRoidSimpleIK`を複製(duplicate)して開きます。
 
@@ -93,20 +95,20 @@ UE4.26以降で動きます。
 一度スクリプト実行するとエディタが停止しやすくなります。再起動後は問題なく動作します。
 {: .notice--info}
 
-### Morphテンプレートを利用する
+### Morph Rigを作成する
 
 IKテンプレートとほぼ同じ手順で利用できます。
 
-`CR_VRoidSimpleMorph`を複製(duplicate)しモデルを差し替え、複製UIのMorphRigにセットしてCreateしてください。
+`CR_VRoidSimpleMorph`を複製(duplicate)しモデルを差し替え、複製UIのMorphRigにセットしてCreateしてください。VrmAssetListは不要です。
 
 |MorphRig にセット|
 |-|
 |[![](./assets/images/small/06a_ui3.png)](../assets/images/06a_ui3.png)|
 
 
-### IKテンプレートを利用する
+### FK Rigを作成
 
-同じく`CR_VRoidSimpleIK` からCreateください。
+同じく`CR_VRoidSimpleFK` からCreateください。
 
 ただ、現在のFKテンプレートの作成には時間がかかります。骨数が100本を超える場合、 **数分の時間を要します。** 将来的なUE4のバージョンアップにより改善されると思われます。
 

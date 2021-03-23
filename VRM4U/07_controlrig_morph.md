@@ -15,11 +15,11 @@ title: "表情を制御する(ControlRig)"
 IKRigと併用する場合、シーケンサーへの登録順をMorphRig > IKRigにする必要があります。サンプルマップ VRM4U_ControlRig を参考にしてください。
 {: .notice--info}
 
-ここで紹介するMorph用の機能は どんなSkeletalMeshにも利用できます。FBXインポートしたモデルなどでも動作します。
+ここで紹介するMorph用の機能は どんなSkeletalMeshにも利用できます。FBXとしてインポートしたモデルも動作します。
 
 ## 下準備
 
-[前述の解説より](../06_controlrig/)、`Morphテンプレート` を複製ください。
+[前述の解説より](../06_controlrig/)、`Morph Rig` を作成ください。
 
 続いて `WBP_MorphTarget`を右クリックから実行し、MoprhTarget制御UIを起動します。
 
@@ -33,15 +33,15 @@ IKRigと併用する場合、シーケンサーへの登録順をMorphRig > IKRi
 
 ## 操作手順
 
- 1. 複製したMorphRigをレベルに配置し、シーケンサーの編集モードに入る
+ 1. MorphRigをレベルに配置し、シーケンサーの編集モードに入る
  1. 制御UIより、操作対象のモデルをTargetActorに設定する
  1. MorphTargetを制御しキーを打つ。
 
-|TargetActorの設定|
+|TargetActorより対象のモデルを選択する|
 |-|
 |[![](./assets/images/small/07a_ui3.png)](../assets/images/07a_ui3.png)|
 
-|シーケンサーより対象のTrackを選択し、キーを打つ。|
+|シーケンサーより対象のTrackを選択し、「AddKey」ボタン or 「K」キー|
 |-|
 |[![](./assets/images/small/07a_ui4.png)](../assets/images/07a_ui4.png)|
 
@@ -56,4 +56,10 @@ IKRigと併用する場合、シーケンサーへの登録順をMorphRig > IKRi
    - 差分がtolerance以下の場合、キー追加をスキップします
  - 長いMorph名の省略
    - Morph名の先頭を省略します。TargetActorのRemoveStringに一致したものが対象です
+
+## 細かい仕組み（中身を知りたい方向け）
+
+複製スクリプトによって、ControlRigにMorphTarget数ぶんのControlを追加しています。それらの値をカーブ値に渡しています。
+
+シーケンサーでControlの値を変更すれば、そのままMorphTargetへ反映されます。お手軽ですね。
 
