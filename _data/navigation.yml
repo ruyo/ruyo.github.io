@@ -35,6 +35,8 @@ vrm4udocs:
         url: /VRM4U/02_envlight/
       - title: "ポーズ(ControlRIg)"
         url: /VRM4U/06_controlrig/
+      - title: "フェイシャル(ControlRIg)"
+        url: /VRM4U/07_controlrig_morph/
       - title: "ポーズ(VRM4U)"
         url: /VRM4U/02_pose/
   - title: "ゲームで使う"

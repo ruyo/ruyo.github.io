@@ -26,9 +26,11 @@ ControlRigはベータ版であり、適切な公式ドキュメントはあり�
 
 UE4.26以降で動きます。
 
-以下2つのプラグインを有効化し、エディタを再起動します。
+以下4つのプラグインを有効化し、エディタを再起動します。
  - Python Editor Script Plugin
  - Control Rig
+ - Sequencer Scripting
+ - Editor Scripting Utilities
 
 |プラグイン有効化||
 |-|-|
@@ -46,26 +48,19 @@ UE4.26以降で動きます。
 |-|
 |[![](./assets/images/small/06a_ui2.png)](../assets/images/06a_ui2.png)|
 
+## 手順の要約
 
+ 1. テンプレートRigを複製し、SkeletalMeshを差し替える
+ 1. 複製UIにRigをセットし、Createボタンを押す
+ 1. Rigを保存し、エディタを再起動する
+    - 保存せずにRigをコンパイルしたり操作を継続すると、エディタがクラッシュすることがあります。
 
-## テンプレートからControlRigを作成する
+テンプレートは3種類あります。通常は `IK Rig` を複製すればOKです。表情を付けたい場合は `Morph Rig` も複製ください。
 
-テンプレートは2種類あります。
+### IKテンプレートからControlRigを作成する
 
-|||
-|-|-|
-|IKテンプレート|これを使えばOK。最低限のIKを組んであります|
-|FKテンプレート|全ての骨をFK制御したい時のテンプレート|
+`CR_VRoidSimpleIK`を複製(duplicate)して開きます。
 
-### IKテンプレートを利用する
-
-|IKテンプレート|
-|-|
-|[![](./assets/images/small/06a_rig.png)](../assets/images/06a_rig.png)|
-|手足と視線はIKです。指(開閉)、頭、肩、つま先、背骨-頭はFKで動作します|
-
-`CR_VRoidSimple`を複製(duplicate)して開きます。
- 
 **ControlRig編集画面より**
 
 |複製したControlRigを開いて、、|
@@ -92,25 +87,28 @@ UE4.26以降で動きます。
 |-|
 |[![](./assets/images/small/06a_copy2.png)](../assets/images/06a_copy2.png)|
 
-左側の`CreateSpace`ボタンを押し、数十秒待ちます。
+`Create IK Rig`ボタンを押し、数十秒待ちます。
 完了したらControlRigをSaveし、**念の為エディタを再起動します。**
 
 一度スクリプト実行するとエディタが停止しやすくなります。再起動後は問題なく動作します。
 {: .notice--info}
 
-### FKテンプレートを利用する
+### Morphテンプレートを利用する
 
-|FKテンプレート|
+IKテンプレートとほぼ同じ手順で利用できます。
+
+`CR_VRoidSimpleMorph`を複製(duplicate)しモデルを差し替え、複製UIのMorphRigにセットしてCreateしてください。
+
+|MorphRig にセット|
 |-|
-|[![](./assets/images/small/06a_fk.png)](../assets/images/06a_fk.png)|
-|全ての骨がFKで制御できます。リグの位置(赤線の骨構造)は適宜変更ください。|
+|[![](./assets/images/small/06a_ui3.png)](../assets/images/06a_ui3.png)|
 
 
-手順は上記とほぼ同じです。違いは、
- - テンプレートとして、`RC_VRoidSimpleAll`を複製する
- - UIにセット後、`CreateAllController`ボタンを押す
+### IKテンプレートを利用する
 
-現在のFKテンプレートの作成には時間がかかります。骨数が100本を超える場合、 **数分の時間を要します。** 将来的なUE4のバージョンアップにより改善されると思われます。
+同じく`CR_VRoidSimpleIK` からCreateください。
+
+ただ、現在のFKテンプレートの作成には時間がかかります。骨数が100本を超える場合、 **数分の時間を要します。** 将来的なUE4のバージョンアップにより改善されると思われます。
 
 処理の進行状況をログで確認したい場合、UE4起動時のオプションに`-log`を追加してログウィンドウを表示ください。
 
