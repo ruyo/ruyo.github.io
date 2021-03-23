@@ -61,5 +61,5 @@ IKRigと併用する場合、シーケンサーへの登録順をMorphRig > IKRi
 
 複製スクリプトによって、ControlRigにMorphTarget数ぶんのControlを追加しています。それらの値をカーブ値に渡しています。
 
-シーケンサーでControlの値を変更すれば、そのままMorphTargetへ反映されます。お手軽ですね。
+あとはシーケンサーでControlの値を変更すれば、MorphTargetへ反映されます。お手軽です。
 

@@ -106,7 +106,7 @@ IKテンプレートとほぼ同じ手順で利用できます。
 |[![](./assets/images/small/06a_ui3.png)](../assets/images/06a_ui3.png)|
 
 
-### FK Rigを作成
+### FK Rigを作成する
 
 同じく`CR_VRoidSimpleFK` からCreateください。
 
