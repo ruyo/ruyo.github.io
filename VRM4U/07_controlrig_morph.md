@@ -56,6 +56,12 @@ IKRigと併用する場合、シーケンサーへの登録順をMorphRig > IKRi
    - 差分がtolerance以下の場合、キー追加をスキップします
  - 長いMorph名の省略
    - Morph名の先頭を省略します。TargetActorのRemoveStringに一致したものが対象です
+ - エラー検知
+   - エラー時はボタンの色が変わります。シーケンサーより対象のTrackを選択して再度キーを追加してください。
+
+|ボタンが赤い時はエラー。シーケンサーより対象のTrackを選択する|
+|-|
+|[![](./assets/images/small/07a_ui5.png)](../assets/images/07a_ui5.png)|
 
 ## 細かい仕組み（中身を知りたい方向け）
 
