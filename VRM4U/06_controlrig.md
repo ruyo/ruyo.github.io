@@ -101,7 +101,10 @@ IKテンプレートとほぼ同じ手順で利用できます。
 
 `CR_VRoidSimpleMorph`を複製(duplicate)しモデルを差し替え、複製UIのMorphRigにセットしてCreateしてください。VrmAssetListは不要です。
 
-|MorphRig にセット|
+エディタが停止してしまう場合は、上部のオプションを有効化してください。途中経過が保存されます。停止後、再度同じRigをセットしてCreateを繰り返すと処理が完了します。
+{: .notice--info}
+
+|MorphRig にセット。エディタが停止する場合は上部のチェックONで2～3回繰り返す|
 |-|
 |[![](./assets/images/small/06a_ui3.png)](../assets/images/06a_ui3.png)|
 
