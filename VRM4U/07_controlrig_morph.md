@@ -1,27 +1,70 @@
 ---
-title: "表情を制御する(ControlRig)"
+title: "ControlRigでポーズ・フェイシャルを制御する"
 ---
 
 ||
 |-|
 |[![](./assets/images/small/07a_top.png)](../assets/images/07a_top.png)|
 |モデル：[【オリジナル3Dモデル】ドラゴニュート・シェンナ](https://booth.pm/ja/items/2661189)|
+|ボディアニメーション：[Control Rig Mannequinサンプル](https://www.unrealengine.com/marketplace/en-US/product/control-rig-mannequin) からIKRigにベイクして編集|
+|フェイシャルアニメーション：MorphRigによる手付け|
+
 
 ----
 ## 概要
 
-シーケンサーを利用し、MorphTargetのアニメーションを作成します。
+ControlRigとシーケンサーを利用し、姿勢や表情のアニメーションを作成します。
 
-IKRigと併用する場合、シーケンサーへの登録順をMorphRig > IKRigにする必要があります。サンプルマップ VRM4U_ControlRig を参考にしてください。
+細かい話：IKRigとMorphRig併用する場合、登録順によってはキー選択しにくい状態になります。最適な状態をサンプルマップ VRM4U_ControlRig で設定済なので参考にしてください。登録順を MorphRig > IKRig にすればOKです。
 {: .notice--info}
 
-ここで紹介するMorph用の機能は どんなSkeletalMeshにも利用できます。FBXとしてインポートしたモデルも動作します。
+表情アニメーション機能はどのようなSkeletalMeshにも適用できます。FBXインポートしたものにも使えます。
+{: .notice--info}
+
 
 ## 下準備
 
-[前述の解説より](../06_controlrig/)、`Morph Rig` を作成ください。
+[前述の解説より](../06_controlrig/)、`IKRig`と`MorphRig` を作成ください。
 
-続いて `WBP_MorphTarget`を右クリックから実行し、MoprhTarget制御UIを起動します。
+----
+
+## ポーズ・アニメーションの設定
+
+### ポーズをつける
+
+色々方法がありますが、ひとまずは `IKRig`をコンテンツブラウザからレベルに配置すればOKです。自動的にシーケンサー編集モードになります。
+
+コントローラを操作するとキャラクタが動きます。アニメーションを作成する場合は、シーケンサーにキーを追加します。
+
+||
+|-|
+|[![](./assets/images/small/07a_pose2.png)](../assets/images/07a_pose2.png)|
+
+### 既存のアニメーションを編集する
+
+既存アニメーションを、ControlRigの動きにベイクし、再編集することができます。（RigにはBackwardSolveを設定済です）
+
+アプローチは2つあります。
+
+|概要|詳細|
+|-|-|
+|(オススメ)<br>加算アニメで調整する|toleranceを小さめにベイクし、additiveセクションを追加。オフセットを入れて制御する|
+|初期設定で調整する|初期設定でベイクし、コントローラを制御する。細かい動きが再現されない|
+
+|アニメーションをセットしてtoleranceを小さめにベイク|
+|-|
+|[![](./assets/images/small/07a_pose3.png)](../assets/images/07a_pose3.png)|
+
+|additiveセクションを追加|additive側にキーを打つとオフセットとして制御できる|
+|-|-|
+|[![](./assets/images/small/07a_pose1.png)](../assets/images/07a_pose1.png)|[![](./assets/images/small/07a_pose4.png)](../assets/images/07a_pose4.png)|
+
+
+----
+
+## 表情の設定
+
+`WBP_MorphTarget`を右クリックから実行し、MoprhTarget制御UIを起動します。
 
 ||
 |-|
@@ -31,7 +74,7 @@ IKRigと併用する場合、シーケンサーへの登録順をMorphRig > IKRi
 |-|
 |[![](./assets/images/small/07a_ui2.png)](../assets/images/07a_ui2.png)|
 
-## 操作手順
+### 表情：操作手順
 
  1. MorphRigをレベルに配置し、シーケンサーの編集モードに入る
  1. 制御UIより、操作対象のモデルをTargetActorに設定する
@@ -45,7 +88,7 @@ IKRigと併用する場合、シーケンサーへの登録順をMorphRig > IKRi
 |-|
 |[![](./assets/images/small/07a_ui4.png)](../assets/images/07a_ui4.png)|
 
-## 細かい機能紹介
+### 表情：細かい機能紹介
 
  - ショートカットキー
    - k  キー追加
@@ -63,9 +106,28 @@ IKRigと併用する場合、シーケンサーへの登録順をMorphRig > IKRi
 |-|
 |[![](./assets/images/small/07a_ui5.png)](../assets/images/07a_ui5.png)|
 
-## 細かい仕組み（中身を知りたい方向け）
+### 表情：細かい仕組み（中身を知りたい方向け）
 
 複製スクリプトによって、ControlRigにMorphTarget数ぶんのControlを追加しています。それらの値をカーブ値に渡しています。
 
 あとはシーケンサーでControlの値を変更すれば、MorphTargetへ反映されます。お手軽です。
 
+
+----
+
+## シーケンサー操作時に揺れ骨が動くようにする
+
+`PostProcessAnimBlueprint`を利用します。
+
+以下のようなAnimBPを作成し、SkeletalMeshのPostProcessAnimBlueprintにセットすれば完了です。
+
+|作成するAnimBP|SkeletalMeshにセット。プレビューに表示が増える|
+|-|-|
+|[![](./assets/images/small/06a_post1.png)](../assets/images/06a_post1.png)|[![](./assets/images/small/06a_post2.png)](../assets/images/06a_post2.png)|
+
+----
+
+## 見た目のセットアップを忘れずに！
+
+`MToonAttachActor`を配置してTargetをセットしてください。輪郭線やセルフシャドウが有効化されます。
+[詳しくは前章の解説を参照ください](../01_look/)

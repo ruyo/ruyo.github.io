@@ -33,11 +33,11 @@ vrm4udocs:
         url: /VRM4U/02_sss/
       - title: "ライティング環境に合わせる"
         url: /VRM4U/02_envlight/
-      - title: "ポーズ(ControlRIg)"
+      - title: "ControlRigを作成する"
         url: /VRM4U/06_controlrig/
-      - title: "フェイシャル(ControlRIg)"
+      - title: "ポーズ・フェイシャル(ControlRig)"
         url: /VRM4U/07_controlrig_morph/
-      - title: "ポーズ(VRM4U)"
+      - title: "ポーズ・フェイシャル(VRM4U)"
         url: /VRM4U/02_pose/
   - title: "ゲームで使う"
     children:

@@ -1,5 +1,5 @@
 ---
-title: "ポーズを調整する(VRM4U機能)"
+title: "VRM4U機能でポーズを調整する"
 ---
 
 ||
@@ -68,3 +68,9 @@ AnimSequenceとして切り出し、`VRMCharacterModel`にセット。
 |[![](./assets/images/small/02r_skeleton.png)](../assets/images/02r_skeleton.png)|
 
 プレビューでおおまかに調整し、rigで微調整します。
+
+----
+
+## 表情をつける
+
+`MorphControl`を利用します。[詳しくは前章の解説を参照ください](../02_shortcut/)

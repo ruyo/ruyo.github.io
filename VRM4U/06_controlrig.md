@@ -1,5 +1,5 @@
 ---
-title: "ポーズを調整する(ControlRig)"
+title: "ControlRigを作成する"
 ---
 
 ||
@@ -57,7 +57,7 @@ UI表示でエラーが出る場合は、前述のプラグインが正しく有
  1. Rigを保存し、エディタを再起動する
     - 保存せずにRigをコンパイルしたり操作を継続すると、エディタがクラッシュすることがあります。
 
-テンプレートは3種類あります。通常は `IK Rig` を複製すればOKです。表情を付けたい場合は `Morph Rig` も複製ください。
+テンプレートは3種類あります。通常は `IKRig` を複製すればOKです。表情を付けたい場合は `MorphRig` も複製ください。
 
 ### IK Rigを作成する
 
@@ -125,21 +125,3 @@ IKテンプレートとほぼ同じ手順で利用できます。
 |-|
 |[![](./assets/images/small/06a_log.png)](../assets/images/06a_log.png)|
 
-
-----
-
-## シーケンサー操作時に揺れ骨が動くようにする
-
-`PostProcessAnimBlueprint`を利用します。
-
-以下のようなAnimBPを作成し、SkeletalMeshのPostProcessAnimBlueprintにセットすれば完了です。
-
-|作成するAnimBP|SkeletalMeshにセット。プレビューに表示が増える|
-|-|-|
-|[![](./assets/images/small/06a_post1.png)](../assets/images/06a_post1.png)|[![](./assets/images/small/06a_post2.png)](../assets/images/06a_post2.png)|
-
-----
-
-## 見た目のセットアップを忘れずに！
-
-輪郭線やセルフシャドウを手動で設定する必要があります。[前章の解説を参照ください](../01_look/)
