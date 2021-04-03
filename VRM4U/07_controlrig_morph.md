@@ -15,9 +15,6 @@ title: "ControlRigでポーズ・フェイシャルを制御する"
 
 ControlRigとシーケンサーを利用し、姿勢や表情のアニメーションを作成します。
 
-細かい話：IKRigとMorphRig併用すると、キー選択しにくい状態になることがあります。登録順を MorphRig > IKRig にする必要があります。最適な状態はサンプルマップ VRM4U_ControlRig で確認可能です。
-{: .notice--info}
-
 表情アニメーション機能はどのようなSkeletalMeshにも適用できます。FBXインポートしたものにも使えます。
 {: .notice--info}
 
@@ -88,6 +85,9 @@ ControlRigとシーケンサーを利用し、姿勢や表情のアニメーシ�
 |-|
 |[![](./assets/images/small/07a_ui4.png)](../assets/images/07a_ui4.png)|
 
+細かい話：IKRigとMorphRig併用すると、キー選択しにくい状態になることがあります。登録順を MorphRig > IKRig にする必要があります。最適な状態はサンプルマップ VRM4U_ControlRig で確認可能です。
+{: .notice--info}
+
 ### 表情：細かい機能紹介
 
  - ショートカットキー
@@ -111,7 +111,6 @@ ControlRigとシーケンサーを利用し、姿勢や表情のアニメーシ�
 複製スクリプトによって、ControlRigにMorphTarget数ぶんのControlを追加しています。それらの値をカーブ値に渡しています。
 
 あとはシーケンサーでControlの値を変更すれば、MorphTargetへ反映されます。お手軽です。
-
 
 ----
 
