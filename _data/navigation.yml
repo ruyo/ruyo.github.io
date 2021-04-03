@@ -19,6 +19,8 @@ vrm4udocs:
         url: /VRM4U/01_look/
       - title: "アニメーション適用する"
         url: /VRM4U/01_animation/
+      - title: "Macで利用する"
+        url: /VRM4U/03_mac/
   - title: "撮影する"
     children:
       - title: "フォトモードを使う"
