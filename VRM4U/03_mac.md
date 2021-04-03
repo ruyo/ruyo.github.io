@@ -13,10 +13,10 @@ title: "MacでVRM4Uを利用する"
 
 ## 概要
 
-Macで動かすには、ソースの取得とプロジェクトビルドが必要です。
+MacでVRM4Uを動かすための環境設定をします。
+UE4が動作できるスペックがあれば数分で完了します。気軽に利用ください。
 
-UE4が動作できるスペックがあれば数分で完了します。
-エンジンビルドは不要です。
+ソースの取得とプロジェクトビルドを行います。エンジンビルドは不要です。
 
 ### 手順の要約
 
@@ -40,13 +40,13 @@ https://github.com/ruyo/assimp
 私は`cmake-gui`を利用しました。参考にどうぞ。
 `ASSIMP_INSTALL`はOFFが良いと思いますが、よくわからなければそのままで構いません。
 
-パスを設定後、`Configure`、`Generate` を押せば完了です。途中で出るダイアログはデフォルトままでOKです。
+パスを設定後、`Configure`、`Generate` を押します。途中で出るダイアログはデフォルトままでOKです。
 
 ||
 |-|
 |[![](./assets/images/small/03m_c1.png)](../assets/images/03m_c1.png)|
 
-assimpディレクトリで、`make` コマンドを実行します。
+続いてターミナルより、assimpディレクトリで、`make` コマンドを実行します。
 
 完了すると、binフォルダ（上の例だとassimp/build2/bin）に`libassimp.dylib` などが生成されます。
 
@@ -58,23 +58,30 @@ VRM4Uのソースをプロジェクトに展開し、前述のmakeしたassimp�
 MyProject/Plugins/VRM4U/ThirdParty/assimp/lib/Mac/libassimp.dylib
 
 
-その後、MyProject.uprojectを右クリック、Xcodeプロジェクトを作成し開きます。
+その後、MyProject.uprojectをダブルクリックしてビルド＆起動します。
+
+|Yes でビルドされます|
+|-|
+|[![](./assets/images/small/03m_c3.png)](../assets/images/03m_c3.png)|
+
+起動した場合は次の手順へ進んでください。
+
+途中でエラーが出る場合は、Xcodeからビルドします。ファイルを右クリック、Xcodeプロジェクトを作成し開きます。
 
 ||
 |-|
 |[![](./assets/images/small/03m_c2.png)](../assets/images/03m_c2.png)|
 
-
-Xcodeでビルドします。Product > Build を選択します。
+Xcodeでビルドします。Product > Build を選択します。エディタが起動します。
 
 https://docs.unrealengine.com/en-US/ProductionPipelines/DevelopmentSetup/CompilingProjects/index.html
 
 
 初回起動はプラグインは無効です。プラグイン設定から有効化し、Xcodeで再度ビルドしてください。[詳しくはこちら](../01_quick-start/)
 
-xCodeでのビルドは以下を参照ください。
 
-
-|||
+|Mac上でのモデルインポート||
 |-|-|
 |[![](./assets/images/small/03m_i1.png)](../assets/images/03m_i1.png)|[![](./assets/images/small/03m_i2.png)](../assets/images/03m_i2.png)|
+
+蛇足：もしiOSアプリを作成したい場合、Windowsからのリモートビルドも利用することができます。用途に応じて環境をご利用ください。{: .notice--info}
