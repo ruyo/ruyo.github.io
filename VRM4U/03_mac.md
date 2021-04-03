@@ -72,7 +72,7 @@ MyProject/Plugins/VRM4U/ThirdParty/assimp/lib/Mac/libassimp.dylib
 |-|
 |[![](./assets/images/small/03m_c2.png)](../assets/images/03m_c2.png)|
 
-Xcodeでビルドします。Product > Build を選択します。エディタが起動します。
+Xcodeでビルドします。Product > Build を選択します。完了後はMyProject.uprojectをダブルクリックで起動します。
 
 https://docs.unrealengine.com/en-US/ProductionPipelines/DevelopmentSetup/CompilingProjects/index.html
 
