@@ -115,6 +115,34 @@ SkeletalMeshの編集画面より、パーツ毎のCastShadowを制御できま�
 法線向きを変える都合上、MatCapやリムライトの入り方が変わってしまいます。十分確認しましょう。
 
 ----
+## 白目が暗いのを修正したい
+
+|SSSマテリアル初期状態|対応後|
+|-|-|
+|[![](./assets/images/small/02g_eye1.png)](../assets/images/02g_eye1.png)|[![](./assets/images/small/02g_eye2.png)](../assets/images/02g_eye2.png)|
+|モデル：[【オリジナル3Dモデル】ドラゴニュート・シェンナ](https://booth.pm/ja/items/2661189)|
+
+要因は以下のようなものがあります。SSSマテリアルで起きやすいです。
+
+ - SSAO/SSGIの影響
+ - 虹彩のキャストシャドウが落ちている
+ - SSSカラーが反映されている
+
+アプローチは2つあります
+
+ - マテリアルが別れている場合
+   - 白目のSSSカラーを白に設定したり、マテリアル自体をUnlitなどに置き換える
+   - 虹彩のプリミティブのシャドウをOFFにする。SSAOを弱める
+ - マテリアルが他と共通の場合
+   - `BP_EyeWhite`を配置する
+
+BP_EyeWhiteよりTargetActorを設定ください。OffsetTransform、MaskScaleを調整し、白目に合わせます。形状によって上手く合わないことがあります。
+
+||
+|-|
+|[![](./assets/images/small/02g_eye3.png)](../assets/images/02g_eye3.png)|
+
+----
 ## 背景色を指定したい
 
 ステンシルバッファを利用します。エディタ設定より有効化し、キャラクタモデルに任意のステンシル値(ひとまず１）を指定してください。
