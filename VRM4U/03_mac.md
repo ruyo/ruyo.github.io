@@ -77,8 +77,9 @@ Xcodeでビルドします。Product > Build を選択します。完了後はMy
 https://docs.unrealengine.com/en-US/ProductionPipelines/DevelopmentSetup/CompilingProjects/index.html
 
 
-初回起動はプラグインは無効です。プラグイン設定から有効化し、Xcodeで再度ビルドしてください。[詳しくはこちら](../01_quick-start/)
+初回起動時はプラグインは無効です。プラグイン設定から有効化してください。[詳しくはこちら](../01_quick-start/)。有効化後、再度Xcodeでビルドしてください。
 
+完了です。
 
 |Mac上でのモデルインポート||
 |-|-|
