@@ -84,4 +84,5 @@ https://docs.unrealengine.com/en-US/ProductionPipelines/DevelopmentSetup/Compili
 |-|-|
 |[![](./assets/images/small/03m_i1.png)](../assets/images/03m_i1.png)|[![](./assets/images/small/03m_i2.png)](../assets/images/03m_i2.png)|
 
-蛇足：もしiOSアプリを作成したい場合、Windowsからのリモートビルドも利用することができます。用途に応じて環境をご利用ください。{: .notice--info}
+蛇足：もしiOSアプリを作成したい場合、Windowsからのリモートビルドも利用することができます。用途に応じて環境をご利用ください。
+{: .notice--info}
