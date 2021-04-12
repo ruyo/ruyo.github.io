@@ -30,7 +30,7 @@ title: "嘘パース・魚眼レンズ"
 `MToonMaterialSystem`を配置して、`FovFix` をONにすれば完了です。
 キャラクタは常に`FovFixDegree`の画角で描画されます。
 
-|標準|パース固定ON|
+|標準|パース固定ON(キャラ10度、背景130度)|
 |-|-|
 |[![](./assets/images/small/02p_fix1.png)](../assets/images/02p_fix1.png)|[![](./assets/images/small/02p_fix2.png)](../assets/images/02p_fix2.png)|
 
@@ -80,8 +80,8 @@ PlayIn後、`Z/Cキー`で画角を調整し、`T/Yキー`で魚眼処理(Panini
 
 描画負荷が上がるのでご注意ください。魚眼効果中は描画解像度がx2されます。
 
-詳しい動作は こちらの公式ドキュメントを参照ください。
-https://docs.unrealengine.com/ja/RenderingAndGraphics/PostProcessEffects/PaniniProjection/index.html
+詳しい動作は [こちらの公式ドキュメント](https://docs.unrealengine.com/ja/RenderingAndGraphics/PostProcessEffects/PaniniProjection/index.html)を参照ください。
+
 
 VRデバイスが接続されていると、魚眼効果が無効化されることがあります。その場合はデバイスを切断 or VRプラグインを無効化してご利用ください。
 {: .notice--info}
@@ -96,9 +96,10 @@ VRデバイスが接続されていると、魚眼効果が無効化されるこ
 UE4の初期Nearクリップは`10`で、この設定ではキャラに10cm未満に近づくと 描画が欠けます。
 構図に応じて変更ください。とりあえず`1`にすれば大抵は問題ありません。
 
+パース補正を利用すると、キャラクタの見た目と実際の距離に大きな差異が出ます。十分に設定を確認ください。
+{: .notice--info}
+
 |Nearクリップの変更。要エディタ再起動|
 |-|
 |[![](./assets/images/small/02p_near.png)](../assets/images/02p_near.png)||
 
-パース補正を利用すると、キャラクタの見た目と実際の距離に大きな差異が出ます。十分に設定を確認ください。
-{: .notice--info}

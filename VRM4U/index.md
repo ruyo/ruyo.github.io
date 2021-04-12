@@ -24,14 +24,14 @@ UnrealEngine4で動作する、VRMファイルのインポーターです。
 |[![](./assets/images/small/03.png)](./assets/images/03.png)|[![](./assets/images/small/04.png)](./assets/images/04.png)|
 |[![](./assets/images/small/01_a.png)](./assets/images/01_a.png)|[![](./assets/images/small/01_b.png)](./assets/images/01_b.png)|
 
-[他の作例はこちらからどうぞ](./90_gallery/)
+[ギャラリーにも利用例を載せています](./90_gallery/)
 
  - VRMファイルをインポートできます
  - アニメーション
      - 手軽にリターゲット可能です。A-pose/T-pose、BoneMapが生成されます。
      - 顔アニメ（Morphtarget・BlendShapeGroup）を利用可能です。
      - 揺れ骨にVRMSpringBone、PhysicsAssetを選択できます。
-     - 汎用のControlRigがあります。
+     - 汎用のControlRig、操作用のUMGがあります。
  - マテリアル
      - MToonを再現したマテリアル。影色の指定や、アウトラインの色・太さ調整、MatCapなどが全て適用されます。
      - PBR背景に合わせて描画モードを切り替え・調整できます。
