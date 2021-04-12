@@ -63,7 +63,7 @@ vrm4udocs:
     children:
       - title: "Toonを豪華にする"
         url: /VRM4U/02_toon/
-      - title: "魚眼・嘘パースを使う"
+      - title: "嘘パース・魚眼レンズ"
         url: /VRM4U/02_pers/
       - title: "フェイシャルキャプチャ"
         url: /VRM4U/05_tracking/

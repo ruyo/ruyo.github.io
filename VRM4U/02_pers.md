@@ -1,5 +1,5 @@
 ---
-title: "魚眼・嘘パースを使う"
+title: "嘘パース・魚眼レンズ"
 ---
 
 ||
@@ -13,16 +13,44 @@ title: "魚眼・嘘パースを使う"
 少々扱いにくい機能です。工夫してお使いください。
 {: .notice--info}
 
-魚眼レンズのような効果を入れたり、近いものがより大きく見えるような変形をします。
-画角が変わったように見えます。
+3つの機能があります。
 
-## 魚眼の使い方
-CharacterCameraを配置し`UniversalZoom`をONにして画角制限を解除します。
-PlayIn後、`Z/Cキー`で画角を調整し、`T/Yキー`で魚眼処理(Paniniプロジェクション)を調整します。
+|効果|解説|使いやすさ|
+|-|-|-|
+|キャラパース固定|キャラ描画のパースを固定します<br>広角でもキャラが歪まず、背景を広く映せます|○|
+|嘘パース|キャラ描画のパースを、カメラ距離に応じて変更します<br>近いものがより大きく見え、迫力ある絵になります|△|
+|魚眼レンズ|中央を拡大し、樽型に歪ませます<br>魚眼レンズを利用したような大きく歪んだ絵になります|○|
 
-描画負荷が上がるのでご注意ください。魚眼効果中は描画解像度がx2されます。
+----
 
-## 嘘パースの使い方
+## キャラパース固定
+
+サンプルマップ `VRM4U_FOVFIX.umap` を参照ください。
+
+`MToonMaterialSystem`を配置して、`FovFix` をONにすれば完了です。
+キャラクタは常に`FovFixDegree`の画角で描画されます。
+
+|標準|パース固定ON|
+|-|-|
+|[![](./assets/images/small/02p_fix1.png)](../assets/images/02p_fix1.png)|[![](./assets/images/small/02p_fix2.png)](../assets/images/02p_fix2.png)|
+
+
+画角の変更には、「エディタ上の画角変更」または「CharacterCameraでのUniversalZoom」を利用すると便利です。
+
+PlayIn中にカメラ操作したい場合は[VRM4Uのカメラをご利用ください](../02_shortcut2/)
+
+
+|エディタプレビューでの画角変更|
+|-|
+|[![](./assets/images/small/02p_fix3.png)](../assets/images/02p_fix3.png)||
+|モデル：[【オリジナル3Dモデル】ドラゴニュート・シェンナ](https://booth.pm/ja/items/2661189)|
+
+キャラクタの足先を背景位置と合わせています。キャラクタがアニメーション等で移動する場合、位置がずれることがあります。またライトの向きも変化します
+{: .notice--info}
+
+----
+
+## 嘘パース
 
 サンプルマップ `VRM4U_FOV.umap` を参照ください。
 
@@ -38,3 +66,22 @@ PlayIn後、`Z/Cキー`で画角を調整し、`T/Yキー`で魚眼処理(Panini
 |[![](./assets/images/small/02p_p2.png)](../assets/images/02p_p2.png)|[![](./assets/images/small/02p_p1.png)](../assets/images/02p_p1.png)|
 
 ----
+
+## 魚眼レンズ
+CharacterCameraを配置し`UniversalZoom`をONにして画角制限を解除します。
+PlayIn後、`Z/Cキー`で画角を調整し、`T/Yキー`で魚眼処理(Paniniプロジェクション)を調整します。
+
+[操作は前述のカメラ説明を参照ください](../02_shortcut2/)
+
+|標準|魚眼効果ON(Paniniプロジェクション)|
+|-|-|
+|[![](./assets/images/small/02p_pan1.png)](../assets/images/02p_pan1.png)|[![](./assets/images/small/02p_pan2.png)](../assets/images/02p_pan2.png)|
+
+
+描画負荷が上がるのでご注意ください。魚眼効果中は描画解像度がx2されます。
+
+詳しい動作は こちらの公式ドキュメントを参照ください。
+https://docs.unrealengine.com/ja/RenderingAndGraphics/PostProcessEffects/PaniniProjection/index.html
+
+VRデバイスが接続されていると、魚眼効果が無効化されることがあります。その場合はデバイスを切断 or VRプラグインを無効化してご利用ください。
+{: .notice--info}
