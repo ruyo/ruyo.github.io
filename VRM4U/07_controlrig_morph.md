@@ -11,13 +11,13 @@ title: "ControlRigでポーズ・フェイシャルを制御する"
 
 
 ----
+
 ## 概要
 
 ControlRigとシーケンサーを利用し、姿勢や表情のアニメーションを作成します。
 
-表情アニメーション機能はどのようなSkeletalMeshにも適用できます。FBXインポートしたものにも使えます。
+Rigを複数利用する場合、特別なセットアップが必要です。ページ後半を参照ください。
 {: .notice--info}
-
 
 ## 下準備
 
@@ -52,7 +52,7 @@ ControlRigとシーケンサーを利用し、姿勢や表情のアニメーシ�
 |-|
 |[![](./assets/images/small/07a_pose3.png)](../assets/images/07a_pose3.png)|
 
-|additiveセクションを追加|additive側にキーを打つとオフセットとして制御できる|
+|additiveセクションを追加|additive側にキーを打つと既存アニメを調整できる|
 |-|-|
 |[![](./assets/images/small/07a_pose1.png)](../assets/images/07a_pose1.png)|[![](./assets/images/small/07a_pose4.png)](../assets/images/07a_pose4.png)|
 
@@ -60,6 +60,9 @@ ControlRigとシーケンサーを利用し、姿勢や表情のアニメーシ�
 ----
 
 ## 表情の設定
+
+IKRigとMorphRigを併用する場合は、後述のセットアップも合わせて参照ください。
+{: .notice--info}
 
 `WBP_MorphTarget`を右クリックから実行し、MoprhTarget制御UIを起動します。
 
@@ -85,9 +88,6 @@ ControlRigとシーケンサーを利用し、姿勢や表情のアニメーシ�
 |-|
 |[![](./assets/images/small/07a_ui4.png)](../assets/images/07a_ui4.png)|
 
-細かい話：IKRigとMorphRig併用すると、キー選択しにくい状態になることがあります。登録順を MorphRig > IKRig にする必要があります。最適な状態はサンプルマップ VRM4U_ControlRig で確認可能です。
-{: .notice--info}
-
 ### 表情：細かい機能紹介
 
  - ショートカットキー
@@ -112,6 +112,56 @@ ControlRigとシーケンサーを利用し、姿勢や表情のアニメーシ�
 
 あとはシーケンサーでControlの値を変更すれば、MorphTargetへ反映されます。お手軽です。
 
+この仕組みはVRMに依存していないため、どのようなSkeletalMeshにも適用できます。FBXインポートしたものにも使えます。
+
+
+----
+
+## 複数のRigを同時に利用する
+
+**標準的な作業手順では問題が出ます！** Rigを複数利用する場合は十分ご確認ください。正しくセットアップしたものは VRM4U_ControlRig で確認できます。
+{: .notice--info}
+
+
+### 問題ない構成
+
+以下の画像のようにセットアップされていれば問題ありません。
+
+|Rigの登録場所に注意！！|
+|-|
+|[![](./assets/images/small/07a_r1.png)](../assets/images/07a_r1.png)|
+
+```
+問題ない構成
+-SkeltalMeshActor
+  -SkeletalMeshComponent0   <- 右クリックから追加する
+    -IK_Rig           <- OK.  ここがIKRig
+  -Morph_Rig          <- OK.  ここがMorphRig
+```
+
+### 問題ある構成
+
+標準的な作業手順では、以下のような構成になりやすいです。
+
+```
+問題ある構成
+-SkeltalMeshActor
+  -SkeletalMeshComponent0
+    -Morph_Rig       <- NG.  MorphRigとIKRigが逆
+  -IK_Rig            <- NG. 
+```
+
+この構成、一見正しく動作しますが、**`IKRig`を選択した時にシーケンサのフォーカスが移動しません！**
+キーを打つ手間が大変かかります。
+
+修正には 以下のように操作します。
+
+|IKRigを2つ登録して、キーを選択、移動先のrigにコピーする|
+|-|
+|[![](./assets/images/small/07a_r2.png)](../assets/images/07a_r2.png)|
+
+キーを移動後、元の`IKRig`を削除し 改めて`MorphRig`を追加すれば完了です。
+
 ----
 
 ## シーケンサー操作時に揺れ骨が動くようにする
@@ -125,6 +175,7 @@ ControlRigとシーケンサーを利用し、姿勢や表情のアニメーシ�
 |[![](./assets/images/small/06a_post1.png)](../assets/images/06a_post1.png)|[![](./assets/images/small/06a_post2.png)](../assets/images/06a_post2.png)|
 
 ----
+
 
 ## 見た目のセットアップを忘れずに！
 
