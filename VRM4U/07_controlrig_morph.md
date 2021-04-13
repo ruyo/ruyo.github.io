@@ -119,11 +119,11 @@ IKRigとMorphRigを併用する場合は、後述のセットアップも合わ�
 
 ## 複数のRigを同時に利用する
 
-**標準的な作業手順では問題が出ます！** Rigを複数利用する場合は十分ご確認ください。正しくセットアップしたものは VRM4U_ControlRig で確認できます。
+**標準的な作業手順では問題が出ます！** Rigを複数利用する場合は十分ご確認ください。正しくセットアップしたものは サンプルマップ VRM4U_ControlRig で確認できます。
 {: .notice--info}
 
 
-### 問題ない構成
+### 正しい構成
 
 以下の画像のようにセットアップされていれば問題ありません。
 
@@ -132,7 +132,7 @@ IKRigとMorphRigを併用する場合は、後述のセットアップも合わ�
 |[![](./assets/images/small/07a_r1.png)](../assets/images/07a_r1.png)|
 
 ```
-問題ない構成
+正しい構成
 -SkeltalMeshActor
   -SkeletalMeshComponent0   <- 右クリックから追加する
     -IK_Rig           <- OK.  ここがIKRig
