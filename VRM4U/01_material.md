@@ -1,0 +1,133 @@
+---
+title: "マテリアル調整ウインドウを使う"
+
+---
+
+
+||
+|-|
+|[![](./assets/images/small/01m_top.png)](../assets/images/01m_top.png)|
+|モデル：[ヴィクトリア・ルービン](https://hub.vroid.com/characters/2792872861023597723/models/5013769147837660446)、[千駄ヶ谷 渋](https://hub.vroid.com/characters/675572020956181239/models/4479743608263344465)|
+----
+
+## マテリアル調整ウインドウ
+
+VRM4Uの主要な調整機能を、1ウインドウにまとめました。
+手軽に、直感的にパラメータを操作できるようになっています。
+
+|マテリアル調整ウインドウの外観|
+|-|
+|[![](./assets/images/small/01m_p1.png)](../assets/images/01m_p1.png)|
+
+この機能はUE4.26でのみ有効です。
+{: .notice--info}
+
+----
+
+## マテリアル調整ウインドウを起動する
+
+`VRM4U/Util/Actor/latest/WBP_VRMMaterial` を右クリックし `RunEditorUtilityWidget`で起動します。
+
+出てきたウインドウより、`CreateMaterialSystem`ボタン を押すと動作開始です。
+
+|マテリアル調整ウインドウ 起動|
+|-|
+|[![](./assets/images/small/01m_p2.png)](../assets/images/01m_p2.png)|
+
+4つのサブウインドウがあります。
+
+|種別|特徴|
+|-|-|
+|GlobalParam|シーン全体の描画設定です|
+|Filter|VRMモデルと相性の良いポストフィルタを設定します。<br>お好みでご利用ください|
+|ModelMaterial|モデルのマテリアル設定です|
+|Advanced|特殊な設定です。後述|
+
+
+調整ウインドウはドッキングしておくと便利です。
+なおレイアウトを元にもどしたい場合は、`DefaultEditorLayout` を選択ください。
+
+|ウィンドウのドッキング、解除|
+|-|
+|[![](./assets/images/small/01m_w1.png)](../assets/images/01m_w1.png)|
+
+----
+
+## 各ウインドウの解説
+
+### GlobalParam ウインドウ
+
+|GlobalParam|
+|-|
+|[![](./assets/images/small/01m_s1.png)](../assets/images/01m_s1.png)|
+
+基本的な描画パラメータです。VRM4Uのマテリアル調整はこの画面でほぼ完結します。
+
+
+### Filter ウインドウ
+
+|Filter未設定|設定後|
+|-|-|
+|[![](./assets/images/small/01m_s2.png)](../assets/images/01m_s2.png)|[![](./assets/images/small/01m_s2_1.png)](../assets/images/01m_s2_1.png)|
+
+ポストフィルタです。トゥーン/アニメ調のモデルと相性の良いフィルタを追加します。
+
+EnableのチェックをONにすると有効化されます。対応するActorがレベルに配置されます。
+
+
+### ModelMaterial ウインドウ
+
+|Material未設定|設定後|
+|-|-|
+|[![](./assets/images/small/01m_s3.png)](../assets/images/01m_s3.png)|[![](./assets/images/small/01m_s3_2.png)](../assets/images/01m_s3_2.png)|
+
+モデルのベースマテリアルを変更することができます。インポート時の設定と同じ効果です。
+`TargetActor` をレベル上のActorから選択すると操作開始です。
+
+マテリアルの特徴を紹介しておきます。手軽に変更できるので 実際に試して確認ください。
+
+ - MToon Unlit
+   - VRM本来の見た目を再現します。ライトは反映されません。
+ - MToon Lit
+   - VRMの見た目を維持しつつ、ライトやAOが反映されます。
+ - SubsurfaceScattering
+   - ややリアルな見た目になります。調整次第でトゥーンやフィギュアのような質感を出せます。
+ - その他
+   - シンプルなUnlit/Litに置き換えます。自分でマテリアルを組む人向け。
+
+以下に特徴をまとめました。
+
+||**MToonUnlit**|**MToonLit**|**SubsurfaceScattering**|
+|-|:-:|:-:|:-:|
+|見た目|[![](./assets/images/small/01m_m1.png)](../assets/images/01m_m1.png)|[![](./assets/images/small/01m_m2.png)](../assets/images/01m_m2.png)|[![](./assets/images/small/01m_m3.png)](../assets/images/01m_m3.png)
+|ライト効果|**なし**|あり（弱め）|あり|
+|UE4背景との相性|悪い|普通|良い|
+|調整の難易度|**簡単**|普通|**やや難しい**|
+
+
+### Advanced ウインドウ
+
+|Advanced|
+|-|
+|[![](./assets/images/small/01m_s4.png)](../assets/images/01m_s4.png)|
+
+VRM4Uのマニアックな機能のうち、手軽に扱えるものをリストアップしました。
+
+思わぬ発見があるかもしれません。気が向いたらONにして差分を確認ください。<br>
+（やや特殊な動作です。常時ONにする場合は 他シーンに影響ないか十分確認ください）
+
+ - 画角固定
+   - キャラクタの描画画角を固定します。<br>
+     UE4の初期カメラ画角は90度なので、これではキャラクタが魅力的に見えません。<br>
+     あなたのキャラクタはもっとカワイイはずです！
+ - Tonamep切り替え
+   - レガシートーンマッパーに切り替えます。<br>
+     UE4のトーンマッパーと初期設定では鮮やかな色が出ません。<br>
+     あなたのキャラクタはもっと色鮮やかで繊細なグラデーションのはずです！
+
+## 調整ウインドウの詳しい話、内部動作の仕組み
+
+調整用のActorを生成し、それらをUMGで操作できるようにしています。
+内部的には、`MToonMaterialSystem`、`BP_Bloom`、`BP_ColorGradation` 等を生成し、アクセスしています。
+
+他ページの解説では、調整用Actorを利用しています。が、このウインドウで同等の操作が可能です。適宜読み替えてご利用ください。
