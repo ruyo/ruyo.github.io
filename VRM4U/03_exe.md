@@ -60,6 +60,7 @@ https://www.unrealengine.com/ja/blog/updated-authentication-process-for-connecti
 
 
 ----
+
 ## EXEを作る
 
 ひとまずUE4のメニューからパッケージ作成してみて、エラーが出るようならVisualStudioのセットアップを行います。
@@ -71,8 +72,16 @@ https://www.unrealengine.com/ja/blog/updated-authentication-process-for-connecti
 を参照ください。表記のVisualStudioのバージョンが古いですが、適宜読み替えてOKです。
 項目は「VisualStudioのインストール」まで辿ればOKです。「推奨設定」以降はスキップです。
 
+## テスト用BPを削除する（パッケージングでエラーが出ることがあります。プラグイン設定によります）
+
+エクスプローラより `Plugins/VRM4U/Content/Util/Actor/latest` をフォルダごと削除してください。
+これは実験的なデータ（ControlRigやFaceTrackingのActor）です。
+
+とにかく、全部削除してしまってOKです。
+プラグイン設定によっては、エラーが出ない場合や、ログより対象のアセットを削除するだけで解決する場合があります。
 
 ----
+
 ## よくあるトラブル
 
 ### Githubページで404エラーが出る
@@ -87,8 +96,7 @@ Epicのページからアカウントを紐付けする際は、githubのメー�
 
 ### `/VRM4U/Util/Actor/latest` のアセットでエラーが出る
 
-エラーが出る場合は `/VRM4U/Util/Actor/latest` のディレクトリごと削除してください。
-これは実験的なデータ（ControlRigやFaceTrackingのActor）が入っています。プロジェクト設定によって、エラーが出ないこともあります。
+前述のとおり、`Plugins/VRM4U/Content/Util/Actor/latest` のフォルダごと削除してください。
 
 ### 日本語ファイル名によるエラー対応
 
@@ -107,6 +115,7 @@ Epicのページからアカウントを紐付けする際は、githubのメー�
 VRM4Uは対応するUE4バージョン全てに対し、同一のソースコードを使っています。バージョン毎に書きわけできない箇所は古い書式を採用しています。
 
 ----
+
 ## エラーが出た場合
 
 以下のログファイルを [GitHubIssues](https://github.com/ruyo/VRM4U/issues) または [@ruyo_h](https://twitter.com/ruyo_h)のDM などでお送りください。
@@ -116,6 +125,7 @@ VRM4Uは対応するUE4バージョン全てに対し、同一のソースコー
 - MyProject/Saved/Log/MyProject.log
 
 ----
+
 ## （VRM4U_20200625以前を使っている場合）C++プロジェクトにする
 [こちらのリンク](https://docs.unrealengine.com/ja/Programming/QuickStart/2/index.html)を参考に、新規のC++ファイルを追加してください。
 
@@ -124,6 +134,7 @@ VRM4Uは対応するUE4バージョン全てに対し、同一のソースコー
 （例えば「MyProject.uproject」と同じ場所に「MyProject.sln」が生成される）
 
 ----
+
 ## なんでこんなに面倒くさいの？
 
 プラグインを作る際、一部エンジンのソースを参考にしているためです。主にランタイムロード機能です。
