@@ -21,10 +21,11 @@ UnrealEngine4で動作する、VRMファイルのインポーターです。
 
 |||
 |----|----|
-|[![](./assets/images/small/03.png)](./assets/images/03.png)|[![](./assets/images/small/04.png)](./assets/images/04.png)|
-|[![](./assets/images/small/01_a.png)](./assets/images/01_a.png)|[![](./assets/images/small/01_b.png)](./assets/images/01_b.png)|
+|VRMモデル / Toonマテリアルモード<br>[![](./assets/images/small/03.png)](./assets/images/03.png)|VRMモデル / PBRマテリアルモード<br>[![](./assets/images/small/01_b.png)](./assets/images/01_b.png)|
+|グレイマンからのリターゲット<br>[![](./assets/images/small/top_3.png)](./assets/images/top_3.png)|モバイル<br>[![](./assets/images/small/top_2.png)](./assets/images/top_2.png)|
+|VRMSpringBone<br>[![](./assets/images/small/top_1.png)](./assets/images/top_1.png)|共通ControlRig<br>[![](./assets/images/small/07a_top.png)](../assets/images/07a_top.png)|
 
-[ギャラリーにも利用例を載せています](./90_gallery/)
+スクリーンショットや動画は[**ギャラリーのページ**](./90_gallery/)に沢山あります
 
  - VRMファイルをインポートできます
  - アニメーション
