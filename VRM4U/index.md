@@ -23,7 +23,6 @@ UnrealEngine4で動作する、VRMファイルのインポーターです。
 |:-:|:-:|
 |[![](./assets/images/small/03.png)](./assets/images/03.png)|[![](./assets/images/small/04.png)](./assets/images/04.png)|
 |[![](./assets/images/small/01_a.png)](./assets/images/01_a.png)|[![](./assets/images/small/01_b.png)](./assets/images/01_b.png)|
-|[![](./assets/images/small/top_1.png)](./assets/images/top_1.png)|[![](./assets/images/small/07a_top.png)](../assets/images/07a_top.png)|
 
 
 スクリーンショットや動画は[**ギャラリーのページ**](./90_gallery/)に沢山あります
@@ -55,5 +54,4 @@ UnrealEngine4で動作する、VRMファイルのインポーターです。
 ## 雰囲気を知りたい
 
 [簡易的ですがYoutubeの動画](https://www.youtube.com/channel/UC9Xuvwk9YLisxtNbTAjryDQ)や、ハッシュタグ[#VRM4U](https://twitter.com/hashtag/VRM4U)を参考にどうぞ
-
 
