@@ -20,7 +20,7 @@ UnrealEngine4で動作する、VRMファイルのインポーターです。
 
 UE5はアーリーアクセスです。ご利用にはご注意ください。
 
-[![](./assets/images/small/edSplash.bmp)](./assets/images/small/edSplash.bmp)
+[![](./assets/images/small/EdSplash.bmp)](./assets/images/small/EdSplash.bmp)
 
 [![](./assets/images/ue5.png)](./assets/images/small/ue5.png)
 
