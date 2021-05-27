@@ -16,6 +16,14 @@ UnrealEngine4で動作する、VRMファイルのインポーターです。
 
 [English (GoogleTranslate)](https://translate.google.com/translate?um=1&ie=UTF-8&hl=ja&client=tw-ob&sl=ja&tl=en&u=https%3A%2F%2Fruyo.github.io%2FVRM4U%2F)
 
+## UE5 対応しました！
+
+UE5はアーリーアクセスです。ご利用にはご注意ください。
+
+[![](./assets/images/small/edSplash.bmp)](./assets/images/small/edSplash.bmp)
+
+[![](./assets/images/ue5.png)](./assets/images/small/ue5.png)
+
 ----
 ## 特徴
 
@@ -48,7 +56,7 @@ UnrealEngine4で動作する、VRMファイルのインポーターです。
      - アニメーションはランタイムでリターゲットできます。
  - UE4との相性の良さ
      - インポート後は標準的なSkeletalMeshアセットになります。
-     - 対応するUE4のバージョンは4.20~4.26です（2020/12現在）最新版への対応も容易です。
+     - 対応するUEのバージョンは4.20~4.26, 5.0です（2021/05現在）最新版への対応も容易です。
 
 ----
 ## 雰囲気を知りたい
