@@ -23,6 +23,8 @@ vrm4udocs:
         url: /VRM4U/03_mac/
       - title: "マテリアル調整ウインドウを使う"
         url: /VRM4U/01_material/
+      - title: "UE5 オススメ設定"
+        url: /VRM4U/51_ue5/
   - title: "撮影する"
     children:
       - title: "フォトモードを使う"
