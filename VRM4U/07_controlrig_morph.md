@@ -180,6 +180,7 @@ IKRigとMorphRigを併用する場合は、後述のセットアップも合わ�
 |-|-|
 |[![](./assets/images/small/06a_post1.png)](../assets/images/06a_post1.png)|[![](./assets/images/small/06a_post2.png)](../assets/images/06a_post2.png)|
 
+
 ----
 
 
@@ -187,3 +188,41 @@ IKRigとMorphRigを併用する場合は、後述のセットアップも合わ�
 
 `MToonAttachActor`を配置してTargetをセットしてください。輪郭線やセルフシャドウが有効化されます。
 [詳しくは前章の解説を参照ください](../01_look/)
+
+
+----
+
+## 手首のねじれ補正を調整する
+
+初期状態で軽く補正が入っています。好みに応じて調整ください。
+
+|手首ねじれ補正コントローラ|補正ON|補正OFF|
+|-|-|-|
+|[![](./assets/images/small/06a_hand.png)](../assets/images/06a_hand.png)|[![](./assets/images/small/06a_hand_on.png)](../assets/images/06a_hand_on.png)|[![](./assets/images/small/06a_hand_off.png)](../assets/images/06a_hand_off.png)|
+
+
+----
+
+## 補助骨が動くようにする（上級者向け）
+
+補助骨用のControlRigをセットアップし、PostProcessAnimBlueprint にセットすれば完了です。
+
+モデルに補助骨が設定されている必要があります。前段のねじれ補正はOFFにしてください。
+{: .notice--info}
+
+ - `CR_HelperBone`を複製する
+ - Import Hierarchy で対象のモデルを指定
+ - パラメータを書き換える
+   - 動かしたい補助骨とその連動元、ブレンド率などを設定
+
+|モデルを指定|パラメータセットアップ|AnimBP設定|
+|-|-|-|
+|[![](./assets/images/small/06a_helper1.png)](../assets/images/06a_helper1.png)|[![](./assets/images/small/06a_helper2.png)](../assets/images/06a_helper2.png)|[![](./assets/images/small/06a_helper3.png)](../assets/images/06a_helper3.png)|
+
+Skeletonのプレビューより動作確認できます。
+
+|補助骨設定 あり|補助骨設定 なし|
+|-|-|
+|[![](./assets/images/small/06a_helper_on.png)](../assets/images/06a_helper_on.png)|[![](./assets/images/small/06a_helper_off.png)](../assets/images/06a_helper_off.png)|
+
+
