@@ -25,6 +25,8 @@ title: "嘘パース・魚眼レンズ"
 
 ## キャラパース固定
 
+### 利用方法 基本編
+
 サンプルマップ `VRM4U_FOVFIX.umap` を参照ください。
 
 `MToonMaterialSystem`を配置して、`FovFix` をONにすれば完了です。
@@ -47,6 +49,20 @@ PlayIn中にカメラ操作したい場合は[VRM4Uのカメラをご利用く�
 
 キャラクタの足先を背景位置と合わせています。キャラクタがアニメーション等で移動する場合、位置がずれることがあります。またライトの向きも変化します
 {: .notice--info}
+
+### 利用方法 応用編
+
+シーケンサーと併用する場合は、Blueprintを操作します。
+
+FovFixを設定したシーンには、`BP_GlobalTimeChecker` というActorが生成されます。
+これを開き、`Compile`を押せば完了です。以降、シーケンサー編集モードやPlayIn中に、パース固定機能が動作するようになります。
+
+`マテリアル調整ウインドウ`からも設定可能です。
+
+|TimeCheckerを再セット|調整ウインドウ|
+|-|-|
+|[![](./assets/images/small/02p_fix4.png)](../assets/images/02p_fix4.png)|[![](./assets/images/small/02p_fix5.png)](../assets/images/02p_fix5.png)|
+
 
 ----
 
