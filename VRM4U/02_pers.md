@@ -52,16 +52,19 @@ PlayIn中にカメラ操作したい場合は[VRM4Uのカメラをご利用く�
 
 ### 利用方法 応用編
 
-シーケンサーと併用する場合は、Blueprintを操作します。
+シーケンサーと併用する場合は、以下の順に操作してください。
 
-FovFixを設定したシーンには、`BP_GlobalTimeChecker` というActorが生成されます。
-これを開き、`Compile`を押せば完了です。以降、シーケンサー編集モードやPlayIn中に、パース固定機能が動作するようになります。
+1. パース固定を`マテリアル調整ウインドウ`から設定します。
+シーンに`BP_GlobalTimeChecker`というActorが生成されます。
 
-`マテリアル調整ウインドウ`からも設定可能です。
+2. アウトライナからActorを選択し、編集画面より`Compile`を押します。
 
-|TimeCheckerを再セット|調整ウインドウ|
+完了です。以降、シーケンサー編集モードやPlayIn中も、パース固定機能が動作します。
+
+
+|調整ウインドウで設定|TimeCheckerを再コンパイル|
 |-|-|
-|[![](./assets/images/small/02p_fix4.png)](../assets/images/02p_fix4.png)|[![](./assets/images/small/02p_fix5.png)](../assets/images/02p_fix5.png)|
+|[![](./assets/images/small/02p_fix5.png)](../assets/images/02p_fix5.png)|[![](./assets/images/small/02p_fix4.png)](../assets/images/02p_fix4.png)|
 
 
 ----
