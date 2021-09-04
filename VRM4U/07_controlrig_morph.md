@@ -230,3 +230,15 @@ IKRigとMorphRigを併用する場合は、後述のセットアップも合わ�
 |[![](./assets/images/small/06a_helper_on.png)](../assets/images/06a_helper_on.png)|[![](./assets/images/small/06a_helper_off.png)](../assets/images/06a_helper_off.png)|
 
 
+----
+
+## マテリアルパラメータのアニメーションを適用する（上級者向け）
+
+サンプルマップ`VRM4U_BlendShapeGroup.umap`を参照ください。
+
+`BP_BlendShapeGroupController` から設定可能です。VRMのBlendShapeGroupで指定したMorphとMaterialListが適用されます。
+
+|マテリアルパラメータ指定|
+|-|
+|[![](./assets/images/small/06a_mat.png)](../assets/images/06a_mat.png)|
+
