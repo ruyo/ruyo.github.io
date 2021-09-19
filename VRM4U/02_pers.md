@@ -114,7 +114,7 @@ VRM4U以外のマテリアルを併用する際は、以下のノードを利用
 |-|-|-|
 |[![](./assets/images/small/02p_n51.png)](../assets/images/02p_n51.png)|[![](./assets/images/small/02p_n52.png)](../assets/images/02p_n52.png)|[![](./assets/images/small/02p_n53.png)](../assets/images/02p_n53.png)|
 
-|MF_FovCharacter を WorldPositionOffset に繋ぐ<br>ドラッグ&ドロップで配置ください|
+|MF_FovExternal を WorldPositionOffset に繋ぐ<br>ドラッグ&ドロップで配置ください|
 |-|
 |[![](./assets/images/small/02p_n50.png)](../assets/images/02p_n50.png)|
 
