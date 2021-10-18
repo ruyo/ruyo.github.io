@@ -4,19 +4,57 @@ title: "Toonを豪華にする"
 
 ||
 |-|
+|[![](./assets/images/small/02d_top2.png)](../assets/images/02d_top2.png)|
+|モデル：[ドラゴニュート・シアノス](https://booth.pm/ja/items/3224415)|
+|UE4.27 レイトレースON||
+
+----
+
+----
+
+## やや上級者向けです
+
+細かな調整をするためには、ある程度のエディタ操作やVRM4U設定の知識が必要です。
+{: .notice--info}
+
+----
+## PostToon で豪華にする
+
+サンプルマップ `VRM4U_PostToon.umap` を参照ください。セットアップ手順は以下のとおりです。
+
+ - 手順 1. SkeletalMeshを配置し、アニメーションやゲーム処理などを組み込む
+ - 手順 2. `BP_PoseCopyToon` のTargetActorに上記SkeletalMeshを設定し、Toonモデルとして描画する
+ - 手順 3. `BP_PoseCopyToon` のパラメータを調整する。
+
+通常のSkeletalMeshを参照し、Toonで描画しなおします。そのため、シーンにはモデルが2通り配置されます。
+必要に応じて、通常モデルを非表示にして利用ください。
+
+
+|ControlRigでポーズを設定し、Toonモデルとして再描画した様子|
+|-|
+|[![](./assets/images/small/02d_set.png)](../assets/images/02d_set.png)|
+
+### 調整方法＆仕組み
+
+内部的には以下のようなバッファがあります。
+
+`BP_PoseCopyToon`で指定する閾値により陰影の検出、ハイライトの設定をします。
+陰影の色はMToonの設定を利用しています。
+
+細かな陰影を得るために、レイトレースシャドウを利用したり、UE5のVirtualShadowMapを使うと効果的です。
+
+|最終結果|陰影検出用PBR|陰影・ハイライト検出|
+|-|-|-|
+|[![](./assets/images/small/02d_toon1.png)](../assets/images/02d_toon1.png)|[![](./assets/images/small/02d_toon3.png)](../assets/images/02d_toon3.png)|[![](./assets/images/small/02d_toon2.png)](../assets/images/02d_toon2.png)|
+
+----
+
+## （古い仕組み）Toon AO で豪華にする
+
+||
+|-|
 |[![](./assets/images/small/02d_top.png)](../assets/images/02d_top.png)|
-|モデル：[NecoMaid](https://booth.pm/ja/items/1843586) （fbx -> VRM変換）|
-|アニメーション：[ミライ小町](https://www.bandainamcostudios.com/works/miraikomachi/dlcguideline.html)（fbx -> humanoidリターゲット）|
-
-----
-## 効果は限定的です
-
-凹凸が複雑なモデルで、シンプルなライト環境 の場合に効果が出やすいです。
-
-指定した色のみ が適用されます。ライトが利用できないため表現に制限があります。
-
-----
-## Toon AO を使う
+|モデル：[NecoMaid](https://booth.pm/ja/items/1843586) |
 
 「Toon AO」という単語はVRM4Uが勝手に名付けているものです。一般名称ではありません。
 {: .notice--info}
@@ -33,7 +71,7 @@ AmbientOcculusionをToonの影色で塗ります。（一般的にはAOは黒色
 |[![](./assets/images/small/02d_on1.png)](../assets/images/02d_on1.png)|[![](./assets/images/small/02d_on2.png)](../assets/images/02d_on2.png)|[![](./assets/images/small/02d_on3.png)](../assets/images/02d_on3.png)|
 
 ----
-## Toon AO の作り方
+## （古い仕組み）Toon AO の作り方
 
 `AssetUtil`でメッシュを選択し「CreateAOModel」ボタンを押します。
 新しくメッシュが生成されます。末尾に「_AOShadowMesh」という名前がついています。
