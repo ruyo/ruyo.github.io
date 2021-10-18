@@ -20,7 +20,10 @@ title: "Toonを豪華にする"
 ----
 ## PostToon で豪華にする
 
-サンプルマップ `VRM4U_PostToon.umap` を参照ください。セットアップ手順は以下のとおりです。
+サンプルマップ `VRM4U_PostToon.umap` を参照ください。
+モデルを3つの領域（主/影/ハイライト）で塗り分けます。
+
+セットアップ手順は以下のとおりです。
 
  - 手順 1. SkeletalMeshを配置し、アニメーションやゲーム処理などを組み込む
  - 手順 2. `BP_PoseCopyToon` のTargetActorに上記SkeletalMeshを設定し、Toonモデルとして描画する
@@ -30,7 +33,7 @@ title: "Toonを豪華にする"
 必要に応じて、通常モデルを非表示にして利用ください。
 
 
-|ControlRigでポーズを設定し、Toonモデルとして再描画した様子|
+|SkeletalMeshをControlRigでポーズを設定し、Toonモデルとして再描画した様子|
 |-|
 |[![](./assets/images/small/02d_set.png)](../assets/images/02d_set.png)|
 
@@ -41,11 +44,17 @@ title: "Toonを豪華にする"
 `BP_PoseCopyToon`で指定する閾値により陰影の検出、ハイライトの設定をします。
 陰影の色はMToonの設定を利用しています。
 
-細かな陰影を得るために、レイトレースシャドウを利用したり、UE5のVirtualShadowMapを使うと効果的です。
+細かな陰影を得るためには、レイトレースシャドウを利用したり、UE5のVirtualShadowMapを使うと効果的です。
 
 |最終結果|陰影検出用PBR|陰影・ハイライト検出|
 |-|-|-|
 |[![](./assets/images/small/02d_toon1.png)](../assets/images/02d_toon1.png)|[![](./assets/images/small/02d_toon3.png)](../assets/images/02d_toon3.png)|[![](./assets/images/small/02d_toon2.png)](../assets/images/02d_toon2.png)|
+
+### 深く突っ込んだ調整項目
+
+- VRM4Uの法線補正機能を利用すると、陰影を調整できます。
+- 白目が影色になりやすいです。BP_EyeWhiteで補正できます。
+
 
 ----
 
