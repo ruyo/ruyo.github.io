@@ -26,34 +26,32 @@ title: "Toonを豪華にする"
 セットアップ手順は以下のとおりです。
 
  - 手順 1. SkeletalMeshを配置し、アニメーションやゲーム処理などを組み込む
- - 手順 2. `BP_PoseCopyToon` のTargetActorに上記SkeletalMeshを設定し、Toonモデルとして描画する
- - 手順 3. `BP_PoseCopyToon` のパラメータを調整する。
+ - 手順 2. `BP_PoseCopyToon` のTargetActorに上記SkeletalMeshを設定し、パラメータ調整する
 
-通常のSkeletalMeshを参照し、Toonで描画しなおします。そのため、シーンにはモデルが2通り配置されます。
+PostToonの描画には、ベースとなるSkeletalMeshComponentが必要です。そのため、シーンにはモデルが2通り配置されます。
 必要に応じて、通常モデルを非表示にして利用ください。
-
 
 |SkeletalMeshをControlRigでポーズを設定し、Toonモデルとして再描画した様子|
 |-|
 |[![](./assets/images/small/02d_set.png)](../assets/images/02d_set.png)|
 
-### 調整方法＆仕組み
+### 仕組み＆調整方法
 
 内部的には以下のようなバッファがあります。
-
-`BP_PoseCopyToon`で指定する閾値により陰影の検出、ハイライトの設定をします。
-陰影の色はMToonの設定を利用しています。
-
-細かな陰影を得るためには、レイトレースシャドウを利用したり、UE5のVirtualShadowMapを使うと効果的です。
 
 |最終結果|陰影検出用PBR|陰影・ハイライト検出|
 |-|-|-|
 |[![](./assets/images/small/02d_toon1.png)](../assets/images/02d_toon1.png)|[![](./assets/images/small/02d_toon3.png)](../assets/images/02d_toon3.png)|[![](./assets/images/small/02d_toon2.png)](../assets/images/02d_toon2.png)|
 
-### 深く突っ込んだ調整項目
+陰影の検出、ハイライトの設定を`BP_PoseCopyToon` で行います。
+陰色はMToonの設定を利用します。
+
+細かな陰影を得るためには、レイトレースシャドウを利用したり、UE5のVirtualShadowMapを使うと効果的です。
+
+### より細かい調整項目
 
 - VRM4Uの法線補正機能を利用すると、陰影を調整できます。
-- 白目が影色になりやすいです。BP_EyeWhiteで補正できます。
+- 白目が暗くなりがちです。BP_EyeWhiteで補正できます。
 
 
 ----
