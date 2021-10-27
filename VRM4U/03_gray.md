@@ -20,6 +20,13 @@ title: "グレイマンを置き換える"
 
 インポート時に`HumanoidMesh`と`IKBone`にチェックを入れます。
 
+骨名が変わるだけです。骨の向きは変化しません。
+{: .notice--info}
+
+VRMモデルとグレイマンのSkeleton共通化は、正しく動作しません。
+{: .notice--info}
+
+
 ||
 |-|
 |[![](./assets/images/small/03a_import.png)](../assets/images/03a_import.png)|

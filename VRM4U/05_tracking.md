@@ -112,9 +112,11 @@ LiveLinkFaceでキャプチャした表情を、キャラクタに適用しま�
    - セットアップが簡単
    - MorphTargetの名前によっては 動かない場合がある
    - 目線が動かない
+   - Editorでは動かない。Play状態で確認する
  - フル機能使う方法
    - セットアップが手間
    - 全てのパラメータを利用できる
+   - Editorで動く
 
 
 ### 簡易的な方法
@@ -137,8 +139,9 @@ LiveLinkFaceでキャプチャした表情を、キャラクタに適用しま�
  - ControlRigを作成する
    - 目的：頭の向きや視線を変更する。骨のアニメーションを制御する
    - サンプル：CR_VRoidSimple_PostProcess
- - SkeletalMesh の PostProcessAnimBlueprint を変更する
+ - SkeletalMesh の PostProcessAnimBlueprint を変更する。SkeletalMeshComponent の UpdataAnimationInEditorをONにする
    - 目的：PlayIn/プレビューどちらでも動作できるようにする
+
 
 赤丸で示した箇所について、設定忘れに注意ください。
 
