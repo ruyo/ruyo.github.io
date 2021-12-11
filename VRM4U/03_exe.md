@@ -86,6 +86,9 @@ https://www.unrealengine.com/ja/blog/updated-authentication-process-for-connecti
 
 ### Githubページで404エラーが出る
 
+初めて紐付けする方へ：メールで認証確認ページのリンクが届きます。手続きを最後まで終えているか よく確認ください。
+{: .notice--info}
+
 あなたのブラウザでEpicのリポジトリは参照できますか？
 
 https://github.com/EpicGames/UnrealEngine
