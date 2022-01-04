@@ -17,11 +17,11 @@ title: "モーションキャプチャ(VMC Protocol)を受け取る"
 VMC対応については、[はるくさん開発のVMC4UE](https://github.com/HAL9HARUKU/VMC4UE)の利用もご検討ください。
 {: .notice--info}
 
-**UE5EA版では大きな不具合があり（後述）、UE5正式版で修正される**ようです。
+**UE5EA版では大きな不具合があるので（後述）、利用時はご注意ください。正式リリースで修正される**ようです。
 UE4では問題なく動作します。
 {: .notice--warning}
 
-Virtual Motion Capture Protocol（以下VMC Protocol）の解説は[こちらからどうぞ](https://protocol.vmc.info/)
+Virtual Motion Capture Protocol（以下VMC Protocol）の紹介は[こちらからどうぞ](https://protocol.vmc.info/)
 
 
 ----
@@ -100,10 +100,16 @@ SkeletalMeshの`Update Animation in Editor` をONにしてください。エデ�
  - 不具合2: UE5EAは前述のブレンドシェイプやトラッカーを正しく検索できないことがあります
    - Map(文字列と姿勢の連想配列)におけるFindが正しく動作しません。データ参照方法に工夫が必要です。Blueprint/cppどちらのFind呼び出しも問題が起きます。
 
-どちらの不具合も、UE5正式リリースには修正されるようです。
+どちらの不具合も、UE5正式リリースには修正されるようです。UE4では正常動作します。
 
 ### RunServer を押した時の挙動
 
-ボタンを押すと レベルにBP_VMCReceiverがスポーンします。同時にポート番号を設定し、データ受信を開始します。
+ボタンを押すと レベルに`BP_VMCReceiver`がスポーンします。同時にポート番号を設定し、データ受信を開始します。データは`VRM4U_VMC_Subsystem`に格納されます。
 
 EditorUtilityWidgetを経由しているため、いつでもデータ受信が可能です。プレビューであれば PlayInは不要です。このページのトップ絵も PlayInしていない状態です。
+
+### 複数の外部アプリからのデータ受信
+
+レベルに`BP_VMCReceiver`を複数配置し、ポート番号を設定ください。それぞれデータが受信されます。
+
+データの参照には、`VRM4U_VMC_Subsystem`へのアクセス時に、「ポート番号指定」または「通し番号指定」を利用してください。
