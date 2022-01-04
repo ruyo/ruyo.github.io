@@ -37,11 +37,11 @@ Virtual Motion Capture Protocol（以下VMC Protocol）の解説は[こちらか
 |-|
 |[![](./assets/images/small/08a_plugin.png)](../assets/images/small/08a_plugin.png)|
 
-### AnimBPを作成する
+## AnimBPを作成する
 
-アニムグラフにVrmVMCノードを追加します。
+動かす対象モデルでAnimBPを作成し、アニムグラフにVrmVMCノードを追加します。
 
-ノードには、以下のように2つのパラメータをセットします。
+ノードには、以下の2つのデータをセットします。
  - VRM4U_VMC_Subsystemのデータ。受信した骨情報です。
  - インポート時に生成されたMetaデータ。モデルのHumanoid骨名リストです。
 
@@ -53,7 +53,7 @@ Virtual Motion Capture Protocol（以下VMC Protocol）の解説は[こちらか
 |[![](./assets/images/small/08a_node.png)](../assets/images/small/08a_node.png)|
 
 
-### VMC Protocolを受け取る
+## VMC Protocolを受け取る
 
 `EUW_VMC` を起動します。
 受信ポート番号を確認し、`RunServer` をクリックすれば完了です。
@@ -70,7 +70,7 @@ Widgetにポート番号が表示されない場合は、OSCプラグインを�
 
 ----
 
-## より詳しい使い方
+## 高度な使い方
 
 ### ブレンドシェイプを受け取る
 
@@ -85,17 +85,25 @@ VRM4U_VMC_Subsystem内にある、受信データから検索します。
 
 その他の受信データの詳細は、Widgetより `RawData` をOnにすると表示されます。
 
-### マップ上でプレビューする
+### マップ上で直接プレビューする
 
-SkeletalMeshの`Update Animation in Editor` をONにしてください。エディタ上でそのままアニメーションが動作します。あくまでプレビュー動作です。正確にはPlayInで確認ください。
+SkeletalMeshの`Update Animation in Editor` をONにしてください。エディタ上でそのままアニメーションが動作します。あくまでプレビュー動作です。正確な動作はPlayInで確認ください。
 
 ----
 
-## UE5EA版の不具合
+## 詳細解説（上級者向け）
+
+### UE5EA版の不具合
 
  - 不具合1: UE5EAはOSCバンドルを受信できません
    - 送信元アプリにて通信設定を変更できるなら、切り替えて利用ください。
  - 不具合2: UE5EAは前述のブレンドシェイプやトラッカーを正しく検索できないことがあります
-   - Map(文字列と姿勢の連想配列)におけるFindが正しく動作しないため、それを呼ばないよう組み替えてください。Blueprint/cppどちらの呼び出しも問題があります。
+   - Map(文字列と姿勢の連想配列)におけるFindが正しく動作しません。データ参照方法に工夫が必要です。Blueprint/cppどちらのFind呼び出しも問題が起きます。
 
 どちらの不具合も、UE5正式リリースには修正されるようです。
+
+### RunServer を押した時の挙動
+
+ボタンを押すと レベルにBP_VMCReceiverがスポーンします。同時にポート番号を設定し、データ受信を開始します。
+
+EditorUtilityWidgetを経由しているため、いつでもデータ受信が可能です。プレビューであれば PlayInは不要です。このページのトップ絵も PlayInしていない状態です。
