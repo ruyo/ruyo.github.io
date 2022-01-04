@@ -11,49 +11,42 @@ title: "モーションキャプチャ(VMC Protocol)を受け取る"
 
 ## 概要
 
-外部アプリからモーションキャプチャデータを受け取り、モデルをアニメーションさせます。
-
-[Virtual Motion Capture Protocol（以下VMC Protocol）の解説はこちら](https://protocol.vmc.info/)
-https://protocol.vmc.info/
+外部アプリからモーションキャプチャデータを受け取り、モデルにアニメーションを適用します。
 
 この機能はタフな動作チェックを行っていません。
 VMC対応については、[はるくさん開発のVMC4UE](https://github.com/HAL9HARUKU/VMC4UE)の利用もご検討ください。
-https://github.com/HAL9HARUKU/VMC4UE
 {: .notice--info}
+
+**UE5EA版では大きな不具合があり（後述）、UE5正式版で修正される**予定です。
+UE4では問題なく動作します。
+{: .notice--warning}
+
+Virtual Motion Capture Protocol（以下VMC Protocol）の解説は[こちらからどうぞ](https://protocol.vmc.info/)
+
 
 ----
 
 ## 下準備
 
-サンプルマップ `VRM4U_VMC` を参考に設定ください。
-
 動作にはEpic公式の`OSCプラグイン`が必要です。有効化し、エディタを再起動ください。
+
+サンプルマップ `VRM4U_VMC` に設定済のモデルがあります。
+サンプルをそのままPlayInすると、ポート番号39540に届いたデータでアニメーションします。
 
 ||
 |-|
 |[![](./assets/images/small/08a_plugin.png)](../assets/images/small/08a_plugin.png)|
 
-
-**UE5EA版では大きな不具合が2つあります。**
-いずれも**UE5正式版で修正される**予定です。
-なおUE4では問題なく動作します。
-{: .notice--info}
-
- - 不具合1: UE5EAはOSCバンドルを受信できません
-   - 送信元アプリにて通信設定を変更できるなら、切り替えて利用ください。
- - 不具合2: UE5EAは後述のBlendShapeやトラッカーを正しく検索できないことがあります
-   - MapのFindが正しく動作しないため、呼ばないよう組み替えてください。Blueprint/cppどちらの呼び出しも問題があります。
-
 ### AnimBPを作成する
 
-AnimBPにて、VrmVMCノードを追加ください。
+アニムグラフにVrmVMCノードを追加します。
 
-パラメータを2つセットします
+ノードには、以下のように2つのパラメータをセットします。
  - VRM4U_VMC_Subsystemのデータ。受信した骨情報です。
  - インポート時に生成されたMetaデータ。モデルのHumanoid骨名リストです。
 
 揺れ骨を適用する場合は`VRMSpringBone`ノードも追加ください。
-[詳しい解説はこちら](../01_animation/)
+[揺れ骨の解説はこちら](../01_animation/)
 
 ||
 |-|
@@ -69,9 +62,8 @@ AnimBPにて、VrmVMCノードを追加ください。
 |-|
 |[![](./assets/images/small/08a_panel.png)](../assets/images/small/08a_panel.png)|
 
-正しく受信できた場合は、Widget上にログが表示されます。
+正しく受信できた場合は、図のようにWidgetにログが表示されます。
 全ての受信データを確認したい場合は、Widgetより `RawData` をOnにしてください。
-
 
 Widgetにポート番号が表示されない場合は、OSCプラグインを有効化してください。
 {: .notice--info}
@@ -80,19 +72,28 @@ Widgetにポート番号が表示されない場合は、OSCプラグインを�
 
 ## より詳しい使い方
 
-### マップ上でプレビューする
-
-SkeletalMeshの`Update Animation in Editor` をONにしてください。エディタ上でそのままアニメーションが動作します。あくまでプレビュー動作です。正確にはPlayInで確認ください。
-
 ### ブレンドシェイプを受け取る
 
 サンプルマップのAnimBPを参照ください。
-VRM4U_VMC_Subsystemより、受信データを参照します。
-`/VMC/Ext/Blend/Val:Blink` などで参照可能です。
+VRM4U_VMC_Subsystem内にある、受信データから検索します。
+文字列 `/VMC/Ext/Blend/Val:Blink` などで見つかります。
 
 ### トラッカー情報を受け取る
 
 ブレンドシェイプと同様です。
-`/VMC/Ext/Tra/Pos:LeftHand` などで参照可能です。
+文字列 `/VMC/Ext/Tra/Pos:LeftHand` などで見つかります。
 
-その他の受信データの詳細は、Widgetより `RawData` をOnにして確認ください。
+その他の受信データの詳細は、Widgetより `RawData` をOnにすると表示されます。
+
+### マップ上でプレビューする
+
+SkeletalMeshの`Update Animation in Editor` をONにしてください。エディタ上でそのままアニメーションが動作します。あくまでプレビュー動作です。正確にはPlayInで確認ください。
+
+----
+
+## UE5EA版の不具合
+
+ - 不具合1: UE5EAはOSCバンドルを受信できません
+   - 送信元アプリにて通信設定を変更できるなら、切り替えて利用ください。
+ - 不具合2: UE5EAは後述のBlendShapeやトラッカーを正しく検索できないことがあります
+   - MapのFindが正しく動作しないため、呼ばないよう組み替えてください。Blueprint/cppどちらの呼び出しも問題があります。
