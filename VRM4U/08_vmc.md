@@ -29,6 +29,11 @@ https://github.com/HAL9HARUKU/VMC4UE
 
 動作にはEpic公式の`OSCプラグイン`が必要です。有効化し、エディタを再起動ください。
 
+||
+|-|
+|[![](./assets/images/small/08a_plugin.png)](../assets/images/small/08a_plugin.png)|
+
+
 **UE5EA版では大きな不具合が2つあります。**
 いずれも**UE5正式版では修正される**予定です。
 なおUE4では問題なく利用可能です。
