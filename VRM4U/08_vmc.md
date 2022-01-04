@@ -49,8 +49,8 @@ https://github.com/HAL9HARUKU/VMC4UE
 AnimBPにて、VrmVMCノードを追加ください。
 
 パラメータを2つセットします
- - VRM4U_VMC_Subsystemのデータ。受信した骨情報を参照します。
- - インポート時に生成されたMetaデータ。モデルのHumanoid骨名を参照します。
+ - VRM4U_VMC_Subsystemのデータ。受信した骨情報です。
+ - インポート時に生成されたMetaデータ。モデルのHumanoid骨名リストです。
 
 揺れ骨を適用する場合は`VRMSpringBone`ノードも追加ください。
 [詳しい解説はこちら](../01_animation/)
@@ -78,19 +78,21 @@ Widgetにポート番号が表示されない場合は、OSCプラグインを�
 
 ----
 
-## 応用編
+## より詳しい使い方
 
 ### マップ上でプレビューする
 
-`Animation in Editor` をONにしてください。エディタ上でそのままアニメーションが動作します。あくまでプレビュー動作です。正確にはPlayInで確認ください。
+SkeletalMeshの`Update Animation in Editor` をONにしてください。エディタ上でそのままアニメーションが動作します。あくまでプレビュー動作です。正確にはPlayInで確認ください。
 
 ### ブレンドシェイプを受け取る
 
-SubSystem内に受信した生データがあります。
+サンプルマップのAnimBPを参照ください。
+VRM4U_VMC_Subsystemより、受信データを参照します。
 `/VMC/Ext/Blend/Val:Blink` などで参照可能です。
 
 ### トラッカー情報を受け取る
 
+ブレンドシェイプと同様です。
 `/VMC/Ext/Tra/Pos:LeftHand` などで参照可能です。
 
-その他の受信データは、Widgetより `RawData` をOnにして確認ください。
+その他の受信データの詳細は、Widgetより `RawData` をOnにして確認ください。
