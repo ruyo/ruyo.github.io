@@ -73,7 +73,7 @@ A-Tを切り替え可能です。
 |[![](./assets/images/small/01c_anim1.png)](../assets/images/01c_anim1.png)|
 
 
-任意のアニメーションノードを作成し、最後に`VRMSprintBone`ノードを追加します。`VRMMetaObject`に対象キャラクタのメタデータをセットします。このメタデータはVRMインポート時に作成されています。
+任意のアニメーションノードを作成し、最後に`VRMSpringBone`ノードを追加します。`VRMMetaObject`に対象キャラクタのメタデータをセットします。このメタデータはVRMインポート時に作成されています。
 
 ||
 |-|
@@ -91,7 +91,7 @@ VRMの設定値で揺れました。
 |-|
 |[![](./assets/images/small/01c_anim4.png)](../assets/images/01c_anim4.png)|
 
-揺れが大きい場合は `VRMSprintBone` のパラメータで調節可能です。
+揺れが大きい場合は `VRMSpringBone` のパラメータで調節可能です。
 
 UE4でアクションさせる場合は `StiffnessScale` を2～3あたりに設定すると安定しやすいです。
 
