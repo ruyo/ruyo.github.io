@@ -79,11 +79,11 @@ https://www.unrealengine.com/ja/blog/updated-authentication-process-for-connecti
 対処方法は3つあります。上位がオススメです。が対処しやすい方法で構いません。
 
  - その1
-  - ProjectSettingsよりCook対象とするマップを指定する
+   - ProjectSettingsよりCook対象とするマップを指定する
  - その2
-  - ログを参照し、エラーが出ているアセットのみを削除する
+   - ログを参照し、エラーが出ているアセットのみを削除する
  - その3
-  - `Plugins/VRM4U/Content/Util/Actor/latest` フォルダを削除する
+   - `Plugins/VRM4U/Content/Util/Actor/latest` フォルダを削除する
 
 エラーが起きる箇所は、VRM4U内の実験的なアセットです。
 Cook対象のマップを指定することで回避できます。（UE4標準動作では、全てのumapファイルがCook対象となっています。その影響で実験的機能がCookされてエラーが出ることがあります）
