@@ -61,7 +61,7 @@ Unity上でのプレビューが紫色でも問題ありません。UE4側であ
 - 対象キャラクタのVrmMetaアセットを複製する。
 - 対象キャラクタのSkeletalMeshを配置する。
 - `BP_SpringBoneUtil`を配置し、TargetActorに↑のActorをセット、TargetMetaに↑の複製したVrmMetaをセットする。
-- BoneToSpringParamに揺らしたい根本の骨名と、SpringParamID（後述。ひとまず0）を入力する。
+- BoneToSpringParamに揺らしたい根本の骨名と、SpringParamIDを入力する。（後述。WBP_SpringBoneで自動入力できる）
 - `GenerateSpringParam`を押す。
 - `BP_VrmModelActor`を配置し、`CustomSpringParam`に上記のVrmMetaをセットする
 
@@ -69,6 +69,8 @@ Unity上でのプレビューが紫色でも問題ありません。UE4側であ
 
 揺れ方パラメータを`SpringParamSet`で設定可能です。初期値として0番に髪揺れ、1番にスカート揺れ を設定済です。
 どのパラメータを利用するかSpringParamIDで選択できます。任意に編集・追加可能です。
+
+骨名の選択には、`WBP_SpringBone`を利用することもできます。UIが煩雑ですが、`BP_SpringBoneUtil` のパラメータを半分くらい自動設定できます。
 
 揺れ骨で指定する骨は、子が一直線に繋がるものを選択ください。途中で枝分かれする場合は、奇妙な動きをすることがあります。
 
