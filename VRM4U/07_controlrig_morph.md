@@ -195,11 +195,62 @@ IKRigとMorphRigを併用する場合は、後述のセットアップも合わ�
 
 ----
 
+## さらにRigを追加する (VRM4U独自Rig)
+
+髪や衣服を揺れ骨として扱いたい場合、この設定は不要です。
+{: .notice--info}
+
+ここまでの設定で、基本的な骨(HumanoidBone)とフェイシャルアニメーションを設定できました。
+続いて、他の骨(髪の毛や衣服)を制御するRigを追加します。
+
+サンプルマップ `VRM4U_FKRig` を参照ください。
+
+ - 必要なもの 2つ
+    - 操作対象モデルから生成したAnimBP (サンプルでは ABP_VRoidFKRig)
+    - BP_RigControl を継承したBP (サンプルでは BP_RigControl_for_Sample)
+
+### AnimBP(対象モデルから生成したもの) の設定
+
+VrmModifyBoneListノードをつなぎ、BoneTransを変数にします。
+AnimBPをPostProcessAnimBPとして設定します。
+
+|ノード、変数の追加|PostProcessAnimBPとして設定|
+|-|-|
+|[![](./assets/images/small/06a_fkrig1.png)](../assets/images/06a_fkrig1.png)|[![](./assets/images/small/06a_fkrig4.png)](../assets/images/06a_fkrig4.png)|
+
+### BP_Control(を継承したもの) の設定
+
+AddKeyOverrideをOverrideします。前述のAnimBPにキャスト、図のようにつなぎます
+
+||
+|-|
+|[![](./assets/images/small/06a_fkrig2.png)](../assets/images/06a_fkrig2.png)|
+
+### Rigで操作する
+
+対象モデルとBP_RigControl(を継承したもの)をレベルに配置します。
+TargetActorに対象のモデルを指定します。
+
+ボタン`1 Generate Rig`を押すとRigが生成されます。回転操作すると骨が動きます。
+
+||
+|-|
+|[![](./assets/images/small/06a_fkrig3.png)](../assets/images/06a_fkrig3.png)|
+|[モデル：QuQu着物 2021](https://booth.pm/ja/items/2964767)|
+
+### FKRigの雑多な解説
+
+ - 体骨はControlRig、他骨はFKRigで操作する想定です。ただ、`SkipHumanoidBone`をOFFにすれば全ての骨を操作できます。
+ - AnimBPには必要に応じて、揺れ骨やアニメーションの設定を追加ください。
+
+
+----
 
 ## 見た目のセットアップを忘れずに！
 
 `MToonAttachActor`を配置してTargetをセットしてください。輪郭線やセルフシャドウが有効化されます。
 [詳しくは前章の解説を参照ください](../01_look/)
+
 
 
 ----
