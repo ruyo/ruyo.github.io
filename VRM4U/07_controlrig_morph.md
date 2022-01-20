@@ -218,7 +218,7 @@ AnimBPをPostProcessAnimBPとして設定します。
 |-|-|
 |[![](./assets/images/small/06a_fkrig1.png)](../assets/images/06a_fkrig1.png)|[![](./assets/images/small/06a_fkrig4.png)](../assets/images/06a_fkrig4.png)|
 
-### BP_Control(を継承したもの) の設定
+### BP_RigControl(を継承したもの) の設定
 
 AddKeyOverrideをOverrideします。前述のAnimBPにキャスト、図のようにつなぎます
 
