@@ -51,6 +51,7 @@ PlayInすると、VRM標準モデルにリターゲットされます。完了�
 
 **選択するActorに注意ください。** リターゲット設定は `BP_VrmMannequinRetarget` で操作します。プレビューモデルをクリックすると、子Actorである `BP_VrmPoseCopy` が選択されます。
 {: .notice--info}
+
 | **注意！** モデルをクリックすると `BP_VrmPoseCopy` が選択される。これはモデルActor。**リターゲットはその親Actorで設定する**|
 |-|
 |[![](./assets/images/small/03r_pose.png)](../assets/images/03r_pose.png)|
@@ -59,7 +60,7 @@ PlayInすると、VRM標準モデルにリターゲットされます。完了�
 
 差し替え対象のActorの中で `BP_VrmMannequinRetarget` を作成、初期化ノードを呼び出してください。
 
-|ChildActorとしてセットし、BeginPlayで初期化、元モデルを表示OFFにする|PlayInで置き換わる|
+|PawnのChildActorとしてセットし、BeginPlayで初期化、元モデルを表示OFFにする|PlayInで置き換わる|
 |-|-|
 |[![](./assets/images/small/03r_swap.png)](../assets/images/03r_swap.png)|[![](./assets/images/small/03r_swap2.png)](../assets/images/03r_swap2.png)|
 
