@@ -207,7 +207,7 @@ IKRigとMorphRigを併用する場合は、後述のセットアップも合わ�
 
  - 必要なもの 2つ
     - 操作対象モデルから生成したAnimBP (サンプルでは ABP_VRoidFKRig)
-    - BP_RigControl を継承したBP (サンプルでは BP_RigControl_for_Sample)
+    - BP_FKRigGenerator を継承したBP (サンプルでは BP_FKRigGenerator_for_Sample)
 
 ### AnimBP(対象モデルから生成したもの) の設定
 
@@ -218,7 +218,7 @@ AnimBPをPostProcessAnimBPとして設定します。
 |-|-|
 |[![](./assets/images/small/06a_fkrig1.png)](../assets/images/06a_fkrig1.png)|[![](./assets/images/small/06a_fkrig4.png)](../assets/images/06a_fkrig4.png)|
 
-### BP_RigControl(を継承したもの) の設定
+### BP_FKRigGenerator(を継承したもの) の設定
 
 AddKeyOverrideをOverrideします。前述のAnimBPにキャスト、図のようにつなぎます
 
@@ -228,7 +228,7 @@ AddKeyOverrideをOverrideします。前述のAnimBPにキャスト、図のよ�
 
 ### Rigで操作する
 
-対象モデルとBP_RigControl(を継承したもの)をレベルに配置します。
+対象モデルとBP_FKRigGenerator(を継承したもの)をレベルに配置します。
 TargetActorに対象のモデルを指定します。
 
 ボタン`1 Generate Rig`を押すとRigが生成されます。回転操作すると骨が動きます。
