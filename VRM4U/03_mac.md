@@ -22,8 +22,8 @@ MacでVRM4Uを動かすための環境設定をします。
 
  - カスタム版assimpをダウンロード、makeする。
  - VRM4Uのソースをダウンロード、展開する
-   - assimpのdylibをThirdParty以下にコピー
- - MyProject.uprojectを右クリック、Xcodeプロジェクトを作成しビルド。
+   - assimp.aをThirdParty以下にコピー
+ - EpicGamesLauncherからプロジェクトを選択、ダイアログに従ってプロジェクトをビルド。
 
 ソースの取得方法や展開場所は[こちらのページを参照ください。](../03_exe/)
 
@@ -32,13 +32,14 @@ MacでVRM4Uを動かすための環境設定をします。
 
 ### assimpのビルド
 
-こちらからカスタム版assimpのソースをダウンロード、makeします。
+こちらからカスタム版assimpのソースをダウンロード、makeします。後述しますが、M1 Macを利用している場合はx86_64でmakeします。
 
 https://github.com/ruyo/assimp
 
-私は`cmake-gui`を利用しました。guiでパスを設定後、`Configure`、`Generate` を押します。途中で出るダイアログはデフォルトままでOKです。
+私は`cmake-gui`を利用しました。guiでパスを設定後、`Configure`を押します。途中で出るダイアログはデフォルトままでOKです。
+`BUILD_SHARED_LIBS` をOFFにしてから、`Generate` を押します。
 
-オプションが多数ありますが、そのままで構いません。（できれば`ASSIMP_INSTALL`はOFFが良いと思います）
+オプションが多数ありますが、そのままで構いません。
 
 ||
 |-|
@@ -46,14 +47,17 @@ https://github.com/ruyo/assimp
 
 続いてターミナルより、assimpディレクトリで、`make` コマンドを実行します。
 
-完了すると、binディレクトリ（上の例だとassimp/build2/bin）に`libassimp.dylib` が生成されます。
+完了すると、libディレクトリ（上の例だとassimp/build2/lib）に`libassimp.a` が生成されます。
+
+M1 Macを利用している場合は、明示的にx86_64としてビルドする必要があります。上記の例では、ターミナルとcmake-gui をRosettaを利用して起動し、手順を辿ります。
+{: .notice--info}
 
 ### プロジェクトのビルド
 
 UE4からC++プロジェクトを作成しておきます。
 VRM4Uのソースをプロジェクトに展開し、前段でmakeしたassimpライブラリを以下に置きます。
 
-MyProject/Plugins/VRM4U/ThirdParty/assimp/lib/Mac/libassimp.dylib
+MyProject/Plugins/VRM4U/ThirdParty/assimp/lib/Mac/libassimp.a
 
 
 その後、MyProject.uprojectをダブルクリック、ダイアログでYesを選択し、ビルドします。
@@ -64,7 +68,10 @@ MyProject/Plugins/VRM4U/ThirdParty/assimp/lib/Mac/libassimp.dylib
 
 起動した場合は次の手順へ進んでください。
 
-途中でエラーが出る場合は、Xcodeからビルドします。.uprojectファイルを右クリック、Xcodeプロジェクトを作成します。.xcworkspaceが生成されるので開きます。
+途中でエラーが出る場合は、Xcodeからビルドします。 **が、UE4.27ではうまく動作しないようです。** できれば、上記のタイアログによるビルドをご利用ください。
+
+手順だけ書き残しておきます。
+.uprojectファイルを右クリック、Xcodeプロジェクトを作成します。.xcworkspaceが生成されるので開きます。
 
 ||
 |-|
@@ -76,7 +83,7 @@ Xcodeでビルド。Product > Build を選択します。完了後はMyProject.u
 |-|
 |[![](./assets/images/small/03m_c4.png)](../assets/images/03m_c4.png)|
 
-初回起動時はプラグインは無効です。プラグイン設定から有効化してください。有効化後、再度Xcodeでビルドしてください。
+初回起動時はプラグインは無効です。プラグイン設定から有効化してください。有効化後、ビルド確認ダイアログに従ってビルドしてください。
 
 ||
 |-|
