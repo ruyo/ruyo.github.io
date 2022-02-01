@@ -39,6 +39,9 @@ https://www.unrealengine.com/ja/blog/updated-authentication-process-for-connecti
 |[![](./assets/images/small/03e_con.png)](../assets/images/03e_con.png)|
 
 
+Branch(左上の赤丸)をTagに切り替え、ビルド済バイナリの日付と同じものを選択します。
+その後、ソースをダウンロードしてください。
+
 ||
 |-|
 |[![](./assets/images/small/03e_exe.png)](../assets/images/03e_exe.png)|
