@@ -64,8 +64,9 @@ PlayInすると、VRM標準モデルにリターゲットされます。完了�
 |-|-|
 |[![](./assets/images/small/03r_swap.png)](../assets/images/03r_swap.png)|[![](./assets/images/small/03r_swap2.png)](../assets/images/03r_swap2.png)|
 
+アウトラインと揺れ骨は自動設定されます。それぞれオプションで無効化できます。
 
-### リアルタイムリターゲット 応用編
+### 応用編 アタッチする
 
 モデルにオブジェクトをアタッチする場合は、`BP_VrmPoseCopy`を利用します。
 
@@ -78,7 +79,21 @@ MorphTargetを設定する際も同様です。
 |-|
 |[![](./assets/images/small/03r_attach.png)](../assets/images/03r_attach.png)|
 
-アウトラインと揺れ骨は自動設定されます。それぞれオプションで無効化できます。
+### 応用編 骨名が異なる場合
+
+元モデルの骨名がグレイマンと異なる場合は、Metaファイルをセットすることで対応できます。
+
+WBP_EpicSkeletonMeta を開き、BaseEpicSkeletonに対象のActorをセットし、ボタン`GenerateEpicSkeletonMetaFile`を押します。
+OutputAssetName の場所にMetaファイルが生成されます。
+これを`BP_VrmMannequinRetarget`にセットすれば完了です。
+
+### 応用編 リファレンスポーズが違う場合
+
+元モデルのリファレンスポーズがA-poseではない場合は、対応する姿勢を指定できます。
+標準モデルで任意姿勢のAnimSequenceを作成します。
+これを `BP_VrmMannequinRetarget` の `CustomReferencePose` にセットすれば完了です。
+
+手の向き・足の開き方が微妙に異なる場合も、同じように調整できます。
 
 ----
 
@@ -188,7 +203,7 @@ Socketはプレビューで位置が異なるように見える場合があり�
 
 ## おまけ
 
-PMXモデルに対するリアルタイムリターゲットも可能です。`BP_VrmMannequinRetarget` のオプションを設定ください。
+PMXモデルに対するリアルタイムリターゲットも可能です。`BP_VrmMannequinRetarget` のオプションを設定ください。内部的には CustomReferencePose と同様の処理が動いています。
 
 ||
 |-|
