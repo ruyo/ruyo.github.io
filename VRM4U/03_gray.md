@@ -11,14 +11,14 @@ title: "グレイマンを置き換える"
 
 ## 概要
 
-グレイマンをVRMモデルに置き換える手法を紹介します。
+グレイマン（EpicSkeleton準拠）をVRMモデルに置き換える手法を紹介します。
 2つのアプローチがあります。
 
  - 手法その１：リアルタイムリターゲット（VRM4U独自機能）
    - レベル上で動いているグレイマンのアニメーションを、直接VRMモデルに割り当てます。
    - 良い点：圧倒的に簡単。
    - 悪い点：微調整できない。厳密なコリジョンや接地感を出すことが難しい。
- - 手法その２：オフラインリターゲット（UE標準機能）
+ - 手法その２：エディタでリターゲット（UE標準機能）
    - リターゲットマネージャでAnimSequenceを複製したり、AnimBPを作成します。
    - 良い点：標準機能なので安心。細かく調整できる
    - 悪い点：圧倒的に手間がかかる。特にAnimBPが複雑な場合は組み直しが大変。骨向きの補正が難しい
@@ -31,7 +31,7 @@ title: "グレイマンを置き換える"
 
 ### モデルをレベルに配置して利用する
 
-`BP_VrmMannequinRetarget` を配置し、`Targetmannequin` にコピー元となるグレイマンを指定します。他モデルでも、グレイマンと同じ骨名であればOKです。
+`BP_VrmMannequinRetarget` を配置し、`Targetmannequin` にコピー元となるグレイマンを指定します。他モデルでもEpicSkeletonに対応（リターゲットマネージャでHumanoid設定できるもの）であればOKです。
 
 PlayInすると、VRM標準モデルにリターゲットされます。完了です。
 
@@ -52,7 +52,7 @@ PlayInすると、VRM標準モデルにリターゲットされます。完了�
 **選択するActorに注意ください。** リターゲット設定は `BP_VrmMannequinRetarget` で操作します。プレビューモデルをクリックすると、子Actorである `BP_VrmPoseCopy` が選択されます。
 {: .notice--info}
 
-| **注意！** モデルをクリックすると `BP_VrmPoseCopy` が選択される。これはモデルActor。**リターゲットはその親Actorで設定する**|
+| ↑の注意書きの図解。モデルをクリックすると `BP_VrmPoseCopy` が選択される。これはモデルActor。**リターゲットはその親Actorで設定する**|
 |-|
 |[![](./assets/images/small/03r_pose.png)](../assets/images/03r_pose.png)|
 
@@ -66,38 +66,9 @@ PlayInすると、VRM標準モデルにリターゲットされます。完了�
 
 アウトラインと揺れ骨は自動設定されます。それぞれオプションで無効化できます。
 
-### 応用編 アタッチする
-
-モデルにオブジェクトをアタッチする場合は、`BP_VrmPoseCopy`を利用します。
-
-レベル配置の場合は、そのままActorにアタッチしてください。
-Spawnしている場合は、`BP_VrmMannequinRetarget` より、関数 `GetRetargetSkeletalMeshComponent` で対象を取得できます。
-
-MorphTargetを設定する際も同様です。
-
-|モデルのアタッチやMorphTargetの設定は BP_VrmPoseCopyを利用する|
-|-|
-|[![](./assets/images/small/03r_attach.png)](../assets/images/03r_attach.png)|
-
-### 応用編 骨名が異なる場合
-
-元モデルの骨名がグレイマンと異なる場合は、Metaファイルをセットすることで対応できます。
-
-WBP_EpicSkeletonMeta を開き、BaseEpicSkeletonに対象のActorをセットし、ボタン`GenerateEpicSkeletonMetaFile`を押します。
-OutputAssetName の場所にMetaファイルが生成されます。
-これを`BP_VrmMannequinRetarget`にセットすれば完了です。
-
-### 応用編 リファレンスポーズが違う場合
-
-元モデルのリファレンスポーズがA-poseではない場合は、対応する姿勢を指定できます。
-標準モデルで任意姿勢のAnimSequenceを作成します。
-これを `BP_VrmMannequinRetarget` の `CustomReferencePose` にセットすれば完了です。
-
-手の向き・足の開き方が微妙に異なる場合も、同じように調整できます。
-
 ----
 
-## UE4標準機能でリターゲットする
+## エディタでリターゲットする（UE4標準機能）
 
 ### Advanced Locomotion System に適用する
 
@@ -138,6 +109,7 @@ Humanoidの骨が以下のような名前になります。それぞれにIKBone
 |[![](./assets/images/small/03a_bone.png)](../assets/images/03a_bone.png)|
 
 ----
+
 ### VirtualBone、Socketを複製する
 
 `AssetUtil` を利用して、既存のSkeletalMeshからVirtualBoneとSocketを複製することができます。
@@ -154,6 +126,7 @@ Socketはプレビューで位置が異なるように見える場合があり�
 |[![](./assets/images/small/03a_bone2.png)](../assets/images/03a_bone2.png)|
 
 ----
+
 ### PhysicsAssetを複製する
 
 `AssetUtil` を利用して、既存のSkeletalMeshからPhysicsAssetを複製することができます。
@@ -170,6 +143,7 @@ Socketはプレビューで位置が異なるように見える場合があり�
 
 
 ----
+
 ### 最後の仕上げを忘れずに
 
 輪郭線や影を反映させましょう。キャラクタのBlueprintにMToonAttachActorをアタッチすればOKです。
@@ -180,7 +154,7 @@ Socketはプレビューで位置が異なるように見える場合があり�
 
 
 ||
-|-|-|
+|-|
 |[![](./assets/images/small/03a_sword.png)](../assets/images/03a_sword.png)|
 
 
@@ -194,18 +168,74 @@ Socketはプレビューで位置が異なるように見える場合があり�
 以下に状況別で紹介します。
 
  - リアルタイムリターゲット向き
-   - メインキャラクターをUE4Mannequin準拠で作成している
+   - メインキャラクターをEpicSkeleton準拠で作成している
    - 既にグレイマンを用いて、ある程度の規模のゲームが動作している
    - 試しにキャラクタをVRMモデルに差し替えてみたい。オマケでVRM対応したい
  - オフラインリターゲット向き
    - メインキャラクターをVRMモデルで作成している
    - 厳密な当たり判定、インタラクションが必要である
 
-## おまけ
+## リアルタイムリターゲット おまけ
 
+### PMX リターゲット
 PMXモデルに対するリアルタイムリターゲットも可能です。`BP_VrmMannequinRetarget` のオプションを設定ください。内部的には CustomReferencePose と同様の処理が動いています。
 
 ||
 |-|
 |[![](./assets/images/small/03r_pmx.png)](../assets/images/03r_pmx.png)|
 |モデル：[初音ミク by む～ぶさん](https://piapro.jp/t/0Hwp)|
+
+### モデルをアタッチする
+
+`BP_VrmPoseCopy`を利用します。
+
+レベル配置の場合は、そのままActorにアタッチしてください。
+Spawnしている場合は、`BP_VrmMannequinRetarget` より、関数 `GetRetargetSkeletalMeshComponent` で対象を取得できます。
+
+MorphTargetを設定する際も同様です。
+
+|モデルのアタッチやMorphTargetの設定は BP_VrmPoseCopyを利用する|
+|-|
+|[![](./assets/images/small/03r_attach.png)](../assets/images/03r_attach.png)|
+
+`BP_VrmPoseCopy`の使い方は[こちらも参照ください](../05_limitedanim/)
+
+### 異なる骨名のEpicSkeletonからリターゲットする
+
+対象のMetaファイルを作成・設定することで対応します。
+
+事前に対象のモデルについて、HumanoidのBoneMapを作成しておきます。
+WBP_EpicSkeletonMeta を開き、BaseEpicSkeletonに対象のActorをセットし、ボタン`GenerateEpicSkeletonMetaFile`を押します。
+OutputAssetName の場所にMetaファイルが生成されます。
+これを`BP_VrmMannequinRetarget`にセットすれば完了です。
+
+|対象のBoneMap。腕の名前がEpicSkeletonと異なる|ボタン`Generate`でMetaファイルを作成|
+|-|-|
+|[![](./assets/images/small/03r_skeleton1.png)](../assets/images/03r_skeleton1.png)|[![](./assets/images/small/03r_skeleton4.png)](../assets/images/03r_skeleton4.png)|
+
+|そのままでは腕の骨名が異なるのでリターゲットできない|Metaファイルをセットすると腕をリターゲットできる|
+|-|-|
+|[![](./assets/images/small/03r_skeleton2.png)](../assets/images/03r_skeleton2.png)|[![](./assets/images/small/03r_skeleton3.png)](../assets/images/03r_skeleton3.png)|
+|モデル：[NecoMaid](https://booth.pm/ja/items/1843586) ||
+
+### 異なるリファレンスポーズからリターゲットする
+
+標準モデルで任意姿勢のAnimSequenceを作成し、`BP_VrmMannequinRetarget` の `CustomReferencePose` にセットすれば完了です。
+
+デフォルトでは、対象はA-poseのモデルを想定しています。異なる姿勢の場合は、対応するAnimSequenceを作成します。
+手の向き・足の開き方が異なる場合も、同じように調整します。
+
+|対象がTポーズの場合|
+|-|
+|[![](./assets/images/small/03r_refpose3.png)](../assets/images/03r_refpose3.png)|
+
+|デフォルトはAポーズを想定している|←をベースに、対象に合わせてTポーズを作る|
+|-|-|
+|[![](./assets/images/small/03r_refpose4.png)](../assets/images/03r_refpose4.png)|[![](./assets/images/small/03r_refpose5.png)](../assets/images/03r_refpose5.png)|
+
+
+|そのままではAポーズなので肩の向きがおかしい|Tポーズを指定すれば正しくリターゲットできる|
+|-|-|
+|[![](./assets/images/small/03r_refpose1.png)](../assets/images/03r_refpose1.png)|[![](./assets/images/small/03r_refpose2.png)](../assets/images/03r_refpose2.png)|
+
+----
