@@ -238,4 +238,18 @@ OutputAssetName の場所にMetaファイルが生成されます。
 |-|-|
 |[![](./assets/images/small/03r_refpose1.png)](../assets/images/03r_refpose1.png)|[![](./assets/images/small/03r_refpose2.png)](../assets/images/03r_refpose2.png)|
 
+### 身長差の補正を制御する
+
+自動で身長差を補正しています。オプションで補正を解除したり、腰をActor原点に揃えることができます。
+
+アニメーションに応じて 補正方法を切り替えてください。
+
+|初期状態|身長差補正なし。腰座標が一致する|
+|-|-|
+|[![](./assets/images/small/03r_scale1.png)](../assets/images/03r_scale1.png)|[![](./assets/images/small/03r_scale2.png)](../assets/images/03r_scale2.png)|
+
+|初期状態|XY軸のみ補正なし。接地感を残せる|移動を無効化。腰座標はActor原点になる|
+|-|-|-|
+|[![](./assets/images/small/03r_scale3.png)](../assets/images/03r_scale3.png)|[![](./assets/images/small/03r_scale4.png)](../assets/images/03r_scale4.png)|[![](./assets/images/small/03r_scale5.png)](../assets/images/03r_scale5.png)|
+
 ----
