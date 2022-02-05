@@ -15,7 +15,7 @@ title: "グレイマンを置き換える"
 2つのアプローチがあります。
 
  - 手法その１：リアルタイムリターゲット（VRM4U独自機能）
-   - レベル上で動いているグレイマンのアニメーションを、直接VRMモデルに割り当てます。
+   - レベル上で動いているグレイマン(EpicSkeletonのモデル)のアニメーションを、直接VRMモデルに割り当てます。
    - 良い点：圧倒的に簡単。
    - 悪い点：微調整できない。厳密なコリジョンや接地感を出すことが難しい。
  - 手法その２：エディタでリターゲット（UE標準機能）
@@ -31,7 +31,7 @@ title: "グレイマンを置き換える"
 
 ### モデルをレベルに配置して利用する
 
-`BP_VrmMannequinRetarget` を配置し、`Targetmannequin` にコピー元となるグレイマンを指定します。他モデルでもEpicSkeletonに対応（リターゲットマネージャでHumanoid設定できるもの）であればOKです。
+`BP_VrmMannequinRetarget` を配置し、`Targetmannequin` にコピー元となるグレイマンを指定します。
 
 PlayInすると、VRM標準モデルにリターゲットされます。完了です。
 
@@ -52,7 +52,7 @@ PlayInすると、VRM標準モデルにリターゲットされます。完了�
 **選択するActorに注意ください。** リターゲット設定は `BP_VrmMannequinRetarget` で操作します。プレビューモデルをクリックすると、子Actorである `BP_VrmPoseCopy` が選択されます。
 {: .notice--info}
 
-| ↑の注意書きの図解。モデルをクリックすると `BP_VrmPoseCopy` が選択される。これはモデルActor。**リターゲットはその親Actorで設定する**|
+| ↑の注意書きの図解。プレビューモデルをクリックすると `BP_VrmPoseCopy` が選択される。選択Actorはアウトライナで確認ください。|
 |-|
 |[![](./assets/images/small/03r_pose.png)](../assets/images/03r_pose.png)|
 
