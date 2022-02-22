@@ -92,7 +92,9 @@ BP_LiveLinkFaceをコピーして、カスタマイズして利用ください�
 |-|
 |[![](./assets/images/small/05t_detail.png)](../assets/images/05t_detail.png)|
 
+
 ----
+
 ## パーフェクトシンク（カスタムする場合は上級者向け）
 
 LiveLinkFaceでキャプチャした表情を、キャラクタに適用します。ARKitのパラメータを全て利用します。パーフェクトシンクに対応したモデルが必要です。
@@ -169,14 +171,14 @@ LiveLinkFaceでキャプチャした表情を、キャラクタに適用しま�
 
 OculusQuestで認識した手と指を、キャラクタに適用します。
 
-UE4.26で動作します。VRM4Uのビルド環境が必要です。
+UE4.26以降で動作します。VRM4Uのビルド環境が必要です。
 {: .notice--info}
 
 VRM4UのビルドについてはEXE化のページを参照ください。[こちらのページです](../03_exe/)
 
 ### VRM4Uのハンドトラッキングを有効化する
 
-`VRM4U.Build.cs`にて、`bUseQuestTracking = true;` としてビルドしてください。
+`VRM4U.Build.cs`にて、`bUseQuestTracking = true;` を設定し、**プラグインをビルド**してください。
 
 ### ハンドトラッキングする
 
@@ -187,3 +189,13 @@ Maps/VRM4U_Tracking
 ||
 |-|
 |[![](./assets/images/small/05t_hand.png)](../assets/images/05t_hand.png)|
+
+
+## フェイシャルキャプチャを記録する（上級者向け）
+
+前述のパーフェクトシンク向けのようにAnimBPを作成し、エディタ上でプレビュー可能（PlayInせずにキャプチャが動く状態）にすればOKです。
+記録にはTake Recorderを利用します。詳しくは以下の解説を参照ください。
+
+https://docs.unrealengine.com/4.27/en-US/AnimatingObjects/SkeletalMeshAnimation/FacialRecordingiPhone/
+
+

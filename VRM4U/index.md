@@ -18,7 +18,7 @@ UnrealEngine4で動作する、VRMファイルのインポーターです。
 
 ## UE5 対応しました！
 
-UE5はアーリーアクセスです。[UE5向けの設定はこちら](./51_ue5/)
+UE5はPreview版リリースです。[UE5向けの設定はこちら](./51_ue5/)
 
 [![](./assets/images/small/EdSplash.bmp)](./assets/images/small/EdSplash.bmp)
 
