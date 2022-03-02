@@ -37,7 +37,11 @@ MacでVRM4Uを動かすための環境設定をします。
 https://github.com/ruyo/assimp
 
 私は`cmake-gui`を利用しました。guiでパスを設定後、`Configure`を押します。途中で出るダイアログはデフォルトままでOKです。
-`BUILD_SHARED_LIBS` をOFFにしてから、`Generate` を押します。
+
+その後、
+ - `MACOSX_DEPLOYMENT_TARGET` を `10.14` に設定します（UE4.27の場合。他は後述）
+ - `BUILD_SHARED_LIBS` をOFFにします
+ - `Generate` を押します
 
 オプションが多数ありますが、そのままで構いません。
 
@@ -68,7 +72,16 @@ MyProject/Plugins/VRM4U/ThirdParty/assimp/lib/Mac/libassimp.a
 
 起動した場合は次の手順へ進んでください。
 
-途中でエラーが出る場合は、Xcodeからビルドします。 **が、UE4.27ではうまく動作しないようです。** できれば、上記のタイアログによるビルドをご利用ください。
+途中でエラーが出る場合は、ログを確認ください。
+以下のようなパスに出力されています。
+`\\username\Library\Logs\Unreal Engine\MyProjectMac427Editor`
+
+バージョン違いのメッセージが出ている場合、 `MACOSX_DEPLOYMENT_TARGET` を設定ください。
+このようなログが出ます -> /libassimp.a(Importer.cpp.o)) was built for newer macOS version (12.0) than being linked (10.14)
+{: .notice--info}
+
+
+以下はXcodeでのビルドです。 **が、UE4.27ではうまく動作しないようです。** できれば、上記のタイアログによるビルドをご利用ください。
 
 手順だけ書き残しておきます。
 .uprojectファイルを右クリック、Xcodeプロジェクトを作成します。.xcworkspaceが生成されるので開きます。
