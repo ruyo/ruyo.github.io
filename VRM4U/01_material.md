@@ -19,7 +19,7 @@ VRM4Uの主要な調整機能ついて、手軽にパラメータを操作でき
 |-|
 |[![](./assets/images/small/01m_p1.png)](../assets/images/01m_p1.png)|
 
-この機能はUE4.26以降でのみ利用可能です。
+この機能はUE4.26以降でのみ利用可能です。利用時はプラグインウインドウより、EditorScriptingUtilitiesプラグインを有効化してください。
 {: .notice--info}
 
 ----
