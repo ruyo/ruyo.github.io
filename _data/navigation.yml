@@ -67,7 +67,7 @@ vrm4udocs:
         url: /VRM4U/04_import/
   - title: "マイナーな機能たち"
     children:
-      - title: "Toonを豪華にする"
+      - title: "特殊なマテリアル"
         url: /VRM4U/02_toon/
       - title: "嘘パース・魚眼レンズ"
         url: /VRM4U/02_pers/
