@@ -99,13 +99,16 @@ UE5のリターゲットでは、リターゲット元と先のモデル それ�
 |-|-|
 |[![](./assets/images/small/03r_ikrig2.png)](../assets/images/03r_ikrig2.png)|[![](./assets/images/small/03r_ikrig3.png)](../assets/images/03r_ikrig3.png)|
 
+
+UE5標準のグレイマン用IK_Rigを取得するには、以下よりサードパーソンテンプレートを追加ください。
+
 プラグインコンテンツが表示されない場合は、以下の項目を確認ください。
 
 グレイマンのIK_Rigは以下の手順で生成できます。ただこの手法では、UE4でのリターゲット精度と同等の結果になります。UE5標準IK_Rigを使う方が精度が良いです。
 
-|プラグインコンテンツの表示切り替え|WBP_RetargetによるIK_Rigの生成|
-|-|-|
-|[![](./assets/images/small/03r_ikrig4.png)](../assets/images/03r_ikrig4.png)|[![](./assets/images/small/03r_ikrig5.png)](../assets/images/03r_ikrig5.png)|
+|サードパーソンテンプレートの追加方法|プラグインコンテンツが表示されない場合の対処|WBP_RetargetによるIK_Rigの生成|
+|-|-|-|
+|[![](./assets/images/small/03r_ikrig_add.png)](../assets/images/03r_ikrig_add.png)|[![](./assets/images/small/03r_ikrig4.png)](../assets/images/03r_ikrig4.png)|[![](./assets/images/small/03r_ikrig5.png)](../assets/images/03r_ikrig5.png)|
 
 ### 詳細：IK_Rig自動生成
 
