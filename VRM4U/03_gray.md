@@ -68,6 +68,82 @@ PlayInすると、VRM標準モデルにリターゲットされます。完了�
 
 ----
 
+## エディタでリターゲットする（UE5標準機能）
+
+手順が多いです。VRM4Uでは簡略化ツールを用意していますので活用ください。
+{: .notice--info}
+
+以下の解説を一通り読んでから 公式ドキュメント参照することをオススメします。
+[公式ドキュメントはこちら。](https://docs.unrealengine.com/5.0/ja/ik-rig-animation-retargeting-in-unreal-engine/)
+
+UE5のリターゲットでは、リターゲット元と先のモデル それぞれに対応するIK_Rigアセットが必要です。
+
+ - リターゲット元のIK_Rig（グレイマン、UE5マネキン）
+   - UE5のサードパーソンテンプレートプロジェクト等に含まれています。また、VRM4Uの`WBP_Retarget`から生成できます。
+ - リターゲット先のIK_Rig（VRMモデル）
+   - インポート時に生成されます。
+
+これらを利用し、IKRetargeterを作成します。
+
+|リターゲットに利用するIK_Rig|
+|-|
+|[![](./assets/images/small/03r_ikrig.png)](../assets/images/03r_ikrig.png)|
+
+
+手順の概要
+ 1. IKRetargeterを作成し、ベース（グレイマン）のIK_Mannequinと リターゲット先のIK_[モデル名]_Mannequin をセットする
+ 1. WBP_Retarget を起動、IKRetargeterをセットし、ボタンを押す。Aポーズが設定される。
+ 1. 完成。リターゲット時に表示されるウインドウに このIKRetargeterをセットすればOK。
+
+|IKRetargeterの作成|WBP_Retargetを起動、IKRetargeterを設定しボタンを押すとAポーズが適用される|
+|-|-|
+|[![](./assets/images/small/03r_ikrig2.png)](../assets/images/03r_ikrig2.png)|[![](./assets/images/small/03r_ikrig3.png)](../assets/images/03r_ikrig3.png)|
+
+プラグインコンテンツが表示されない場合は、以下の項目を確認ください。
+
+グレイマンのIK_Rigは以下の手順で生成できます。ただこの手法では、UE4でのリターゲット精度と同等の結果になります。UE5標準IK_Rigを使う方が精度が良いです。
+
+|プラグインコンテンツの表示切り替え|WBP_RetargetによるIK_Rigの生成|
+|-|-|
+|[![](./assets/images/small/03r_ikrig4.png)](../assets/images/03r_ikrig4.png)|[![](./assets/images/small/03r_ikrig5.png)](../assets/images/03r_ikrig5.png)|
+
+### 詳細：IK_Rig自動生成
+
+VRM4Uは インポート時に、3タイプのIK_Rigを生成します。
+
+|タイプ|用途|
+|-|-|
+|1. UE5のChainName基準|これを使えばOK。UE5標準。テンプレートのIK_Rigとペアで利用する|
+|2. VRMのHumanoidBone基準|VRM同士でのリターゲットに利用する|
+|3. UE4マネキンの骨名基準|WBP_Retargetで生成したIK_Rigとペアで利用する|
+
+WBP_Retargetを利用してUE4マネキンのIK_Rigを生成した場合、ChainNameは2,3番に対応します。VRM側のIK_Rigも対応するものを利用ください。
+
+### 詳細：FullBodyIK設定
+
+IK_RigにはFullBodyIKを設定済です。用途に応じてONにして利用ください。
+設定はグレイマンと同じものを設定しています。
+
+FullBodyIKを使うと肩が破綻しやすいです。有効化する際は十分確認ください。モデルの肩幅の差が大きい場合、より大きく破綻します。
+{: .notice--info}
+
+|FullBodyIKの有効化|
+|-|
+|[![](./assets/images/small/03r_ikrig_ik.png)](../assets/images/03r_ikrig_ik.png)|
+
+### 詳細：Aポーズ自動設定
+
+VRM4Uは リターゲットポーズを ポーズアセットから読み込めます。
+
+インポート時に自動的にAポーズ用のアセットを生成します。リターゲットではこれを利用しています。
+標準VRoidを基準にしています。気になる場合は微調整ください。大抵は問題ないです。
+
+|自動設定Aポーズ|
+|-|
+|[![](./assets/images/small/03r_ikrig_pose.png)](../assets/images/03r_ikrig_pose.png)|
+
+----
+
 ## エディタでリターゲットする（UE4標準機能）
 
 ### Advanced Locomotion System に適用する
