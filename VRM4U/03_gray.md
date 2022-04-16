@@ -90,17 +90,23 @@ UE5のリターゲットでは、リターゲット元と先のモデル それ�
 |[![](./assets/images/small/03r_ikrig.png)](../assets/images/03r_ikrig.png)|
 
 
-手順の概要
+IKRetergeter作成手順
  1. IKRetargeterを作成し、ベース（グレイマン）のIK_Mannequinと リターゲット先のIK_[モデル名]_Mannequin をセットする
  1. WBP_Retarget を起動、IKRetargeterをセットし、ボタンを押す。Aポーズが設定される。完成。
- 1. AssetBrowserタブより、AnimSequenceを選択するとプレビューできる。他、リターゲット時の設定ウインドウに このIKRetargeterをセットすればOK。
-
+ 
 |IKRetargeterの作成|WBP_Retargetを起動、IKRetargeterを設定しボタンを押すとAポーズが適用される|
 |-|-|
 |[![](./assets/images/small/03r_ikrig2.png)](../assets/images/03r_ikrig2.png)|[![](./assets/images/small/03r_ikrig3.png)](../assets/images/03r_ikrig3.png)|
 
+ AssetBrowserタブより、AnimSequenceを選択するとプレビューできます。他、右クリックからのリターゲット設定で、このIKRetargeterをセットすればOKです。
 
-UE5標準のグレイマン用IK_Rigを取得するには、以下よりサードパーソンテンプレートを追加ください。
+
+|AssetBrowserのプレビュー|AnimBPやAnimSequenceを右クリックしてリターゲット|
+|-|-|
+|[![](./assets/images/small/03r_ikrig_r1.png)](../assets/images/03r_ikrig_r1.png)|[![](./assets/images/small/03r_ikrig_r2.png)](../assets/images/03r_ikrig_r2.png)|
+
+
+UE5標準のグレイマン用IK_Rigを利用するには、以下よりサードパーソンテンプレートを追加ください。
 UE4,UE5それぞれのグレイマンの設定が含まれています。
 
 プラグインコンテンツが表示されない場合は、以下の項目を確認ください。
