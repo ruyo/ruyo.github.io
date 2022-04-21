@@ -73,8 +73,11 @@ PlayInすると、VRM標準モデルにリターゲットされます。完了�
 手順が多いです。VRM4Uの簡略化ツールを活用ください。
 {: .notice--info}
 
-以下の解説を一通り読んでから 公式ドキュメント参照することをオススメします。VRM4Uでは手順を省略できます。
-[公式ドキュメントはこちら。](https://docs.unrealengine.com/5.0/ja/ik-rig-animation-retargeting-in-unreal-engine/)
+手順に詰まったら、公式解説動画を参照ください。ただVRM4Uでは手順を省略できます。
+
+[公式の解説スライド＆動画（日本語です）](https://www.docswell.com/s/EpicGamesJapan/KQN3EK-UE5-ShareAnimation#p1)
+
+[公式のドキュメント](https://docs.unrealengine.com/5.0/ja/ik-rig-animation-retargeting-in-unreal-engine/) 
 
 ### IK_Rigの準備
 
@@ -332,10 +335,11 @@ VRM4Uは インポート時に、以下3タイプのIK_Rigを生成します。
 |タイプ|用途|
 |-|-|
 |1. UE5のChainName基準|これを使えばOK。UE5標準。テンプレートのIK_Rigとペアで利用する|
-|2. VRMのHumanoidBone基準|VRM同士でのリターゲットに利用する|
-|3. UE4マネキンの骨名基準|WBP_Retargetで生成したIK_Rigとペアで利用する|
+|2. VRMのHumanoidBone基準|1がうまく動作しない場合の予備。背骨はChain、他は骨同士で対応|
+|3. UE4マネキンの骨名基準|さらに予備。骨同士で対応|
 
-WBP_Retargetを利用してUE4マネキンのIK_Rigを生成した場合は、2,3番が生成されます。VRM側のIK_Rigと対応するものを利用ください。
+WBP_Retargetを利用してグレイマンのIK_Rigを生成した場合は、2番を利用ください。
+背骨の数を考慮してリターゲットされます。
 
 ### FullBodyIK設定を有効化する
 
