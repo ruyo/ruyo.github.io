@@ -2,10 +2,10 @@
 title: "ControlRigを作成する"
 ---
 
-||
-|-|
-|[![](./assets/images/small/06a_top.png)](../assets/images/06a_top.png)|
-|モデル：[【オリジナル3Dモデル】サタリナ族のメイドさん](https://booth.pm/ja/items/2589069)|
+|||
+|-|-|
+|[![](./assets/images/small/06a_ue5_4.png)](../assets/images/06a_ue5_4.png)|[![](./assets/images/small/06a_top.png)](../assets/images/06a_top.png)|
+|モデル：[AvatarSample_A](https://hub.vroid.com/characters/2843975675147313744/models/5644550979324015604)|モデル：[【オリジナル3Dモデル】サタリナ族のメイドさん](https://booth.pm/ja/items/2589069)|
 
 ----
 ## 概要
@@ -14,19 +14,15 @@ VRM4Uが用意したControlRigを対象のモデルに割り当てます。
 
 ControlRigとシーケンサーを利用することで、任意のポージング、アニメーションを作成することができます。
 
-開発中のため、このページの操作手順は、適宜に変更されます。
-{: .notice--info}
-
-ControlRigはベータ版であり、適切な公式ドキュメントはありません。情報を参照する際は、対象のバージョンを十分確認ください。(UE4.26現在)
 モデルのポージング機能としては十分利用可能です。
-複雑な操作時にエディタが停止することがあります。
+アニメーションとしては機能不足かもしれません。用途に応じてツールの使い分けをオススメします。
 {: .notice--info}
 
 ## 下準備
 
-UE4.26以降で動きます。
+UE5：そのまま動作します。
 
-以下4つのプラグインを有効化し、エディタを再起動します。
+UE4：UE4.26以降で動作します。以下4つのプラグインを有効化し、エディタを再起動します。
  - Python Editor Script Plugin
  - Control Rig
  - Sequencer Scripting
@@ -57,9 +53,36 @@ UI表示でエラーが出る場合は、前述のプラグインが正しく有
  1. Rigを保存し、エディタを再起動する
     - 保存せずにRigをコンパイルしたり操作を継続すると、エディタがクラッシュすることがあります。
 
-テンプレートは3種類あります。通常は `IKRig` を複製すればOKです。表情を付けたい場合は `MorphRig` も複製ください。
+テンプレートは複数あります。UE5は`BodyRig`を、UE4は `IKRig` を複製すればOKです。表情を付けたい場合は `MorphRig` も複製ください。
 
-### IK Rigを作成する
+### UE5: Body Rigを作成する
+
+`CR_VRoidSimpleUE5Body`を複製(duplicate)して開きます。
+
+
+
+|複製したControlRigを開いて、Previewを差し替えて、、|
+|-|
+|[![](./assets/images/small/06a_ue5_1.png)](../assets/images/06a_ue5_1.png)|
+
+
+
+|上記設定を行ったControlRigをセット、GenerateBodyRigを押す|
+|-|
+|[![](./assets/images/small/06a_ue5_2.png)](../assets/images/06a_ue5_2.png)|
+
+
+「GenerateBodyRig」をクリックすれば完了です。**が、そのままではRigの生成には数十秒かかります。**
+
+あまりにも遅い場合は「AutoCompile」をOFFにすると高速化されます。ただこの場合はRig生成後にCompileボタンを押してください。
+
+|AutoCompileをOFFにした場合は、Generate後にCompileボタンを押す|
+|-|
+|[![](./assets/images/small/06a_ue5_3.png)](../assets/images/06a_ue5_3.png)|
+
+BodyRigは UE5標準Rigをベースにしています。FK/IK制御切り替え機能があります。
+
+### UE4: IK Rigを作成する
 
 `CR_VRoidSimpleIK`を複製(duplicate)して開きます。
 
