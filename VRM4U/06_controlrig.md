@@ -80,7 +80,12 @@ UI表示でエラーが出る場合は、前述のプラグインが正しく有
 |-|
 |[![](./assets/images/small/06a_ue5_3.png)](../assets/images/06a_ue5_3.png)|
 
-BodyRigは UE5標準Rigをベースにしています。FK/IK制御切り替え機能があります。
+BodyRigはFK/IK制御切り替え機能があります。UE5標準Rigの機能をそのまま利用できます。
+
+|IKモード（初期状態）|FKモード|
+|-|-|
+|[![](./assets/images/small/06a_ue5_5.png)](../assets/images/06a_ue5_5.png)|[![](./assets/images/small/06a_ue5_6.png)](../assets/images/06a_ue5_6.png)|
+
 
 ### UE4: IK Rigを作成する
 
