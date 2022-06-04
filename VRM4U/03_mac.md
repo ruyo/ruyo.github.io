@@ -74,7 +74,7 @@ MyProject/Plugins/VRM4U/ThirdParty/assimp/lib/Mac/libassimp.a
 
 途中でエラーが出る場合は、ログを確認ください。
 以下のようなパスに出力されています。
-`\\username\Library\Logs\Unreal Engine\MyProjectMac427Editor`
+`~/Library/Logs/Unreal Engine/MyProjectMac427Editor`
 
 バージョン違いのメッセージが出ている場合、 `MACOSX_DEPLOYMENT_TARGET` を設定ください。
 このようなログが出ます -> /libassimp.a(Importer.cpp.o)) was built for newer macOS version (12.0) than being linked (10.14)

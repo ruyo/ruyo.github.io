@@ -6,6 +6,10 @@ title: "フォトモードTips"
 ----
 ## カメラ操作
 
+**UE5, UE4.26以降では CineCameraを使うことをオススメします。シーケンサーと合わせてご利用ください。**
+{: .notice--info}
+
+
 CharacterCameraアクターの操作方法
 
 `※レンジ制限解除可能`の記述がある箇所は、`UniversalZoom`をONでレンジが広がる。
