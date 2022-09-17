@@ -159,6 +159,13 @@ UE4.22でWindowモードの場合は、Windowが透過モードになります�
 |-|
 |[![](./assets/images/small/02g_trans.png)](../assets/images/02g_trans.png)|
 
+
+----
+## 影をキレイにしたい（UE5向け）
+
+[UE5専用機能ページ](../05_ue5function/)を参照ください。
+
+
 ----
 ## マッハバンドを消したい＆色が濃いのを修正したい（上級者向け）
 
