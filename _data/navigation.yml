@@ -75,6 +75,8 @@ vrm4udocs:
         url: /VRM4U/05_tracking/
       - title: "リミテッドアニメ"
         url: /VRM4U/05_limitedanim/
+      - title: "UE5専用機能"
+        url: /VRM4U/05_ue5function/
   - title: "その他の情報"
     children:
       - title: "モデル・アニメーション"
