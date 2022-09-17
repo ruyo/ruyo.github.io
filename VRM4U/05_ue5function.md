@@ -9,7 +9,7 @@ title: "UE5専用機能"
 
 UE5は非常に細かいポリゴンに向けて調整されているため、モデルによってはキレイな影が出ません。
 
-それを改善するパラメータがあります。
+それを改善するパラメータです。
 
 |初期状態|NormalBias調整後（オススメ）|従来のShadowmap|
 |-|-|-|
@@ -23,22 +23,23 @@ UE5は非常に細かいポリゴンに向けて調整されているため、�
 
 コンソールコマンド r.Shadow.Virtual.NormalBias を利用しています
 
-くわしくはこちらを参照ください。
-https://docs.unrealengine.com/5.0/en-US/virtual-shadow-maps-in-unreal-engine/
+くわしく知りたい方は こちらを参照ください。
+
+[https://docs.unrealengine.com/5.0/en-US/virtual-shadow-maps-in-unreal-engine/](https://docs.unrealengine.com/5.0/en-US/virtual-shadow-maps-in-unreal-engine/)
 
 ## (MToonUnlit) 色味を完全に再現する
 
 UEはFilmicTonemapperの影響で、テクスチャの色味を再現できません。
 
-その影響度合いを調整するパラメータがあります。
+その影響度合いを調整するパラメータです。
 同時に、VRM4Uで行っている逆変換の強さも調整できます。
 
-背景も含めて色味が変わるため、フォトリアリスティックな表現には向きません。用途に応じて利用ください。
+背景も含めて色味が変わるため、フォトリアリスティックな表現には向きません。厳密な色再現が必要な場合に、状況に応じて利用ください。
 
 |初期状態|色再現したもの|（参考）再現したいテクスチャの色|
 |-|-|-|
 |[![](./assets/images/small/05u_c1.png)](../assets/images/05u_c1.png)|[![](./assets/images/small/05u_c2.png)](../assets/images/05u_c2.png)|[![](./assets/images/small/05u_c3.png)](../assets/images/05u_c3.png)|
-|全体的に白っぽくなる|テクスチャの色が適用される。<br>背景にも影響してしまうのを 割合を調整できる|（参考）この色が再現できればOK|
+|少し色味がずれてしまう。逆変換で補正しきれない|テクスチャの色が適用される。<br>ただし背景にも影響してしまう。影響度を調整できる|（参考）この色が再現できればOK|
 
 
 ### 仕組み
