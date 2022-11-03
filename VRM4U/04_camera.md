@@ -36,6 +36,7 @@ VRMCineCameraActor を配置します。OffCenterProjectionOffset に値を入�
 撮影範囲が 上下左右にシフトします。
 
 コンソールコマンド `ShowFlag.CameraFrustums 1` によってカメラの視錐台をデバッグ描画できます。
+下図の紫のラインで描画されているものが視錐台です。
 
 |標準（カメラの正面が映る）|視錐台を下方にシフトした（カメラの下方が映る）|
 |-|-|
