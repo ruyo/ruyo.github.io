@@ -71,6 +71,8 @@ vrm4udocs:
         url: /VRM4U/02_toon/
       - title: "嘘パース・魚眼レンズ"
         url: /VRM4U/02_pers/
+      - title: "シフトレンズカメラ"
+        url: /VRM4U/04_camera/
       - title: "フェイシャルキャプチャ"
         url: /VRM4U/05_tracking/
       - title: "リミテッドアニメ"
