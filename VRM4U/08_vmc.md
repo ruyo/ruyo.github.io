@@ -39,14 +39,11 @@ Virtual Motion Capture Protocol（以下VMC Protocol）の紹介は[こちらか
 
 ## AnimBPを作成する
 
-動かす対象モデルでAnimBPを作成し、アニムグラフにVrmVMCノードを追加します。
+動かす対象モデルでAnimBPを作成し、アニムグラフにVrmModifyBoneListノードを追加します。
 
 ノードには、以下の2つのデータをセットします。
- - VRM4U_VMC_Subsystemのデータ。受信した骨情報です。
+ - VRM4U_AnimationSubsystemのデータ。受信した骨情報です。
  - インポート時に生成されたMetaデータ。モデルのHumanoid骨名リストです。
-
-揺れ骨を適用する場合は`VRMSpringBone`ノードも追加ください。
-[揺れ骨の解説はこちら](../01_animation/)
 
 ||
 |-|
@@ -70,12 +67,12 @@ Widgetにポート番号が表示されない場合は、OSCプラグインを�
 
 ----
 
-## 高度な使い方
+## 詳細解説（UEの操作に慣れてる人向け）
 
 ### ブレンドシェイプを受け取る
 
 サンプルマップのAnimBPを参照ください。
-VRM4U_VMC_Subsystem内にある、受信データから検索します。
+VRM4U_AnimationSubsystem内にある、受信データから検索します。
 文字列 `/VMC/Ext/Blend/Val:Blink` などで見つかります。
 
 ### トラッカー情報を受け取る
@@ -85,31 +82,24 @@ VRM4U_VMC_Subsystem内にある、受信データから検索します。
 
 その他の受信データの詳細は、Widgetより `RawData` をOnにすると表示されます。
 
-### マップ上で直接プレビューする
+### マップ上で直接プレビューする。PlayInなし。
 
-SkeletalMeshの`Update Animation in Editor` をONにしてください。エディタ上でそのままアニメーションが動作します。あくまでプレビュー動作です。正確な動作はPlayInで確認ください。
+SkeletalMeshの`Update Animation in Editor` をONにしてください。
+前段の手順にて、「Listen」ボタンを押した際に自動的にONになります。
 
-----
+### 揺れ骨を適用する
 
-## 詳細解説（上級者向け）
-
-### UE5EA版の不具合
-
- - 不具合1: UE5EAはOSCバンドルを受信できません
-   - 送信元アプリにて通信設定を変更できるなら、切り替えて利用ください。
- - 不具合2: UE5EAは前述のブレンドシェイプやトラッカーを正しく検索できないことがあります
-   - Map(文字列と姿勢の連想配列)におけるFindが正しく動作しません。データ参照方法に工夫が必要です。Blueprint/cppどちらのFind呼び出しも問題が起きます。
-
-どちらの不具合も、UE5正式リリースには修正されるようです。UE4では正常動作します。
-
-### RunServer を押した時の挙動
-
-ボタンを押すと レベルに`BP_VMCReceiver`がスポーンします。同時にポート番号を設定し、データ受信を開始します。データは`VRM4U_VMC_Subsystem`に格納されます。
-
-EditorUtilityWidgetを経由しているため、いつでもデータ受信が可能です。プレビューであれば PlayInは不要です。このページのトップ絵も PlayInしていない状態です。
+揺れ骨を適用する場合は`VRMSpringBone`ノードも追加ください。
+[揺れ骨の解説はこちら](../01_animation/)
 
 ### 複数の外部アプリからのデータ受信
 
-レベルに`BP_VMCReceiver`を複数配置し、ポート番号を設定ください。それぞれデータが受信されます。
+レベルに各種Receiverをを複数配置し、ポート番号を設定ください。それぞれデータが受信されます。
 
-データの参照には、`VRM4U_VMC_Subsystem`へのアクセス時に、「ポート番号指定」または「通し番号指定」を利用してください。
+データの参照には、`VRM4U_AnimationSubsystem`へのアクセス時に、「ポート番号指定」または「通し番号指定」を利用してください。
+
+### RunServer を押した時の挙動
+
+ボタンを押すと レベルに`BP_VMCReceiver`がスポーンします。同時にポート番号を設定し、データ受信を開始します。データは`VRM4U_AnimationSubsystem`に格納されます。
+
+EditorUtilityWidgetを経由しているため、いつでもデータ受信が可能です。プレビューであれば PlayInは不要です。このページのトップ絵も PlayInしていない状態です。

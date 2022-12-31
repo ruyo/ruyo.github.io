@@ -45,8 +45,10 @@ vrm4udocs:
         url: /VRM4U/07_controlrig_morph/
       - title: "ポーズ・フェイシャル(VRM4U)"
         url: /VRM4U/02_pose/
-      - title: "モーションキャプチャ"
+      - title: "モーションキャプチャVMC"
         url: /VRM4U/08_vmc/
+      - title: "モーションキャプチャmocopi"
+        url: /VRM4U/08_mocopi/
   - title: "ゲームで使う"
     children:
       - title: "配布用EXEを作成する"
