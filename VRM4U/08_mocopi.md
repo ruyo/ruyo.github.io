@@ -4,8 +4,8 @@ title: "モーションキャプチャ(mocopi UDP)を受け取る"
 
 ||
 |-|
-|[![](./assets/images/small/08a_m1.png)](../assets/images/small/08a_m1.png)|
-|モデル：VRoidStudio サンプル|
+|[![](./assets/images/small/08a_m5.png)](../assets/images/small/08a_m5.png)|
+|モデル：UE5マネキン|
 
 ----
 
@@ -24,6 +24,8 @@ title: "モーションキャプチャ(mocopi UDP)を受け取る"
 サンプルマップ `VRM4U_Mocopi` を参照ください
 
 レベル上のBP_MocopiReceiverにポート番号を設定後、Listenボタンを押すかPlayInしてください。
+
+|[![](./assets/images/small/08a_m1.png)](../assets/images/small/08a_m1.png)|
 
 完了です。
 
