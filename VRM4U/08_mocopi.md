@@ -13,13 +13,13 @@ title: "モーションキャプチャ(mocopi UDP)を受け取る"
 
 外部アプリからモーションキャプチャデータを受け取り、モデルにアニメーションを適用します。
 
-----
-
-## mocopi UDP を受け取る
-
 [mocopi公式サイト](https://www.sony.jp/mocopi)
 
 [mocopi開発者向け情報](https://www.sony.net/Products/mocopi-dev/jp/documents/Home/TechSpec.html)
+
+----
+
+## mocopi UDP を受け取る
 
 サンプルマップ `VRM4U_Mocopi` を参照ください
 

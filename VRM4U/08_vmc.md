@@ -14,30 +14,26 @@ title: "モーションキャプチャ(VMC Protocol)を受け取る"
 外部アプリからモーションキャプチャデータを受け取り、モデルにアニメーションを適用します。
 
 この機能はタフな動作チェックを行っていません。
-VMC対応については、[はるくさん開発のVMC4UE](https://github.com/HAL9HARUKU/VMC4UE)の利用もご検討ください。
+うまく動作しない場合は、[はるくさん開発のVMC4UE](https://github.com/HAL9HARUKU/VMC4UE)の利用もご検討ください。
 {: .notice--info}
-
-**UE5EA版では大きな不具合があるので（後述）、利用時はご注意ください。正式リリースで修正される**ようです。
-UE4では問題なく動作します。
-{: .notice--warning}
 
 Virtual Motion Capture Protocol（以下VMC Protocol）の紹介は[こちらからどうぞ](https://protocol.vmc.info/)
 
-
 ----
 
-## 下準備
+## 下準備&動作
 
 動作にはEpic公式の`OSCプラグイン`が必要です。有効化し、エディタを再起動ください。
 
-サンプルマップ `VRM4U_VMC` に設定済のモデルがあります。
-サンプルをそのままPlayInすると、ポート番号39540に届いたデータでアニメーションします。
+サンプルマップ `VRM4U_VMC` を参照ください。
+
+レベル上のBP_VrmReceiverにポート番号を設定後、Listenボタンを押すかPlayInしてください。
 
 ||
 |-|
 |[![](./assets/images/small/08a_plugin.png)](../assets/images/small/08a_plugin.png)|
 
-## AnimBPを作成する
+## AnimBPの解説
 
 動かす対象モデルでAnimBPを作成し、アニムグラフにVrmModifyBoneListノードを追加します。
 
