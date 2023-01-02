@@ -68,18 +68,23 @@ Branch(左上の赤丸)をTagに切り替え、ビルド済バイナリの日付
 
 ## EXEを作る
 
-ひとまずUE4のメニューからパッケージ作成してみて、エラーが出るようならVisualStudioのセットアップを行います。
+ひとまずUEのメニューよりパッケージ作成してみてください。エラーが出るようならVisualStudioのセットアップを行います。
 
-エラーが出る場合は[こちらのページ](https://visualstudio.microsoft.com/ja/vs/older-downloads/)
-より、「VisualStudioのダウンロード」をクリック「Community2019」を選択します。(UE4.23以前であれば2017が必要です)
+### VisualStudioのインストール
 
-インストールオプションは[こちら](https://docs.unrealengine.com/ja/Programming/Development/VisualStudioSetup/index.html)
-を参照ください。表記のVisualStudioのバージョンが古いですが、適宜読み替えてOKです。
+[こちらのページ](https://docs.unrealengine.com/ja/Programming/Development/VisualStudioSetup/index.html)を参照し、対応するVisualStudioをインストールください。
 項目は「VisualStudioのインストール」まで辿ればOKです。「推奨設定」以降はスキップです。
 
-## パッケージングのエラーを対処する
+## C++プロジェクトにする
+[こちらのリンク](https://docs.unrealengine.com/ja/Programming/QuickStart/2/index.html)を参考に、新規のC++ファイルを追加してください。
 
-対処方法は3つあります。上位がオススメです。が対処しやすい方法で構いません。
+「Choose Parent Class」はNoneのまま、他も初期設定のままでOKです。
+完了するとプロジェクトファイルと同じ場所に「sln」ファイルが生成されます。
+（例えば「MyProject.uproject」と同じ場所に「MyProject.sln」が生成される）
+
+### パッケージングのエラーを対処する
+
+対処方法は3つあります。上位がオススメですが、対処しやすい方法で構いません。
 
  - その1
    - ProjectSettingsよりCook対象とするマップを指定する
@@ -89,7 +94,7 @@ Branch(左上の赤丸)をTagに切り替え、ビルド済バイナリの日付
    - `Plugins/VRM4U/Content/Util/Actor/latest` フォルダを削除する
 
 エラーが起きる箇所は、VRM4U内の実験的なアセットです。
-Cook対象のマップを指定することで回避できます。（UE4標準動作では、全てのumapファイルがCook対象となっています。その影響で実験的機能がCookされてエラーが出ることがあります）
+Cook対象のマップを指定することで回避できます。（UE標準動作では、全てのumapファイルがCook対象となっています。その影響で実験的機能がCookされてエラーが出ることがあります）
 
 |ProjectSettingsでCook対象マップを指定。複数ある場合は適宜追加|
 |-|
@@ -126,13 +131,13 @@ Epicのページからアカウントを紐付けする際は、githubのメー�
 - 「MyProject/Intermediate」
 - 「MyProject/Plugins/VRM4U/Intermediate」
 
-複数のUE4バージョンを行き来したり、プロジェクトをBP→CPPに切り替えた直後にエラーが起きやすいです。
+複数のUEバージョンを行き来したり、プロジェクトをBP→CPPに切り替えた直後にエラーが起きやすいです。
 
 ### ビルド時の警告の対応
 
 ビルドやCook時に一部警告が出ますが、そのままで問題ありません。
 対応したい場合は、`VRM4U.plugin`内のコメントを参照し、`Developer` -> `UncookedOnly` へ書き換えてください。
-VRM4Uは対応するUE4バージョン全てに対し、同一のソースコードを使っています。バージョン毎に書きわけできない箇所は古い書式を採用しています。
+VRM4Uは対応するUEバージョン全てに対し、同一のソースコードを使っています。バージョン毎に書きわけできない箇所は古い書式を採用しています。
 
 ----
 
@@ -146,18 +151,9 @@ VRM4Uは対応するUE4バージョン全てに対し、同一のソースコー
 
 ----
 
-## （VRM4U_20200625以前を使っている場合）C++プロジェクトにする
-[こちらのリンク](https://docs.unrealengine.com/ja/Programming/QuickStart/2/index.html)を参考に、新規のC++ファイルを追加してください。
-
-「Choose Parent Class」はNoneのまま、他も初期設定のままでOKです。
-完了するとプロジェクトファイルと同じ場所に「sln」ファイルが生成されます。
-（例えば「MyProject.uproject」と同じ場所に「MyProject.sln」が生成される）
-
-----
-
 ## なんでこんなに面倒くさいの？
 
 プラグインを作る際、一部エンジンのソースを参考にしているためです。主にランタイムロード機能です。
 
-念の為にEpic紐付けのアカウントで公開しています。（UE4で利用するぶんには問題ありません）
+念の為にEpic紐付けのアカウントで公開しています。（UEで利用するぶんには問題ありません）
 
