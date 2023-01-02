@@ -32,7 +32,7 @@ OculusQuestは OculusLinkでPCに接続して利用します。
 LiveLinkFaceでキャプチャした表情を、キャラクタに適用します。VRMBlendShapeClipの設定を利用するため、表情パターンがやや少ないです。
 
 ここで紹介するのは、VRM4Uのフォトモードやランタイムリターゲットと連動した使い方です。
-UE4での標準的な使い方は[ドキュメント](https://docs.unrealengine.com/ja/Engine/Animation/FacialRecordingiPhone/index.html)を参照するか、後述のパーフェクトシンクを参考にしてください。
+UEでの標準的な使い方は[ドキュメント](https://docs.unrealengine.com/ja/Engine/Animation/FacialRecordingiPhone/index.html)を参照するか、後述のパーフェクトシンクを参考にしてください。
 
 
 以下のサンプルマップを参照してください。UE4.26以降でのみコンテンツブラウザに表示されます。

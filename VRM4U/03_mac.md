@@ -58,7 +58,7 @@ M1 Macを利用している場合は、明示的にx86_64としてビルドす�
 
 ### プロジェクトのビルド
 
-UE4からC++プロジェクトを作成しておきます。
+UEからC++プロジェクトを作成しておきます。
 VRM4Uのソースをプロジェクトに展開し、前段でmakeしたassimpライブラリを以下に置きます。
 
 MyProject/Plugins/VRM4U/ThirdParty/assimp/lib/Mac/libassimp.a

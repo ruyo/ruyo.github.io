@@ -22,7 +22,7 @@ toc: false
 |[ミライ小町](https://www.bandainamcostudios.com/works/miraikomachi/dlcguideline.html)|VRM、ダンスアニメーション（Unityプロジェクト同梱のfbx）|
 
 ----
-## UE4の 標準的なアセット
+## UEの 標準的なアセット
 
 |EpicGames公式|内容（VRM4Uで利用しやすいものだけ抜粋）|
 |-|-|
