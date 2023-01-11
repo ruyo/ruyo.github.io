@@ -25,15 +25,42 @@ Virtual Motion Capture Protocol（以下VMC Protocol）の紹介は[こちらか
 
 動作にはEpic公式の`OSCプラグイン`が必要です。有効化し、エディタを再起動ください。
 
-サンプルマップ `VRM4U_VMC` を参照ください。
-
-レベル上のBP_VrmReceiverにポート番号を設定後、Listenボタンを押すかPlayInしてください。
-
 ||
 |-|
 |[![](./assets/images/small/08a_plugin.png)](../assets/images/small/08a_plugin.png)|
 
-## AnimBPの解説
+サンプルマップ `VRM4U_VMC` を参照ください。
+動作させる方法が3通りあります。
+
+ - 方法その１．(オススメ)
+   - BP_VrmReceiverにポート番号を指定、ServerListenボタンを押す。エディタモードのままアニメーションします。
+ - 方法その２．
+   - EUW_VMC を利用し、ServerListenボタンを押す。内部的には方法その１と同じ。
+ - 方法その３．
+   - BP_VrmReceiverにポート番号を指定、PlayInする。
+ 
+|BP_VrmReceiverから起動|EUW_VMCから起動|
+|-|-|
+|[![](./assets/images/small/08a_server.png)](../assets/images/small/08a_server.png)|[![](./assets/images/small/08a_wbp.png)](../assets/images/small/08a_wbp.png)|
+
+
+### EUW_VMC 解説
+
+`EUW_VMC` を右クリックより起動します。
+正しく受信できた場合は、図のようにWidgetにログが表示されます。
+全ての受信データを確認したい場合は、Widgetより `RawData` をOnにしてください。
+
+|||
+|-|-|
+|[![](./assets/images/small/08a_wbp3.png)](../assets/images/small/08a_wbp3.png)|[![](./assets/images/small/08a_wbp2.png)](../assets/images/small/08a_wbp2.png)|
+
+Widgetにポート番号が表示されない場合は、OSCプラグインを有効化してください。
+{: .notice--info}
+
+EUB_VMCTick について警告が出る場合は、EUB_VMCTickをレベル上に配置ください。
+{: .notice--info}
+
+### AnimBPの解説
 
 動かす対象モデルでAnimBPを作成し、アニムグラフにVrmModifyBoneListノードを追加します。
 
@@ -45,47 +72,33 @@ Virtual Motion Capture Protocol（以下VMC Protocol）の紹介は[こちらか
 |-|
 |[![](./assets/images/small/08a_node.png)](../assets/images/small/08a_node.png)|
 
-
-## VMC Protocolを受け取る
-
-`EUW_VMC` を起動します。
-受信ポート番号を確認し、`RunServer` をクリックすれば完了です。
-
-||
-|-|
-|[![](./assets/images/small/08a_panel.png)](../assets/images/small/08a_panel.png)|
-
-正しく受信できた場合は、図のようにWidgetにログが表示されます。
-全ての受信データを確認したい場合は、Widgetより `RawData` をOnにしてください。
-
-Widgetにポート番号が表示されない場合は、OSCプラグインを有効化してください。
-{: .notice--info}
-
 ----
 
 ## 詳細解説（UEの操作に慣れてる人向け）
 
-### ブレンドシェイプを受け取る
+### OSCの受信データを見る （ブレンドシェイプ、トラッカー）
 
 サンプルマップのAnimBPを参照ください。
 VRM4U_AnimationSubsystem内にある、受信データから検索します。
-文字列 `/VMC/Ext/Blend/Val:Blink` などで見つかります。
 
-### トラッカー情報を受け取る
+- ブレンドシェイプを見たい場合
+  - 文字列 `/VMC/Ext/Blend/Val:Blink` などで見つかります。
 
-ブレンドシェイプと同様です。
-文字列 `/VMC/Ext/Tra/Pos:LeftHand` などで見つかります。
+- トラッカーを見たい場合
+  - 文字列 `/VMC/Ext/Tra/Pos:LeftHand` などで見つかります。
 
-その他の受信データの詳細は、Widgetより `RawData` をOnにすると表示されます。
+その他の受信データの詳細は、Widgetより `RawData` をOnにして確認ください
 
-### マップ上で直接プレビューする。PlayInなし。
+### マップ上で直接プレビューする仕組み
 
-SkeletalMeshの`Update Animation in Editor` をONにしてください。
-前段の手順にて、「Listen」ボタンを押した際に自動的にONになります。
+OSCサーバの`EditorTick`を有効化しています。
+これはEditorUtilityからのみアクセス可能なので、EUB_VMCTick というActorを経由しています。
+
+また、SkeletalMeshの`Update Animation in Editor` をONにしています。
 
 ### 揺れ骨を適用する
 
-揺れ骨を適用する場合は`VRMSpringBone`ノードも追加ください。
+揺れ骨を適用する場合は、AnimBlueprintに`VRMSpringBone`ノードも追加ください。
 [揺れ骨の解説はこちら](../01_animation/)
 
 ### 複数の外部アプリからのデータ受信
@@ -93,9 +106,3 @@ SkeletalMeshの`Update Animation in Editor` をONにしてください。
 レベルに各種Receiverをを複数配置し、ポート番号を設定ください。それぞれデータが受信されます。
 
 データの参照には、`VRM4U_AnimationSubsystem`へのアクセス時に、「ポート番号指定」または「通し番号指定」を利用してください。
-
-### RunServer を押した時の挙動
-
-ボタンを押すと レベルに`BP_VMCReceiver`がスポーンします。同時にポート番号を設定し、データ受信を開始します。データは`VRM4U_AnimationSubsystem`に格納されます。
-
-EditorUtilityWidgetを経由しているため、いつでもデータ受信が可能です。プレビューであれば PlayInは不要です。このページのトップ絵も PlayInしていない状態です。
