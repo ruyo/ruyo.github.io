@@ -1,8 +1,8 @@
 ---
 title: "UEFN(Unreal Editor For Fortnite)で使う"
 ---
-|||
-|-|-|
+||
+|-|
 |[![](./assets/images/small/03u_uefn.png)](../assets/images/03u_uefn.png)|
 |モデル：[【オリジナル3Dモデル】ドラゴニュート・シェンナ](https://booth.pm/ja/items/2661189)|
 
@@ -16,8 +16,8 @@ title: "UEFN(Unreal Editor For Fortnite)で使う"
  - UEFNのチェックボックスをON
  - UEFN用のマテリアルを選択します。オススメはUEFN(SSSProfile) です。
 
-|||
-|-|-|
+||
+|-|
 |[![](./assets/images/small/03u_import.png)](../assets/images/03u_import.png)|
 
 インポート後は、アセットを保存してください。
@@ -29,14 +29,14 @@ SkeletalMeshを右クリックより、migrateを選択、migrate先をUEFNプ�
 
 設定はデフォルトのまま利用ください。（依存するアセットが全てチェックONになっている状態）
 
-|||
-|-|-|
+||
+|-|
 |[![](./assets/images/small/03u_migrate.png)](../assets/images/03u_migrate.png)|
 
 完了です。
 
-|||
-|-|-|
+||
+|-|
 |[![](./assets/images/small/03u_edit.png)](../assets/images/03u_edit.png)|
 
 
