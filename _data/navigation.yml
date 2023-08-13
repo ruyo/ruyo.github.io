@@ -63,6 +63,8 @@ vrm4udocs:
         url: /VRM4U/03_uefn/
   - title: "VRM以外のモデルを使う"
     children:
+      - title: "VRMAアニメーションを使う"
+        url: /VRM4U/04_vrma/
       - title: "VRChat用アバターを使う"
         url: /VRM4U/04_vrchat/
       - title: "BVHアニメーションを使う"
