@@ -86,16 +86,9 @@ MyProject/Plugins/VRM4U/ThirdParty/assimp/lib/Mac/libassimp.a
 - Myproject/Plugins/VRM4U/Binaries
 - Myproject/Plugins/VRM4U/Intermediate
 
-
 それでもエラーが出る場合は、ログを確認ください。
 以下のようなパスに出力されています。
 `~/Library/Logs/Unreal Engine/MyProjectEditor`
-
-以下はXcodeでのビルドです。 **ただXcodeのバージョンが変わると、すぐ動かなくなります。** できれば、上記のタイアログによるビルドをご利用ください。
-手順だけ書き残しておきます。
-.uprojectファイルを右クリック、Xcodeプロジェクトを作成します。.xcworkspaceが生成されるので開きます。
-
-Xcodeでビルド。Product > Build を選択します。起動時にエラーがでてエディタが立ち上がらない場合、ビルド設定がGameになっているかもしれません。Editorビルドに切り替えてください。完了後はMyProject.uprojectをダブルクリックで起動します。
 
 ### プラグインの有効化、ビルド
 
@@ -114,3 +107,13 @@ Xcodeでビルド。Product > Build を選択します。起動時にエラー�
 
 蛇足：もしiOSアプリを作成したい場合、Windowsからのリモートビルドも利用することができます。用途に応じて環境をご利用ください。
 {: .notice--info}
+
+### （補足）Xcodeによるビルド
+
+この手順は、Xcodeのバージョンが変わると、動かなくなることがあります。できれば、前述のダイアログによるビルドをご利用ください。
+{: .notice--info}
+
+.uprojectファイルを右クリック、Xcodeプロジェクトを作成します。.xcworkspaceが生成されるので開きます。
+（生成されない場合は、Xcodeのバージョン違いによる影響かもしれません。このトラブルの対処方法は 私にはわかりません。。）
+
+Xcodeでビルド。Product > Build を選択します。起動時にエラーがでてエディタが立ち上がらない場合、Gameをビルドしているかもしれません。Editorのビルドに切り替えてください。完了後はMyProject.uprojectをダブルクリックで起動します。
