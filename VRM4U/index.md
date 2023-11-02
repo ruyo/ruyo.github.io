@@ -11,6 +11,7 @@ classes: wide
 ## VRM4Uとは
 
 UnrealEngineで動作する、VRMファイルのインポート用プラグインです。
+
 開発・サポートは[@はるべえ](https://twitter.com/ruyo_h)が個人で行っているものです。
 
 [導入はこのリンクから](./01_quick-start/)
@@ -75,3 +76,6 @@ UnrealEngineで動作する、VRMファイルのインポート用プラグイ�
 
 [簡易的ですがYoutubeの動画](https://www.youtube.com/channel/UC9Xuvwk9YLisxtNbTAjryDQ)や、ハッシュタグ[#VRM4U](https://twitter.com/hashtag/VRM4U)を参考にどうぞ
 
+## 開発支援
+
+VRM4Uの開発を支援したい という奇特な方は[こちら](https://ruyo.booth.pm/items/1707224)からどうぞ
