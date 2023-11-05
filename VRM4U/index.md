@@ -12,7 +12,7 @@ classes: wide
 
 UnrealEngineで動作する、VRMファイルのインポート用プラグインです。
 
-開発・サポートは[@はるべえ](https://twitter.com/ruyo_h)が個人で行っているものです。
+開発・サポートは[@はるべえ](https://twitter.com/ruyo_h)が個人で対応しています。
 
 [導入はこのリンクから](./01_quick-start/)
 
