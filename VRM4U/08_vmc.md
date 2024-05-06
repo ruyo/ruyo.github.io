@@ -23,7 +23,7 @@ Virtual Motion Capture Protocol（以下VMC Protocol）の紹介は[こちらか
 
 |AnimBPでVrmVMCノードをつなぐ|
 |-|
-|[![](./assets/images/small/08a_anim.png)](../assets/images/small/08a_anim.png)|
+|[![](./assets/images/small/08a_anim.png)](../assets/images/08a_anim.png)|
 
 ## 補足
 
