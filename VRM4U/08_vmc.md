@@ -13,15 +13,33 @@ title: "モーションキャプチャ(VMC Protocol)を受け取る"
 
 外部アプリからモーションキャプチャデータを受け取り、モデルにアニメーションを適用します。
 
-この機能はタフな動作チェックを行っていません。
-うまく動作しない場合は、[はるくさん開発のVMC4UE](https://github.com/HAL9HARUKU/VMC4UE)の利用もご検討ください。
-{: .notice--info}
-
 Virtual Motion Capture Protocol（以下VMC Protocol）の紹介は[こちらからどうぞ](https://protocol.vmc.info/)
 
 ----
 
-## 下準備&動作
+## 使い方
+
+対象のSkeletonよりAnimationBlueprintを作成し、VrmVMCノードを繋いでください。完了です。
+
+|AnimBPでVrmVMCノードをつなぐ|
+|-|
+|[![](./assets/images/small/08a_anim.png)](../assets/images/small/08a_anim.png)|
+
+## 補足
+
+別PCやスマートフォンからのVMCを受信したい場合、VrmVMCノードに対象のIPアドレスを指定ください。
+
+モデルが崩れてしまう場合、以下を確認ください。
+
+  - 送信元がVRM0を利用している場合、VrmVMCノードのIgnoreLocalRotation をONに変更する
+  - 送受信どちらも同じVRMモデルを利用する
+
+
+<details>
+
+<summary>以下は古い情報です</summary>
+
+##  ~~下準備&動作~~
 
 動作にはEpic公式の`OSCプラグイン`が必要です。有効化し、エディタを再起動ください。
 
@@ -44,7 +62,7 @@ Virtual Motion Capture Protocol（以下VMC Protocol）の紹介は[こちらか
 |[![](./assets/images/small/08a_server.png)](../assets/images/small/08a_server.png)|[![](./assets/images/small/08a_wbp.png)](../assets/images/small/08a_wbp.png)|
 
 
-### EUW_VMC 解説
+### ~~EUW_VMC 解説~~
 
 `EUW_VMC` を右クリックより起動します。
 正しく受信できた場合は、図のようにWidgetにログが表示されます。
@@ -60,7 +78,7 @@ Widgetにポート番号が表示されない場合は、OSCプラグインを�
 EUB_VMCTick について警告が出る場合は、EUB_VMCTickをレベル上に配置ください。
 {: .notice--info}
 
-### AnimBPの解説
+### ~~AnimBPの解説~~
 
 動かす対象モデルでAnimBPを作成し、アニムグラフにVrmModifyBoneListノードを追加します。
 
@@ -74,9 +92,9 @@ EUB_VMCTick について警告が出る場合は、EUB_VMCTickをレベル上に
 
 ----
 
-## 詳細解説（UEの操作に慣れてる人向け）
+## ~~詳細解説（UEの操作に慣れてる人向け）~~
 
-### OSCの受信データを見る （ブレンドシェイプ、トラッカー）
+### ~~OSCの受信データを見る （ブレンドシェイプ、トラッカー）~~
 
 サンプルマップのAnimBPを参照ください。
 VRM4U_AnimationSubsystem内にある、受信データから検索します。
@@ -89,20 +107,21 @@ VRM4U_AnimationSubsystem内にある、受信データから検索します。
 
 その他の受信データの詳細は、Widgetより `RawData` をOnにして確認ください
 
-### マップ上で直接プレビューする仕組み
+### ~~マップ上で直接プレビューする仕組み~~
 
 OSCサーバの`EditorTick`を有効化しています。
 これはEditorUtilityからのみアクセス可能なので、EUB_VMCTick というActorを経由しています。
 
 また、SkeletalMeshの`Update Animation in Editor` をONにしています。
 
-### 揺れ骨を適用する
+### ~~揺れ骨を適用する~~
 
 揺れ骨を適用する場合は、AnimBlueprintに`VRMSpringBone`ノードも追加ください。
 [揺れ骨の解説はこちら](../01_animation/)
 
-### 複数の外部アプリからのデータ受信
+### ~~複数の外部アプリからのデータ受信~~
 
 レベルに各種Receiverをを複数配置し、ポート番号を設定ください。それぞれデータが受信されます。
 
 データの参照には、`VRM4U_AnimationSubsystem`へのアクセス時に、「ポート番号指定」または「通し番号指定」を利用してください。
+</details>
