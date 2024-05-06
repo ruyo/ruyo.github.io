@@ -36,8 +36,7 @@ Virtual Motion Capture Protocol（以下VMC Protocol）の紹介は[こちらか
 
 
 <details>
-
-<summary>以下は古い情報です</summary>
+  <summary>以下は古い情報です</summary>
 
 ##  ~~下準備&動作~~
 
