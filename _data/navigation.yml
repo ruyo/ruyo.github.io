@@ -39,6 +39,8 @@ vrm4udocs:
         url: /VRM4U/02_sss/
       - title: "ライティング環境に合わせる"
         url: /VRM4U/02_envlight/
+      - title: "フィルタを利用する"
+        url: /VRM4U/05_filter/
       - title: "ControlRigを作成する"
         url: /VRM4U/06_controlrig/
       - title: "ポーズ・フェイシャル(ControlRig)"
