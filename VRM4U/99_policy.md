@@ -1,3 +1,9 @@
+---
+title: "Policy"
+share: true
+toc: false
+classes: wide
+---
 
 【個人情報の管理】
 
