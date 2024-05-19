@@ -3,6 +3,8 @@ title: "VRM4U"
 share: true
 toc: false
 classes: wide
+redirect_from:
+ - /
 ---
 
 [![](../assets/images/top_256x256.png)](../assets/images/top_l.png)
@@ -81,3 +83,5 @@ UnrealEngineで動作する、VRMファイルのインポート用プラグイ�
 ## 開発支援
 
 VRM4Uの開発を支援したい という奇特な方は[こちら](https://ruyo.booth.pm/items/1707224)からどうぞ
+
+[サイトポリシー](./99_policy/)

@@ -57,6 +57,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 author:
   name   : "Harube"
