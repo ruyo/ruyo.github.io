@@ -77,6 +77,8 @@ vrm4udocs:
     children:
       - title: "特殊なマテリアル"
         url: /VRM4U/02_toon/
+      - title: "画面キャプチャ"
+        url: /VRM4U/05_scenecapture/
       - title: "嘘パース・魚眼レンズ"
         url: /VRM4U/02_pers/
       - title: "シフトレンズカメラ"
@@ -95,4 +97,5 @@ vrm4udocs:
         url: /VRM4U/10_detail/
       - title: "ギャラリー"
         url: /VRM4U/90_gallery/
+        
 
