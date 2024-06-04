@@ -41,12 +41,12 @@ UnrealEngineで動作する、VRMファイルのインポート用プラグイ�
 
 スクリーンショットや動画は[**ギャラリーのページ**](./90_gallery/)に沢山あります
 
- - VRMファイルをインポートできます
+ - VRM,VRMA,BVH,PMXファイルをインポートできます
  - アニメーション
-     - 手軽にリターゲット可能です。A-pose/T-pose、BoneMapが生成されます。
+     - 手軽にリターゲット可能です。A-pose/T-poseの設定、IKRig、IKRetargdterが生成されます。
      - 顔アニメ（Morphtarget・BlendShapeGroup）を利用可能です。
      - 揺れ骨にVRMSpringBone、PhysicsAssetを選択できます。
-     - 汎用のControlRig、操作用のUMGがあります。
+     - 汎用のControlRig（UE標準を拡張したもの）、操作用のUMGがあります。
      - 外部アプリからモーションキャプチャデータを受け取れます。VMCプロトコルに対応しています。
      - UEMannequinからVRMモデルに、ランタイムでリターゲットできます。
      - UE5: IKRetargeterアセットを自動生成できます。EpicSkeletonからのリターゲット手順を簡略化できます。
